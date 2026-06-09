@@ -1,0 +1,18 @@
+cd D:\codes\Archi
+
+@"
+[project]
+name = "archi"
+version = "1.0.0"
+description = "Local Code Architecture Mapping Tool"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["networkx>=3.0"]
+
+[project.scripts]
+archi = "Archi.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["Archi*"]
+"@ | Out-File -FilePath pyproject.toml -Encoding utf8 -Force
