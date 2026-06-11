@@ -1,7 +1,7 @@
 # auth/routers.py::login
 
-**Type:** function
-**Community:** 1
+**Type:** fastapi_endpoint
+**Community:** 0
 
 ## Outgoing Connections
 

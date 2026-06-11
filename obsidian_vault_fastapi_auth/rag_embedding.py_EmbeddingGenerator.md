@@ -1,7 +1,7 @@
 # rag/embedding.py::EmbeddingGenerator
 
 **Type:** file
-**Community:** 25
+**Community:** 18
 
 ## Outgoing Connections
 

@@ -1,7 +1,7 @@
 # auth/config.py::Settings
 
 **Type:** file
-**Community:** 1
+**Community:** 0
 
 ## Outgoing Connections
 

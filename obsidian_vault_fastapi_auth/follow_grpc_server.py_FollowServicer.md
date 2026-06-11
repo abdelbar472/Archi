@@ -1,7 +1,7 @@
 # follow/grpc_server.py::FollowServicer
 
 **Type:** grpc
-**Community:** 8
+**Community:** 10
 
 ## Outgoing Connections
 

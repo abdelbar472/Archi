@@ -1,7 +1,7 @@
 # social/auth.py::get_current_user_id
 
 **Type:** function
-**Community:** 28
+**Community:** 21
 
 ## Outgoing Connections
 

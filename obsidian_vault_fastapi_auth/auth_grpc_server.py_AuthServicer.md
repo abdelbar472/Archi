@@ -1,7 +1,7 @@
 # auth/grpc_server.py::AuthServicer
 
 **Type:** grpc
-**Community:** 1
+**Community:** 0
 
 ## Outgoing Connections
 

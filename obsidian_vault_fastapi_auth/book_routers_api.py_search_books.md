@@ -1,4 +1,4 @@
 # book/routers/api.py::search_books
 
-**Type:** function
+**Type:** fastapi_endpoint
 **Community:** 6

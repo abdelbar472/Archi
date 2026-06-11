@@ -1,7 +1,7 @@
 # rag/main.py::lifespan
 
 **Type:** function
-**Community:** 25
+**Community:** 18
 
 ## Outgoing Connections
 

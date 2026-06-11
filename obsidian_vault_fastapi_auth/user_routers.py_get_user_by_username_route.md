@@ -1,7 +1,7 @@
 # user/routers.py::get_user_by_username_route
 
-**Type:** function
-**Community:** 32
+**Type:** fastapi_endpoint
+**Community:** 26
 
 ## Outgoing Connections
 

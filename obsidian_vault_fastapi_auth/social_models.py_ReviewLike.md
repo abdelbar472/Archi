@@ -1,7 +1,7 @@
 # social/models.py::ReviewLike
 
 **Type:** model
-**Community:** 29
+**Community:** 22
 
 ## Outgoing Connections
 

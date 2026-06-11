@@ -368,13 +368,13 @@
     },
     {
       "id": "galileo/chat/signals.py::create_space_chat_room",
-      "type": "function",
+      "type": "django_signal",
       "community": 4,
       "external": false
     },
     {
       "id": "galileo/chat/signals.py::create_team_chat_room",
-      "type": "function",
+      "type": "django_signal",
       "community": 4,
       "external": false
     },
@@ -1466,7 +1466,7 @@
     },
     {
       "id": "galileo/space/signals.py::space_created_or_updated",
-      "type": "function",
+      "type": "django_signal",
       "community": 12,
       "external": false
     },
@@ -1484,43 +1484,43 @@
     },
     {
       "id": "galileo/space/signals.py::space_membership_created",
-      "type": "function",
+      "type": "django_signal",
       "community": 12,
       "external": false
     },
     {
       "id": "galileo/space/signals.py::space_membership_deleted",
-      "type": "function",
+      "type": "django_signal",
       "community": 12,
       "external": false
     },
     {
       "id": "galileo/space/signals.py::invitation_created",
-      "type": "function",
+      "type": "django_signal",
       "community": 12,
       "external": false
     },
     {
       "id": "galileo/space/signals.py::team_created_or_updated",
-      "type": "function",
+      "type": "django_signal",
       "community": 12,
       "external": false
     },
     {
       "id": "galileo/space/signals.py::team_membership_created",
-      "type": "function",
+      "type": "django_signal",
       "community": 12,
       "external": false
     },
     {
       "id": "galileo/space/signals.py::team_membership_deleted",
-      "type": "function",
+      "type": "django_signal",
       "community": 12,
       "external": false
     },
     {
       "id": "galileo/space/signals.py::workspace_created",
-      "type": "function",
+      "type": "django_signal",
       "community": 12,
       "external": false
     },
@@ -2473,7 +2473,7 @@
       "external": false
     },
     {
-      "id": "Model",
+      "id": "BaseCommand",
       "type": "type",
       "community": -1,
       "external": false
@@ -2485,31 +2485,7 @@
       "external": false
     },
     {
-      "id": "AppConfig",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.RetrieveUpdateDestroyAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "PermissionsMixin",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.RetrieveAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "serializers.Serializer",
+      "id": "Model",
       "type": "type",
       "community": -1,
       "external": false
@@ -2521,7 +2497,13 @@
       "external": false
     },
     {
-      "id": "permissions.BasePermission",
+      "id": "AppConfig",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.CreateAPIView",
       "type": "type",
       "community": -1,
       "external": false
@@ -2539,55 +2521,19 @@
       "external": false
     },
     {
-      "id": "generics.ListAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "serializers.ModelSerializer",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.ListCreateAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
       "id": "generics.UpdateAPIView",
       "type": "type",
       "community": -1,
       "external": false
     },
     {
-      "id": "APIView",
+      "id": "AbstractBaseUser",
       "type": "type",
       "community": -1,
       "external": false
     },
     {
-      "id": "BaseCommand",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.CreateAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "BaseMiddleware",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "BaseAuthentication",
+      "id": "PermissionsMixin",
       "type": "type",
       "community": -1,
       "external": false
@@ -2599,13 +2545,67 @@
       "external": false
     },
     {
+      "id": "generics.ListAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "APIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseMiddleware",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "serializers.Serializer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseAuthentication",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "permissions.BasePermission",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
       "id": "viewsets.ModelViewSet",
       "type": "type",
       "community": -1,
       "external": false
     },
     {
-      "id": "AbstractBaseUser",
+      "id": "generics.ListCreateAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.RetrieveUpdateDestroyAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.RetrieveAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "serializers.ModelSerializer",
       "type": "type",
       "community": -1,
       "external": false
@@ -5198,7 +5198,7 @@
     "total_nodes": 435,
     "total_edges": 516,
     "generated_by": "Tempory Mapper v1.0",
-    "scan_date": "2026-06-11T03:20:31.422903",
+    "scan_date": "2026-06-11T08:22:49.050916",
     "communities_count": 20,
     "god_nodes": {
       "internal": [

@@ -1,7 +1,7 @@
 # auth/main.py::lifespan
 
 **Type:** function
-**Community:** 1
+**Community:** 0
 
 ## Outgoing Connections
 

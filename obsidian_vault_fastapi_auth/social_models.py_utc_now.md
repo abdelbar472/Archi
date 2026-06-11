@@ -1,7 +1,7 @@
 # social/models.py::utc_now
 
 **Type:** function
-**Community:** 29
+**Community:** 22
 
 ## Outgoing Connections
 

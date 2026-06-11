@@ -1,7 +1,7 @@
 # rag/grpc_server.py::_as_candidate
 
 **Type:** function
-**Community:** 25
+**Community:** 19
 
 ## Outgoing Connections
 

@@ -1,7 +1,7 @@
 # rag/routers.py::sync_book_by_work_id
 
-**Type:** function
-**Community:** 24
+**Type:** fastapi_endpoint
+**Community:** 18
 
 ## Outgoing Connections
 

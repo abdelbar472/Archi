@@ -1,7 +1,7 @@
 # proto/book_v4_pb2_grpc.py
 
-**Type:** file
-**Community:** 15
+**Type:** grpc
+**Community:** 16
 
 ## Outgoing Connections
 

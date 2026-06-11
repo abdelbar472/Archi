@@ -1,7 +1,7 @@
 # proto/rag_pb2_grpc.py::RagServiceServicer
 
 **Type:** grpc
-**Community:** 19
+**Community:** 15
 
 ## Outgoing Connections
 

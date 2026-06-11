@@ -1,4 +1,4 @@
 # rag/routers.py::semantic_search
 
-**Type:** function
-**Community:** 24
+**Type:** fastapi_endpoint
+**Community:** 18

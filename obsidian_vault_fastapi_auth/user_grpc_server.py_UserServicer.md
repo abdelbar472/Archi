@@ -1,7 +1,7 @@
 # user/grpc_server.py::UserServicer
 
 **Type:** grpc
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

@@ -1,7 +1,7 @@
 # social/book_grpc_client.py::assert_book_exists
 
 **Type:** function
-**Community:** 28
+**Community:** 21
 
 ## Outgoing Connections
 

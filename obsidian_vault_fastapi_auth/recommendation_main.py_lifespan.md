@@ -1,7 +1,7 @@
 # recommendation/main.py::lifespan
 
 **Type:** function
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

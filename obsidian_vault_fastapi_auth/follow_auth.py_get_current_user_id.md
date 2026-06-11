@@ -1,7 +1,7 @@
 # follow/auth.py::get_current_user_id
 
 **Type:** function
-**Community:** 8
+**Community:** 10
 
 ## Outgoing Connections
 

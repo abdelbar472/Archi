@@ -1,4 +1,4 @@
 # auth/database.py::get_session
 
 **Type:** function
-**Community:** 1
+**Community:** 0

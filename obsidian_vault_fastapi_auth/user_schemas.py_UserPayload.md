@@ -1,7 +1,7 @@
 # user/schemas.py::UserPayload
 
 **Type:** fastapi_schema
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

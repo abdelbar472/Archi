@@ -1,7 +1,7 @@
 # follow/routers.py::follow_stats
 
-**Type:** function
-**Community:** 8
+**Type:** fastapi_endpoint
+**Community:** 10
 
 ## Outgoing Connections
 

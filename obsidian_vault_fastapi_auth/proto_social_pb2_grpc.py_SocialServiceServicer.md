@@ -1,7 +1,7 @@
 # proto/social_pb2_grpc.py::SocialServiceServicer
 
 **Type:** grpc
-**Community:** 22
+**Community:** 17
 
 ## Outgoing Connections
 

@@ -1,7 +1,7 @@
 # social/book_grpc_client.py
 
-**Type:** file
-**Community:** 28
+**Type:** grpc
+**Community:** 21
 
 ## Outgoing Connections
 

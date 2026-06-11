@@ -1,4 +1,4 @@
 # book/main.py::root
 
-**Type:** function
+**Type:** fastapi_endpoint
 **Community:** 4

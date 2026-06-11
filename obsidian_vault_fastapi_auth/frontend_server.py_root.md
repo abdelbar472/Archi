@@ -1,4 +1,4 @@
 # frontend/server.py::root
 
-**Type:** function
-**Community:** 0
+**Type:** fastapi_endpoint
+**Community:** 8

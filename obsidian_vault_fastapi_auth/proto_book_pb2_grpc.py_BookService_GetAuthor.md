@@ -1,4 +1,4 @@
 # proto/book_pb2_grpc.py::BookService::GetAuthor
 
 **Type:** method
-**Community:** 13
+**Community:** 11

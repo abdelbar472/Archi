@@ -1,7 +1,7 @@
 # rag/qdrant_client.py::get_qdrant
 
 **Type:** function
-**Community:** 25
+**Community:** 18
 
 ## Outgoing Connections
 

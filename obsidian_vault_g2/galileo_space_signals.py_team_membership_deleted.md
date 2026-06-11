@@ -1,4 +1,4 @@
 # galileo/space/signals.py::team_membership_deleted
 
-**Type:** function
+**Type:** django_signal
 **Community:** 12

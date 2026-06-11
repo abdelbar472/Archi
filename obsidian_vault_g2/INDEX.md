@@ -1,6 +1,6 @@
 # g2 Architecture
 
-Generated on 2026-06-11T03:20:31.422903
+Generated on 2026-06-11T08:22:49.050916
 Nodes: 435 | Edges: 516
 
 ## 🔥 Top God Nodes

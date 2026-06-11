@@ -1,7 +1,7 @@
 # user/routers.py::get_current_user
 
 **Type:** function
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

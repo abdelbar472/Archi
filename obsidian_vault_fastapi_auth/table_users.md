@@ -1,4 +1,4 @@
 # table:users
 
 **Type:** table
-**Community:** 1
+**Community:** 0

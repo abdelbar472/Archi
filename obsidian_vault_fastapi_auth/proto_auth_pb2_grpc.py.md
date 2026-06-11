@@ -1,7 +1,7 @@
 # proto/auth_pb2_grpc.py
 
-**Type:** file
-**Community:** 11
+**Type:** grpc
+**Community:** 13
 
 ## Outgoing Connections
 

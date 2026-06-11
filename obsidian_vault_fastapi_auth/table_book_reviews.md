@@ -1,4 +1,4 @@
 # table:book_reviews
 
 **Type:** table
-**Community:** 29
+**Community:** 22

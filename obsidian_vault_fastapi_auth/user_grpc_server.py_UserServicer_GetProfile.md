@@ -1,4 +1,4 @@
 # user/grpc_server.py::UserServicer::GetProfile
 
 **Type:** method
-**Community:** 32
+**Community:** 26

@@ -1,7 +1,7 @@
 # book/grpc_client.py::RAGServiceGRPCClient
 
 **Type:** grpc
-**Community:** 4
+**Community:** 3
 
 ## Outgoing Connections
 

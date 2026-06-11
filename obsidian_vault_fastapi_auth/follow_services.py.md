@@ -1,7 +1,7 @@
 # follow/services.py
 
 **Type:** service
-**Community:** 8
+**Community:** 10
 
 ## Outgoing Connections
 

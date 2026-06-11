@@ -1,4 +1,4 @@
 # rag/services.py::IndexingService::batch_index
 
 **Type:** method
-**Community:** 25
+**Community:** 18

@@ -1,4 +1,4 @@
 # rag/config.py::Config
 
 **Type:** file
-**Community:** 25
+**Community:** 18

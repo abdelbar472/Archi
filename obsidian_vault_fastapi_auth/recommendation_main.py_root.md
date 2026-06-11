@@ -1,4 +1,4 @@
 # recommendation/main.py::root
 
-**Type:** function
-**Community:** 27
+**Type:** fastapi_endpoint
+**Community:** 20

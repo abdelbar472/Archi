@@ -1,7 +1,7 @@
 # user/main.py::log_requests
 
 **Type:** function
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

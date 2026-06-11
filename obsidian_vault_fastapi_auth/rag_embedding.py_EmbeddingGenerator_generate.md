@@ -1,4 +1,4 @@
 # rag/embedding.py::EmbeddingGenerator::generate
 
 **Type:** method
-**Community:** 25
+**Community:** 18

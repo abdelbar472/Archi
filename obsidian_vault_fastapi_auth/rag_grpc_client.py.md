@@ -1,7 +1,7 @@
 # rag/grpc_client.py
 
-**Type:** file
-**Community:** 25
+**Type:** grpc
+**Community:** 18
 
 ## Outgoing Connections
 

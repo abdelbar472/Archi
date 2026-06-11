@@ -1,7 +1,7 @@
 # recommendation/grpc_server.py::GRPCServer::start
 
 **Type:** method
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

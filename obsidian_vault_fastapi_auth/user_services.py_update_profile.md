@@ -1,7 +1,7 @@
 # user/services.py::update_profile
 
 **Type:** function
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

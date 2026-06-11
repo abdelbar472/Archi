@@ -1,7 +1,7 @@
 # recommendation/profile.py::UserProfileBuilder::from_history
 
 **Type:** method
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

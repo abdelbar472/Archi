@@ -1,7 +1,7 @@
 # follow/models.py
 
 **Type:** model
-**Community:** 8
+**Community:** 10
 
 ## Outgoing Connections
 

@@ -1,4 +1,4 @@
 # api_gateway/main.py::root
 
-**Type:** function
-**Community:** 0
+**Type:** fastapi_endpoint
+**Community:** 8

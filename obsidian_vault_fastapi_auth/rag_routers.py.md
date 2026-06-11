@@ -1,7 +1,7 @@
 # rag/routers.py
 
 **Type:** router
-**Community:** 24
+**Community:** 18
 
 ## Outgoing Connections
 

@@ -1,7 +1,7 @@
 # rag/vector_store.py::VectorStore
 
 **Type:** file
-**Community:** 26
+**Community:** 18
 
 ## Outgoing Connections
 

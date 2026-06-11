@@ -1,7 +1,7 @@
 # social/services.py::list_book_reviews
 
 **Type:** function
-**Community:** 31
+**Community:** 25
 
 ## Outgoing Connections
 

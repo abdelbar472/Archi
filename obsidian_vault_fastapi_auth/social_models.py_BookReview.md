@@ -1,7 +1,7 @@
 # social/models.py::BookReview
 
 **Type:** model
-**Community:** 29
+**Community:** 22
 
 ## Outgoing Connections
 

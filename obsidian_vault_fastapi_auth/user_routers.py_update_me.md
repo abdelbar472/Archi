@@ -1,7 +1,7 @@
 # user/routers.py::update_me
 
-**Type:** function
-**Community:** 32
+**Type:** fastapi_endpoint
+**Community:** 26
 
 ## Outgoing Connections
 

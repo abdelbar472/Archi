@@ -1,7 +1,7 @@
 # social/services.py::get_my_rating
 
 **Type:** function
-**Community:** 31
+**Community:** 25
 
 ## Outgoing Connections
 

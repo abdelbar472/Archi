@@ -1,7 +1,7 @@
 # social/routers.py::list_my_shelves_route
 
-**Type:** function
-**Community:** 30
+**Type:** fastapi_endpoint
+**Community:** 23
 
 ## Outgoing Connections
 

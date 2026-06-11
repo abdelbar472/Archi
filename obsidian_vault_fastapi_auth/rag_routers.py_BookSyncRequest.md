@@ -1,7 +1,7 @@
 # rag/routers.py::BookSyncRequest
 
 **Type:** fastapi_schema
-**Community:** 24
+**Community:** 18
 
 ## Outgoing Connections
 

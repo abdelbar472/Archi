@@ -1,7 +1,7 @@
 # rag/grpc_server.py::RagServicer::IndexBooks
 
 **Type:** method
-**Community:** 25
+**Community:** 19
 
 ## Outgoing Connections
 

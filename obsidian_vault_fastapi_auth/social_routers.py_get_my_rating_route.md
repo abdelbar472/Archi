@@ -1,7 +1,7 @@
 # social/routers.py::get_my_rating_route
 
-**Type:** function
-**Community:** 30
+**Type:** fastapi_endpoint
+**Community:** 23
 
 ## Outgoing Connections
 

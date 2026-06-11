@@ -1,7 +1,7 @@
 # recommendation/config.py::get_settings
 
 **Type:** function
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

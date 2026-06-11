@@ -1,4 +1,4 @@
 # table:shelves
 
 **Type:** table
-**Community:** 29
+**Community:** 22

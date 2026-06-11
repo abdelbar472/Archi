@@ -1,4 +1,4 @@
 # rag/engine.py::RAGEngine::_embedding_is_ready
 
 **Type:** method
-**Community:** 25
+**Community:** 18

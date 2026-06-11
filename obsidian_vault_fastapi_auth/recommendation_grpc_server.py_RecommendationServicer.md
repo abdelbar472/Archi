@@ -1,7 +1,7 @@
 # recommendation/grpc_server.py::RecommendationServicer
 
 **Type:** grpc
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

@@ -1,6 +1,6 @@
 # book/grpc_server.py
 
-**Type:** file
+**Type:** grpc
 **Community:** 4
 
 ## Outgoing Connections

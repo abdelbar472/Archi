@@ -1,7 +1,7 @@
 # social/recommendation_grpc_client.py::track_interaction
 
 **Type:** function
-**Community:** 28
+**Community:** 21
 
 ## Outgoing Connections
 

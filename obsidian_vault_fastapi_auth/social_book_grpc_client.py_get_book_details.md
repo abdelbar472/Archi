@@ -1,7 +1,7 @@
 # social/book_grpc_client.py::get_book_details
 
 **Type:** function
-**Community:** 28
+**Community:** 21
 
 ## Outgoing Connections
 

@@ -1,7 +1,7 @@
 # auth/services.py::revoke_refresh_token
 
 **Type:** function
-**Community:** 2
+**Community:** 1
 
 ## Outgoing Connections
 

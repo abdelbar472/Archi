@@ -1,4 +1,4 @@
 # rag/grpc_client.py::BookServiceGRPCClient::close
 
 **Type:** method
-**Community:** 25
+**Community:** 18

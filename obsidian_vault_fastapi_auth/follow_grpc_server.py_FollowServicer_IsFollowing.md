@@ -1,4 +1,4 @@
 # follow/grpc_server.py::FollowServicer::IsFollowing
 
 **Type:** method
-**Community:** 8
+**Community:** 10

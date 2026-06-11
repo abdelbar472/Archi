@@ -1,7 +1,7 @@
 # social/schemas.py
 
 **Type:** model
-**Community:** 28
+**Community:** 24
 
 ## Outgoing Connections
 

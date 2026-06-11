@@ -1,7 +1,7 @@
 # api_gateway
 
 **Type:** folder
-**Community:** 0
+**Community:** 8
 
 ## Outgoing Connections
 

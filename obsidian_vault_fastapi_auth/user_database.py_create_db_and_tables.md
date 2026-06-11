@@ -1,7 +1,7 @@
 # user/database.py::create_db_and_tables
 
 **Type:** function
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

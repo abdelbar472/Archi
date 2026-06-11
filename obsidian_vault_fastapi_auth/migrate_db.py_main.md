@@ -1,7 +1,7 @@
 # migrate_db.py::main
 
 **Type:** function
-**Community:** 0
+**Community:** 8
 
 ## Outgoing Connections
 

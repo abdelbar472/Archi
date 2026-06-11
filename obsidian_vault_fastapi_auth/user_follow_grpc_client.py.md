@@ -1,7 +1,7 @@
 # user/follow_grpc_client.py
 
-**Type:** file
-**Community:** 32
+**Type:** grpc
+**Community:** 26
 
 ## Outgoing Connections
 

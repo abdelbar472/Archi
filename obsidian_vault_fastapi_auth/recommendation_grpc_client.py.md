@@ -1,7 +1,7 @@
 # recommendation/grpc_client.py
 
-**Type:** file
-**Community:** 27
+**Type:** grpc
+**Community:** 20
 
 ## Outgoing Connections
 

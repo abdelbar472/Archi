@@ -1,7 +1,7 @@
 # proto/recommendation_pb2_grpc.py::RecommendationService
 
 **Type:** grpc
-**Community:** 21
+**Community:** 16
 
 ## Outgoing Connections
 

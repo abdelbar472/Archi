@@ -1,7 +1,7 @@
 # auth/schemas.py::UserResponse
 
 **Type:** model
-**Community:** 1
+**Community:** 0
 
 ## Outgoing Connections
 

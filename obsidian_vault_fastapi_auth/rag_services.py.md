@@ -1,7 +1,7 @@
 # rag/services.py
 
 **Type:** service
-**Community:** 25
+**Community:** 18
 
 ## Outgoing Connections
 

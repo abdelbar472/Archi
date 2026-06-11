@@ -1,4 +1,4 @@
 # recommendation/config.py::Config
 
 **Type:** file
-**Community:** 27
+**Community:** 20

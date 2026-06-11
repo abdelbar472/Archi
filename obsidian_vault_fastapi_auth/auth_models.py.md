@@ -1,7 +1,7 @@
 # auth/models.py
 
 **Type:** model
-**Community:** 1
+**Community:** 0
 
 ## Outgoing Connections
 

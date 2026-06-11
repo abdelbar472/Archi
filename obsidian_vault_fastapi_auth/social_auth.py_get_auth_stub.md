@@ -1,7 +1,7 @@
 # social/auth.py::_get_auth_stub
 
 **Type:** function
-**Community:** 28
+**Community:** 21
 
 ## Outgoing Connections
 

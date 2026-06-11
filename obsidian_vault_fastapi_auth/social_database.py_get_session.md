@@ -1,4 +1,4 @@
 # social/database.py::get_session
 
 **Type:** function
-**Community:** 28
+**Community:** 21

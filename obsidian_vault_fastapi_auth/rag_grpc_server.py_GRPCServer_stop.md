@@ -1,4 +1,4 @@
 # rag/grpc_server.py::GRPCServer::stop
 
 **Type:** method
-**Community:** 25
+**Community:** 19

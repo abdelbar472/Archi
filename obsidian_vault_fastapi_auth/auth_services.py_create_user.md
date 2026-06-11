@@ -1,7 +1,7 @@
 # auth/services.py::create_user
 
 **Type:** function
-**Community:** 2
+**Community:** 1
 
 ## Outgoing Connections
 

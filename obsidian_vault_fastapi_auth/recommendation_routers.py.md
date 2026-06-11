@@ -1,7 +1,7 @@
 # recommendation/routers.py
 
 **Type:** router
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

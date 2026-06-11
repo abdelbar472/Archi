@@ -1,7 +1,7 @@
 # proto/user_pb2_grpc.py::UserService
 
 **Type:** grpc
-**Community:** 23
+**Community:** 16
 
 ## Outgoing Connections
 

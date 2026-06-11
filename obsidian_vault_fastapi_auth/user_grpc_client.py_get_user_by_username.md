@@ -1,7 +1,7 @@
 # user/grpc_client.py::get_user_by_username
 
 **Type:** function
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

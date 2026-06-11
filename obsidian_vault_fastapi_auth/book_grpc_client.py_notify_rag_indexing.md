@@ -1,4 +1,4 @@
 # book/grpc_client.py::notify_rag_indexing
 
 **Type:** function
-**Community:** 4
+**Community:** 3

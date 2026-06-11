@@ -1,7 +1,7 @@
 # follow/services.py::get_followers
 
 **Type:** function
-**Community:** 8
+**Community:** 10
 
 ## Outgoing Connections
 

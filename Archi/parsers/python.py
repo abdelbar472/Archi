@@ -1,4 +1,4 @@
-"""Python parser — AST-based with rich framework detection (FastAPI + Django)."""
+"""Python parser — Deep AST-based with rich FastAPI + Django detection."""
 import ast
 from pathlib import Path
 
@@ -8,7 +8,7 @@ from .base import BaseParser
 class PythonParser(BaseParser):
     METHOD = "ast"
 
-    # Framework detection helpers
+    # Framework signatures
     FASTAPI_DECORATORS = {'get', 'post', 'put', 'delete', 'patch', 'options', 'head', 'trace'}
     DJANGO_VIEW_BASES = {'APIView', 'ViewSet', 'ModelViewSet', 'GenericAPIView', 
                         'CreateAPIView', 'ListAPIView', 'RetrieveAPIView',
@@ -30,6 +30,7 @@ class PythonParser(BaseParser):
 
         func_nodes = []
 
+        # Class definitions with framework detection
         for node in ast.walk(tree):
             if isinstance(node, ast.ClassDef):
                 class_id = self._register_class(node, file_id)
@@ -42,10 +43,11 @@ class PythonParser(BaseParser):
                         self._extract_annotations(item, method_id)
                         func_nodes.append((method_id, item))
 
-        # Top-level functions
+        # Top-level functions + decorator detection
         for node in tree.body:
             if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
-                func_id = self._add_def(file_id, node.name, "function")
+                func_type = self._detect_function_type(node)
+                func_id = self._add_def(file_id, node.name, func_type)
                 self._extract_annotations(node, func_id)
                 func_nodes.append((func_id, node))
 
@@ -73,10 +75,23 @@ class PythonParser(BaseParser):
             node_type = "django_app"
         elif any('BaseModel' in b for b in base_names):
             node_type = "fastapi_schema"
+        elif any('APIRouter' in self._expr_to_str(b) for b in node.bases):
+            node_type = "fastapi_router"
         else:
             node_type = self._detect_type(file_id)
 
         return self._add_def(file_id, node.name, node_type)
+
+    def _detect_function_type(self, node):
+        """Detect FastAPI endpoints and Django signals"""
+        for dec in node.decorator_list:
+            if isinstance(dec, ast.Call):
+                name = self._expr_to_str(dec.func)
+                if any(d in name for d in self.FASTAPI_DECORATORS):
+                    return "fastapi_endpoint"
+                if 'receiver' in name:
+                    return "django_signal"
+        return "function"
 
     def _expr_to_str(self, expr):
         try:
@@ -84,23 +99,23 @@ class PythonParser(BaseParser):
         except:
             return str(expr)
 
-    def _extract_database_mapping(self, node: ast.ClassDef, class_id: str, file_id: str):
+    def _extract_database_mapping(self, node, class_id, file_id):
         for item in node.body:
             if isinstance(item, ast.Assign):
                 for target in item.targets:
                     if isinstance(target, ast.Name) and isinstance(item.value, ast.Constant):
                         if target.id == "__tablename__":
-                            table_name = f"table:{item.value.value}"
-                            self.graph.add_node(table_name, "table")
-                            self.graph.add_edge(class_id, table_name, "maps_to")
+                            table = f"table:{item.value.value}"
+                            self.graph.add_node(table, "table")
+                            self.graph.add_edge(class_id, table, "maps_to")
                             return
                         if target.id in ("__collection__", "collection"):
-                            coll_name = f"collection:{item.value.value}"
-                            self.graph.add_node(coll_name, "collection")
-                            self.graph.add_edge(class_id, coll_name, "maps_to")
+                            coll = f"collection:{item.value.value}"
+                            self.graph.add_node(coll, "collection")
+                            self.graph.add_edge(class_id, coll, "maps_to")
                             return
 
-    def _extract_inheritance(self, node: ast.ClassDef, class_id: str):
+    def _extract_inheritance(self, node, class_id):
         for base in node.bases:
             try:
                 base_name = self._expr_to_str(base)
@@ -110,7 +125,6 @@ class PythonParser(BaseParser):
                 pass
 
     def _extract_annotations(self, func_node, func_id: str):
-        """Extract param and return type annotations"""
         for arg in func_node.args.args:
             type_name = self._resolve_annotation(arg.annotation)
             if type_name:
@@ -121,20 +135,18 @@ class PythonParser(BaseParser):
             if type_name:
                 self._add_type_edge(func_id, type_name, "return_type")
 
-    def _resolve_annotation(self, annotation) -> str | None:
-        if annotation is None:
+    def _resolve_annotation(self, annotation):
+        if not annotation:
             return None
         if isinstance(annotation, ast.Name):
             return annotation.id
-        if isinstance(annotation, ast.Subscript):
-            return self._subscript_base(annotation)
         if isinstance(annotation, ast.Attribute):
             return annotation.attr
-        if isinstance(annotation, ast.Constant) and isinstance(annotation.value, str):
-            return annotation.value
+        if isinstance(annotation, ast.Subscript):
+            return self._subscript_base(annotation)
         return None
 
-    def _subscript_base(self, node) -> str | None:
+    def _subscript_base(self, node):
         if isinstance(node, ast.Name):
             return node.id
         if isinstance(node, ast.Subscript):
@@ -143,7 +155,7 @@ class PythonParser(BaseParser):
             return node.attr
         return None
 
-    def _parse_imports(self, tree, file_id: str):
+    def _parse_imports(self, tree, file_id):
         for node in ast.walk(tree):
             if isinstance(node, ast.ImportFrom) and node.module:
                 target = f"{node.module.replace('.', '/')}.py"

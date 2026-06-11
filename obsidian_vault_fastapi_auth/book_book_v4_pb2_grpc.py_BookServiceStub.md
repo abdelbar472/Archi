@@ -1,7 +1,7 @@
 # book/book_v4_pb2_grpc.py::BookServiceStub
 
 **Type:** grpc
-**Community:** 3
+**Community:** 2
 
 ## Outgoing Connections
 

@@ -1,7 +1,7 @@
 # follow/grpc_client.py::get_follow_stats
 
 **Type:** function
-**Community:** 8
+**Community:** 9
 
 ## Outgoing Connections
 

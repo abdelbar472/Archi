@@ -1,4 +1,4 @@
 # rag/main.py::root
 
-**Type:** function
-**Community:** 25
+**Type:** fastapi_endpoint
+**Community:** 18

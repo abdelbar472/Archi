@@ -1,4 +1,4 @@
 # book/routers/api.py::health
 
-**Type:** function
+**Type:** fastapi_endpoint
 **Community:** 6

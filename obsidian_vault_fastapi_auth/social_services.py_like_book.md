@@ -1,7 +1,7 @@
 # social/services.py::like_book
 
 **Type:** function
-**Community:** 31
+**Community:** 25
 
 ## Outgoing Connections
 

@@ -1,7 +1,7 @@
 # social/services.py
 
 **Type:** service
-**Community:** 31
+**Community:** 25
 
 ## Outgoing Connections
 

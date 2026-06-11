@@ -1,7 +1,7 @@
 # user/grpc_client.py::refresh_token
 
 **Type:** function
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

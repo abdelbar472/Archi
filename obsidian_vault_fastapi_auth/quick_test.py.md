@@ -1,7 +1,7 @@
 # quick_test.py
 
 **Type:** test
-**Community:** 0
+**Community:** 8
 
 ## Outgoing Connections
 

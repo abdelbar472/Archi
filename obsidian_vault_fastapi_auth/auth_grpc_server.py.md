@@ -1,7 +1,7 @@
 # auth/grpc_server.py
 
-**Type:** file
-**Community:** 1
+**Type:** grpc
+**Community:** 0
 
 ## Outgoing Connections
 

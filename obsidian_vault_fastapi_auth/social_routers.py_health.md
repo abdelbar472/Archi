@@ -1,4 +1,4 @@
 # social/routers.py::health
 
-**Type:** function
-**Community:** 30
+**Type:** fastapi_endpoint
+**Community:** 23

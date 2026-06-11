@@ -1,4 +1,4 @@
 # table:follows
 
 **Type:** table
-**Community:** 8
+**Community:** 10

@@ -1,7 +1,7 @@
 # recommendation/routers.py::update_profile_event
 
-**Type:** function
-**Community:** 27
+**Type:** fastapi_endpoint
+**Community:** 20
 
 ## Outgoing Connections
 

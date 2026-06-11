@@ -1,7 +1,7 @@
 # auth/schemas.py::TokenData
 
 **Type:** fastapi_schema
-**Community:** 1
+**Community:** 0
 
 ## Outgoing Connections
 

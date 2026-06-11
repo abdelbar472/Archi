@@ -1,7 +1,7 @@
 # social/services.py::get_book_social_stats
 
 **Type:** function
-**Community:** 31
+**Community:** 25
 
 ## Outgoing Connections
 

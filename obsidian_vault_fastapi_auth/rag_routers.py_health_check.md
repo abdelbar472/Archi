@@ -1,4 +1,4 @@
 # rag/routers.py::health_check
 
-**Type:** function
-**Community:** 24
+**Type:** fastapi_endpoint
+**Community:** 18

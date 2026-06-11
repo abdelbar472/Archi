@@ -1,7 +1,7 @@
 # proto/follow_pb2_grpc.py::FollowServiceStub
 
 **Type:** grpc
-**Community:** 17
+**Community:** 14
 
 ## Outgoing Connections
 

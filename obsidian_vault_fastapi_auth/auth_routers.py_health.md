@@ -1,4 +1,4 @@
 # auth/routers.py::health
 
-**Type:** function
-**Community:** 1
+**Type:** fastapi_endpoint
+**Community:** 0

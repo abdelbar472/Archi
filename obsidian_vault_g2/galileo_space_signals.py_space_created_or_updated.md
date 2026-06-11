@@ -1,6 +1,6 @@
 # galileo/space/signals.py::space_created_or_updated
 
-**Type:** function
+**Type:** django_signal
 **Community:** 12
 
 ## Outgoing Connections

@@ -1,7 +1,7 @@
 # recommendation/service.py
 
 **Type:** service
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

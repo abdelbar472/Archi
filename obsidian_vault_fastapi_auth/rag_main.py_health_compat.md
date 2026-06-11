@@ -1,4 +1,4 @@
 # rag/main.py::health_compat
 
-**Type:** function
-**Community:** 25
+**Type:** fastapi_endpoint
+**Community:** 18

@@ -1,7 +1,7 @@
 # book/book_v4_pb2_grpc.py
 
-**Type:** file
-**Community:** 3
+**Type:** grpc
+**Community:** 2
 
 ## Outgoing Connections
 

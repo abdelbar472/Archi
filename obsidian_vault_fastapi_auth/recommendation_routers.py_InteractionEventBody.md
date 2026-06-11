@@ -1,7 +1,7 @@
 # recommendation/routers.py::InteractionEventBody
 
 **Type:** fastapi_schema
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

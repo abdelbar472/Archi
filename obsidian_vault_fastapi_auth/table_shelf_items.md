@@ -1,4 +1,4 @@
 # table:shelf_items
 
 **Type:** table
-**Community:** 29
+**Community:** 22

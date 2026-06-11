@@ -1,7 +1,7 @@
 # social/grpc_server.py::SocialServicer
 
 **Type:** grpc
-**Community:** 28
+**Community:** 21
 
 ## Outgoing Connections
 

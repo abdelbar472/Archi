@@ -1,4 +1,4 @@
 # table:user_profiles
 
 **Type:** table
-**Community:** 32
+**Community:** 26

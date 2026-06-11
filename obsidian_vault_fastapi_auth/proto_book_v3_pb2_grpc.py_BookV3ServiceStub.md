@@ -1,7 +1,7 @@
 # proto/book_v3_pb2_grpc.py::BookV3ServiceStub
 
 **Type:** grpc
-**Community:** 14
+**Community:** 12
 
 ## Outgoing Connections
 

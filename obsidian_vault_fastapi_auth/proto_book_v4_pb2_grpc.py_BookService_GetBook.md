@@ -1,4 +1,4 @@
 # proto/book_v4_pb2_grpc.py::BookService::GetBook
 
 **Type:** method
-**Community:** 15
+**Community:** 16

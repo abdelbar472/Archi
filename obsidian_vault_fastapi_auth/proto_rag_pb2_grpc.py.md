@@ -1,7 +1,7 @@
 # proto/rag_pb2_grpc.py
 
-**Type:** file
-**Community:** 19
+**Type:** grpc
+**Community:** 15
 
 ## Outgoing Connections
 

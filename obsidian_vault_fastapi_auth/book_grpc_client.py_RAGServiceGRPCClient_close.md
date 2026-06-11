@@ -1,4 +1,4 @@
 # book/grpc_client.py::RAGServiceGRPCClient::close
 
 **Type:** method
-**Community:** 4
+**Community:** 3

@@ -1,7 +1,7 @@
 # follow/main.py::log_requests
 
 **Type:** function
-**Community:** 8
+**Community:** 10
 
 ## Outgoing Connections
 

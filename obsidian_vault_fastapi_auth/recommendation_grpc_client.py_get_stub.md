@@ -1,7 +1,7 @@
 # recommendation/grpc_client.py::_get_stub
 
 **Type:** function
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

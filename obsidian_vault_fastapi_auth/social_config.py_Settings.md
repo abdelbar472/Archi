@@ -1,7 +1,7 @@
 # social/config.py::Settings
 
 **Type:** file
-**Community:** 28
+**Community:** 21
 
 ## Outgoing Connections
 

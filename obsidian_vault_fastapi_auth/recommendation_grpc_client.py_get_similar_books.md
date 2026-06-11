@@ -1,7 +1,7 @@
 # recommendation/grpc_client.py::get_similar_books
 
 **Type:** function
-**Community:** 27
+**Community:** 20
 
 ## Outgoing Connections
 

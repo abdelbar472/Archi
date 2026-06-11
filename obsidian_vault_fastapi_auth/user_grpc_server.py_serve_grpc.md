@@ -1,7 +1,7 @@
 # user/grpc_server.py::serve_grpc
 
 **Type:** function
-**Community:** 32
+**Community:** 26
 
 ## Outgoing Connections
 

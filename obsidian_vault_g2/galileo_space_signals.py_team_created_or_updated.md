@@ -1,4 +1,4 @@
 # galileo/space/signals.py::team_created_or_updated
 
-**Type:** function
+**Type:** django_signal
 **Community:** 12

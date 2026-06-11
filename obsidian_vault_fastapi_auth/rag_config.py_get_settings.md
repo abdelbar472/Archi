@@ -1,7 +1,7 @@
 # rag/config.py::get_settings
 
 **Type:** function
-**Community:** 25
+**Community:** 18
 
 ## Outgoing Connections
 

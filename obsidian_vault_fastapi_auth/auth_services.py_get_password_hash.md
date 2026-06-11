@@ -1,4 +1,4 @@
 # auth/services.py::get_password_hash
 
 **Type:** function
-**Community:** 2
+**Community:** 1

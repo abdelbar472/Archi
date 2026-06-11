@@ -1,4 +1,4 @@
 # book/routers/api.py::get_author_books
 
-**Type:** function
+**Type:** fastapi_endpoint
 **Community:** 6

@@ -1,7 +1,7 @@
 # social/routers.py
 
 **Type:** router
-**Community:** 30
+**Community:** 23
 
 ## Outgoing Connections
 
