@@ -1,8 +1,9 @@
-# Frontend Service
+# frontend
 
-**Overview**: Main functionality for the frontend module.
+**Type:** folder
+**Community:** 0
 
-## Key Components
+## Outgoing Connections
 
-## Related Services
-- [[root]]
+### Contains
+- [[frontend_server.py]]

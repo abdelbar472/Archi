@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "ff2861fa51ddf117",
+    "id": "1b62ec4f22013b79",
     "type": "split",
     "children": [
       {
-        "id": "52ddd32de031e6b2",
+        "id": "e257a1bcaa689faa",
         "type": "tabs",
         "children": [
           {
-            "id": "d0e476e4f84a2a1a",
+            "id": "822f682d35a6ec18",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -23,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "00f46c1a5852f7b8",
+    "id": "05796a0b0c0cc072",
     "type": "split",
     "children": [
       {
-        "id": "f53b6eee4de88e0f",
+        "id": "c172d78bd1099155",
         "type": "tabs",
         "children": [
           {
-            "id": "30feb3f2db8d6bcb",
+            "id": "40d1524f1317531c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +44,7 @@
             }
           },
           {
-            "id": "1ebb3a6657193e04",
+            "id": "25f790cdea749620",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,7 +61,7 @@
             }
           },
           {
-            "id": "104d13914218aa49",
+            "id": "586e1fd4237cf65f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,15 +77,15 @@
     "width": 300
   },
   "right": {
-    "id": "dc6c26a5e0093766",
+    "id": "e0020876ec5a5777",
     "type": "split",
     "children": [
       {
-        "id": "e1690e79456dfb19",
+        "id": "38ac7cb25ee7aadb",
         "type": "tabs",
         "children": [
           {
-            "id": "c20dc0a5be931271",
+            "id": "16ebaa5e6ce1a3c0",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -103,7 +103,7 @@
             }
           },
           {
-            "id": "bdde15a2f01555fb",
+            "id": "1521659b5ce4c18b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -116,7 +116,7 @@
             }
           },
           {
-            "id": "df388c6e982cc599",
+            "id": "4d19ab1f698c31c0",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -131,7 +131,7 @@
             }
           },
           {
-            "id": "fd6df4ae309134a7",
+            "id": "d2f32a88de449cac",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -145,7 +145,7 @@
             }
           },
           {
-            "id": "c53a93ab85d0a8ec",
+            "id": "7dd4276cebf4edf0",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -176,8 +176,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "d0e476e4f84a2a1a",
+  "active": "822f682d35a6ec18",
   "lastOpenFiles": [
-    "galileo_chat_models.py.md"
+    "galileo_outh_serializers.py_LoginSerializer.md",
+    "galileo_outh_serializers.py.md",
+    "galileo_outh.md",
+    "serializers.ModelSerializer.md",
+    "INDEX.md"
   ]
 }

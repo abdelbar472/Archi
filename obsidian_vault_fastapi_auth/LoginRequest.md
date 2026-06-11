@@ -1,0 +1,3 @@
+# LoginRequest
+
+**Type:** type

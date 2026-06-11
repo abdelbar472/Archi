@@ -1,0 +1,3 @@
+# generics.RetrieveUpdateDestroyAPIView
+
+**Type:** type

@@ -1,31 +1,36 @@
-# Proto Service
+# proto
 
-**Overview**: Main functionality for the proto module.
+**Type:** folder
+**Community:** 10
 
-## Key Components
-- [[proto_auth.proto_AuthService]] **(service)**
-- [[proto_book.proto_BookService]] **(service)**
-- [[proto_book_v3.proto_BookV3Service]] **(service)**
-- [[proto_book_v4.proto_BookService]] **(service)**
-- [[proto_follow.proto_FollowService]] **(service)**
-- [[proto_rag.proto_RagService]] **(service)**
-- [[proto_recommendation.proto_RecommendationService]] **(service)**
-- [[proto_social.proto_SocialService]] **(service)**
-- [[proto_user.proto_UserService]] **(service)**
+## Outgoing Connections
 
-## Database
-- [[proto_auth_pb2_grpc.py_AuthService]] (model)
-- [[proto_auth_pb2_grpc.py_AuthServiceServicer]] (model)
-- [[proto_auth_pb2_grpc.py_AuthServiceStub]] (model)
-- [[proto_book_pb2_grpc.py_BookService]] (model)
-- [[proto_book_pb2_grpc.py_BookServiceServicer]] (model)
-- [[proto_book_pb2_grpc.py_BookServiceStub]] (model)
-- [[proto_book_v3_pb2_grpc.py_BookV3Service]] (model)
-- [[proto_book_v3_pb2_grpc.py_BookV3ServiceServicer]] (model)
-- [[proto_book_v3_pb2_grpc.py_BookV3ServiceStub]] (model)
-- [[proto_book_v4_pb2_grpc.py_BookService]] (model)
-- [[proto_book_v4_pb2_grpc.py_BookServiceServicer]] (model)
-- [[proto_book_v4_pb2_grpc.py_BookServiceStub]] (model)
-
-## Related Services
-- [[root]]
+### Contains
+- [[proto_init_.py]]
+- [[proto_auth.proto]]
+- [[proto_auth_pb2.py]]
+- [[proto_auth_pb2_grpc.py]]
+- [[proto_book.proto]]
+- [[proto_book_pb2.py]]
+- [[proto_book_pb2_grpc.py]]
+- [[proto_book_v3.proto]]
+- [[proto_book_v3_pb2.py]]
+- [[proto_book_v3_pb2_grpc.py]]
+- [[proto_book_v4.proto]]
+- [[proto_book_v4_pb2.py]]
+- [[proto_book_v4_pb2_grpc.py]]
+- [[proto_follow.proto]]
+- [[proto_follow_pb2.py]]
+- [[proto_follow_pb2_grpc.py]]
+- [[proto_rag.proto]]
+- [[proto_rag_pb2.py]]
+- [[proto_rag_pb2_grpc.py]]
+- [[proto_recommendation.proto]]
+- [[proto_recommendation_pb2.py]]
+- [[proto_recommendation_pb2_grpc.py]]
+- [[proto_social.proto]]
+- [[proto_social_pb2.py]]
+- [[proto_social_pb2_grpc.py]]
+- [[proto_user.proto]]
+- [[proto_user_pb2.py]]
+- [[proto_user_pb2_grpc.py]]

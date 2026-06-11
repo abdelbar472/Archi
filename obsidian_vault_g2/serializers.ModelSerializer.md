@@ -1,0 +1,3 @@
+# serializers.ModelSerializer
+
+**Type:** type

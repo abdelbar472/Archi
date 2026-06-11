@@ -1,0 +1,10 @@
+# recommendation/main.py
+
+**Type:** main
+**Community:** 27
+
+## Outgoing Connections
+
+### Defines
+- [[recommendation_main.py_lifespan]]
+- [[recommendation_main.py_root]]

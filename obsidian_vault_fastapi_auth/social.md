@@ -1,32 +1,20 @@
-# Social Service
+# social
 
-**Overview**: Main functionality for the social module.
+**Type:** folder
+**Community:** 28
 
-## Key Components
-- [[social_main.py]] **(main)**
-- [[social_routers.py]] **(router)**
-- [[social_services.py]] **(service)**
+## Outgoing Connections
 
-## Database
-- [[social_config.py_Settings]] (sql_model)
-- [[social_grpc_server.py_SocialServicer]] (model)
-- [[social_models.py]] (model)
-- [[social_models.py_BookLike]] (sql_model)
-- [[social_models.py_BookRating]] (sql_model)
-- [[social_models.py_BookReview]] (sql_model)
-- [[social_models.py_ReviewLike]] (sql_model)
-- [[social_models.py_Shelf]] (sql_model)
-- [[social_models.py_ShelfItem]] (sql_model)
-- [[social_schemas.py]] (model)
-- [[social_schemas.py_BookSocialStatsResponse]] (sql_model)
-- [[social_schemas.py_LikeResponse]] (sql_model)
-
-## Related Services
-- [[AsyncSession]]
-- [[AuthServiceStub]]
-- [[BookLike]]
-- [[BookRating]]
-- [[BookReview]]
-- [[FastAPI]]
-- [[HTTPAuthorizationCredentials]]
-- [[RatingUpsertRequest]]
+### Contains
+- [[social_init_.py]]
+- [[social_auth.py]]
+- [[social_book_grpc_client.py]]
+- [[social_config.py]]
+- [[social_database.py]]
+- [[social_grpc_server.py]]
+- [[social_main.py]]
+- [[social_models.py]]
+- [[social_recommendation_grpc_client.py]]
+- [[social_routers.py]]
+- [[social_schemas.py]]
+- [[social_services.py]]

@@ -1,10 +1,10 @@
-# Api_gateway Service
+# api_gateway
 
-**Overview**: Main functionality for the api_gateway module.
+**Type:** folder
+**Community:** 0
 
-## Key Components
-- [[api_gateway_main.py]] **(main)**
+## Outgoing Connections
 
-## Related Services
-- [[Request]]
-- [[root]]
+### Contains
+- [[api_gateway_init_.py]]
+- [[api_gateway_main.py]]

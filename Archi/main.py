@@ -1,10 +1,9 @@
-"""Tempory Mapper v1.0 — Universal Code Architecture Tool"""
+"""Archi — Code Architecture Tool"""
 import argparse
 import json
 import sys
 from pathlib import Path
 
-# Add parent directory to path for absolute imports when run as module
 sys.path.insert(0, str(Path(__file__).parent))
 
 from scanner import TemporyScanner
@@ -19,7 +18,7 @@ def main():
     parser.add_argument("--top-gods", type=int, default=12, help="Number of top god nodes")
     parser.add_argument("--search", type=str, default=None, help="Run semantic search after scan")
     parser.add_argument("--no-obsidian", action="store_true", help="Skip Obsidian vault generation")
-
+    
     args = parser.parse_args()
 
     project_name = Path(args.project_path).name

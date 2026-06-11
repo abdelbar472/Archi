@@ -1,0 +1,3 @@
+# InteractionEventBody
+
+**Type:** type

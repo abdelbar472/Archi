@@ -1,0 +1,3 @@
+# BaseUserManager
+
+**Type:** type

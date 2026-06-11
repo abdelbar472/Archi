@@ -98,7 +98,7 @@
     },
     {
       "id": "galileo/chat/apps.py::ChatConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 4,
       "external": false
     },
@@ -116,7 +116,7 @@
     },
     {
       "id": "galileo/chat/consumers.py::ChatConsumer",
-      "type": "model",
+      "type": "file",
       "community": 1,
       "external": false
     },
@@ -236,13 +236,7 @@
     },
     {
       "id": "galileo/chat/middleware.py::JWTAuthMiddleware",
-      "type": "sql_model",
-      "community": 4,
-      "external": false
-    },
-    {
-      "id": "table:jwtauthmiddlewares",
-      "type": "table",
+      "type": "file",
       "community": 4,
       "external": false
     },
@@ -284,7 +278,7 @@
     },
     {
       "id": "galileo/chat/models.py::MessageScylla",
-      "type": "model",
+      "type": "django_model",
       "community": 2,
       "external": false
     },
@@ -308,13 +302,7 @@
     },
     {
       "id": "galileo/chat/permissions.py::HasSpaceAccess",
-      "type": "sql_model",
-      "community": 4,
-      "external": false
-    },
-    {
-      "id": "table:hasspaceaccesss",
-      "type": "table",
+      "type": "file",
       "community": 4,
       "external": false
     },
@@ -326,13 +314,7 @@
     },
     {
       "id": "galileo/chat/permissions.py::IsChatRoomMember",
-      "type": "sql_model",
-      "community": 4,
-      "external": false
-    },
-    {
-      "id": "table:ischatroommembers",
-      "type": "table",
+      "type": "file",
       "community": 4,
       "external": false
     },
@@ -356,25 +338,25 @@
     },
     {
       "id": "galileo/chat/serializers.py::ChatRoomSerializer",
-      "type": "model",
+      "type": "file",
       "community": 4,
       "external": false
     },
     {
       "id": "galileo/chat/serializers.py::ChatRoomMembershipSerializer",
-      "type": "model",
+      "type": "file",
       "community": 4,
       "external": false
     },
     {
       "id": "galileo/chat/serializers.py::MessageSerializer",
-      "type": "model",
+      "type": "file",
       "community": 4,
       "external": false
     },
     {
       "id": "galileo/chat/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 4,
       "external": false
     },
@@ -416,7 +398,7 @@
     },
     {
       "id": "galileo/chat/views.py::ChatRoomListView",
-      "type": "model",
+      "type": "file",
       "community": 3,
       "external": false
     },
@@ -440,7 +422,7 @@
     },
     {
       "id": "galileo/chat/views.py::ChatRoomDetailView",
-      "type": "model",
+      "type": "file",
       "community": 3,
       "external": false
     },
@@ -464,7 +446,7 @@
     },
     {
       "id": "galileo/chat/views.py::ChatRoomMembershipView",
-      "type": "model",
+      "type": "django_view",
       "community": 3,
       "external": false
     },
@@ -482,7 +464,7 @@
     },
     {
       "id": "galileo/chat/views.py::MessageView",
-      "type": "model",
+      "type": "django_view",
       "community": 3,
       "external": false
     },
@@ -518,7 +500,7 @@
     },
     {
       "id": "galileo/chat/views.py::ChatHealthView",
-      "type": "model",
+      "type": "django_view",
       "community": 3,
       "external": false
     },
@@ -530,7 +512,7 @@
     },
     {
       "id": "galileo/chat/views.py::RoomStatsView",
-      "type": "model",
+      "type": "django_view",
       "community": 3,
       "external": false
     },
@@ -566,13 +548,7 @@
     },
     {
       "id": "galileo/chat/management/commands/setup_scylladb.py::Command",
-      "type": "sql_model",
-      "community": 4,
-      "external": false
-    },
-    {
-      "id": "table:commands",
-      "type": "table",
+      "type": "file",
       "community": 4,
       "external": false
     },
@@ -596,7 +572,7 @@
     },
     {
       "id": "galileo/chat/services/redis_service.py::RedisChatService",
-      "type": "model",
+      "type": "service",
       "community": 0,
       "external": false
     },
@@ -818,7 +794,7 @@
     },
     {
       "id": "galileo/outh/apps.py::OuthConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 6,
       "external": false
     },
@@ -830,13 +806,7 @@
     },
     {
       "id": "galileo/outh/models.py::CustomUserManager",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:customusermanagers",
-      "type": "table",
+      "type": "model",
       "community": 6,
       "external": false
     },
@@ -854,13 +824,7 @@
     },
     {
       "id": "galileo/outh/models.py::User",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:users",
-      "type": "table",
+      "type": "django_model",
       "community": 6,
       "external": false
     },
@@ -878,7 +842,7 @@
     },
     {
       "id": "galileo/outh/serializers.py::UserSerializer",
-      "type": "model",
+      "type": "file",
       "community": 7,
       "external": false
     },
@@ -890,7 +854,7 @@
     },
     {
       "id": "galileo/outh/serializers.py::SignupSerializer",
-      "type": "model",
+      "type": "file",
       "community": 7,
       "external": false
     },
@@ -914,7 +878,7 @@
     },
     {
       "id": "galileo/outh/serializers.py::LoginSerializer",
-      "type": "model",
+      "type": "file",
       "community": 7,
       "external": false
     },
@@ -932,7 +896,7 @@
     },
     {
       "id": "galileo/outh/serializers.py::LogoutSerializer",
-      "type": "model",
+      "type": "file",
       "community": 7,
       "external": false
     },
@@ -950,7 +914,7 @@
     },
     {
       "id": "galileo/outh/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 7,
       "external": false
     },
@@ -974,7 +938,7 @@
     },
     {
       "id": "galileo/outh/views.py::CompleteProfileAPIView",
-      "type": "model",
+      "type": "file",
       "community": 6,
       "external": false
     },
@@ -992,7 +956,7 @@
     },
     {
       "id": "galileo/outh/views.py::SignupAPIView",
-      "type": "model",
+      "type": "django_view",
       "community": 6,
       "external": false
     },
@@ -1004,7 +968,7 @@
     },
     {
       "id": "galileo/outh/views.py::LoginAPIView",
-      "type": "model",
+      "type": "django_view",
       "community": 6,
       "external": false
     },
@@ -1016,7 +980,7 @@
     },
     {
       "id": "galileo/outh/views.py::LogoutAPIView",
-      "type": "model",
+      "type": "django_view",
       "community": 6,
       "external": false
     },
@@ -1058,7 +1022,7 @@
     },
     {
       "id": "galileo/post/apps.py::PostConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 8,
       "external": false
     },
@@ -1088,13 +1052,7 @@
     },
     {
       "id": "galileo/post/permissions.py::PostPermissions",
-      "type": "sql_model",
-      "community": 8,
-      "external": false
-    },
-    {
-      "id": "table:postpermissionss",
-      "type": "table",
+      "type": "file",
       "community": 8,
       "external": false
     },
@@ -1118,13 +1076,13 @@
     },
     {
       "id": "galileo/post/serializers.py::PostSerializer",
-      "type": "model",
+      "type": "file",
       "community": 8,
       "external": false
     },
     {
       "id": "galileo/post/serializers.py::PostCreateSerializer",
-      "type": "model",
+      "type": "file",
       "community": 8,
       "external": false
     },
@@ -1142,13 +1100,13 @@
     },
     {
       "id": "galileo/post/serializers.py::PostUpdateSerializer",
-      "type": "model",
+      "type": "file",
       "community": 8,
       "external": false
     },
     {
       "id": "galileo/post/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 8,
       "external": false
     },
@@ -1160,7 +1118,7 @@
     },
     {
       "id": "galileo/post/space_jwt_middleware.py::SpaceJWTMiddleware",
-      "type": "model",
+      "type": "file",
       "community": 8,
       "external": false
     },
@@ -1196,7 +1154,7 @@
     },
     {
       "id": "galileo/post/views.py::CreatePostView",
-      "type": "model",
+      "type": "file",
       "community": 9,
       "external": false
     },
@@ -1208,7 +1166,7 @@
     },
     {
       "id": "galileo/post/views.py::UpdatePostView",
-      "type": "model",
+      "type": "file",
       "community": 9,
       "external": false
     },
@@ -1220,13 +1178,13 @@
     },
     {
       "id": "galileo/post/views.py::DeletePostView",
-      "type": "model",
+      "type": "file",
       "community": 9,
       "external": false
     },
     {
       "id": "galileo/post/views.py::ListPostView",
-      "type": "model",
+      "type": "file",
       "community": 9,
       "external": false
     },
@@ -1244,7 +1202,7 @@
     },
     {
       "id": "galileo/post/views.py::RetrievePostView",
-      "type": "model",
+      "type": "file",
       "community": 9,
       "external": false
     },
@@ -1280,7 +1238,7 @@
     },
     {
       "id": "galileo/space/apps.py::SpaceConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 10,
       "external": false
     },
@@ -1298,13 +1256,7 @@
     },
     {
       "id": "galileo/space/authentication.py::SpaceJWTAuthentication",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:spacejwtauthentications",
-      "type": "table",
+      "type": "file",
       "community": 10,
       "external": false
     },
@@ -1370,13 +1322,7 @@
     },
     {
       "id": "galileo/space/permissions.py::IsSpaceOwnerOrAdmin",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:isspaceowneroradmins",
-      "type": "table",
+      "type": "file",
       "community": 10,
       "external": false
     },
@@ -1388,13 +1334,7 @@
     },
     {
       "id": "galileo/space/permissions.py::IsSpaceMember",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:isspacemembers",
-      "type": "table",
+      "type": "file",
       "community": 10,
       "external": false
     },
@@ -1406,13 +1346,7 @@
     },
     {
       "id": "galileo/space/permissions.py::HasWorkspaceAccess",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:hasworkspaceaccesss",
-      "type": "table",
+      "type": "file",
       "community": 10,
       "external": false
     },
@@ -1430,7 +1364,7 @@
     },
     {
       "id": "galileo/space/serializers.py::SpaceSerializer",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
@@ -1454,19 +1388,19 @@
     },
     {
       "id": "galileo/space/serializers.py::MemberSerializer",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
     {
       "id": "galileo/space/serializers.py::SpaceJWTSerializer",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
     {
       "id": "galileo/space/serializers.py::InviteSerializer",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
@@ -1478,7 +1412,7 @@
     },
     {
       "id": "galileo/space/serializers.py::JoinSerializer",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
@@ -1490,7 +1424,7 @@
     },
     {
       "id": "galileo/space/serializers.py::ChangeRoleSerializer",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
@@ -1502,7 +1436,7 @@
     },
     {
       "id": "galileo/space/serializers.py::RemoveMemberSerializer",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
@@ -1514,13 +1448,13 @@
     },
     {
       "id": "galileo/space/serializers.py::SpaceTokenSerializer",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
     {
       "id": "galileo/space/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 11,
       "external": false
     },
@@ -1610,7 +1544,7 @@
     },
     {
       "id": "galileo/space/views.py::CreateSpaceView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1628,7 +1562,7 @@
     },
     {
       "id": "galileo/space/views.py::SpaceDetailView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1640,7 +1574,7 @@
     },
     {
       "id": "galileo/space/views.py::SpaceJWTView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1658,7 +1592,7 @@
     },
     {
       "id": "galileo/space/views.py::SpaceAccessTokenView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1676,7 +1610,7 @@
     },
     {
       "id": "galileo/space/views.py::InviteView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1694,7 +1628,7 @@
     },
     {
       "id": "galileo/space/views.py::JoinView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1706,7 +1640,7 @@
     },
     {
       "id": "galileo/space/views.py::RemoveSpaceMemberView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1724,7 +1658,7 @@
     },
     {
       "id": "galileo/space/views.py::ChangeSpaceMemberRoleView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1742,7 +1676,7 @@
     },
     {
       "id": "galileo/space/views.py::LeaveSpaceView",
-      "type": "model",
+      "type": "file",
       "community": 13,
       "external": false
     },
@@ -1790,7 +1724,7 @@
     },
     {
       "id": "galileo/teams/apps.py::TeamsConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 14,
       "external": false
     },
@@ -1844,37 +1778,37 @@
     },
     {
       "id": "galileo/teams/serializers.py::TeamSerializer",
-      "type": "model",
+      "type": "file",
       "community": 14,
       "external": false
     },
     {
       "id": "galileo/teams/serializers.py::TeamCreateSerializer",
-      "type": "model",
+      "type": "file",
       "community": 14,
       "external": false
     },
     {
       "id": "galileo/teams/serializers.py::JoinTeamSerializer",
-      "type": "model",
+      "type": "file",
       "community": 14,
       "external": false
     },
     {
       "id": "galileo/teams/serializers.py::MemberSerializer",
-      "type": "model",
+      "type": "file",
       "community": 14,
       "external": false
     },
     {
       "id": "galileo/teams/serializers.py::RemoveMemberSerializer",
-      "type": "model",
+      "type": "file",
       "community": 14,
       "external": false
     },
     {
       "id": "galileo/teams/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 14,
       "external": false
     },
@@ -1898,7 +1832,7 @@
     },
     {
       "id": "galileo/teams/views.py::ListTeamsView",
-      "type": "model",
+      "type": "file",
       "community": 14,
       "external": false
     },
@@ -1910,7 +1844,7 @@
     },
     {
       "id": "galileo/teams/views.py::RemoveMemberView",
-      "type": "model",
+      "type": "django_view",
       "community": 14,
       "external": false
     },
@@ -1922,7 +1856,7 @@
     },
     {
       "id": "galileo/teams/views.py::TeamMembersView",
-      "type": "model",
+      "type": "django_view",
       "community": 14,
       "external": false
     },
@@ -1958,7 +1892,7 @@
     },
     {
       "id": "galileo/workspace/apps.py::WorkspaceConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 15,
       "external": false
     },
@@ -1988,7 +1922,7 @@
     },
     {
       "id": "galileo/workspace/serializers.py::WorkspaceSerializer",
-      "type": "model",
+      "type": "file",
       "community": 15,
       "external": false
     },
@@ -2000,7 +1934,7 @@
     },
     {
       "id": "galileo/workspace/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 15,
       "external": false
     },
@@ -2024,7 +1958,7 @@
     },
     {
       "id": "galileo/workspace/views.py::WorkspaceView",
-      "type": "model",
+      "type": "file",
       "community": 15,
       "external": false
     },
@@ -2066,7 +2000,7 @@
     },
     {
       "id": "galileo/workspace/board/apps.py::BoardConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 17,
       "external": false
     },
@@ -2120,13 +2054,13 @@
     },
     {
       "id": "galileo/workspace/board/serializers.py::UserSerializer",
-      "type": "model",
+      "type": "file",
       "community": 17,
       "external": false
     },
     {
       "id": "galileo/workspace/board/serializers.py::CardSerializer",
-      "type": "model",
+      "type": "file",
       "community": 17,
       "external": false
     },
@@ -2150,19 +2084,19 @@
     },
     {
       "id": "galileo/workspace/board/serializers.py::ColumnSerializer",
-      "type": "model",
+      "type": "file",
       "community": 17,
       "external": false
     },
     {
       "id": "galileo/workspace/board/serializers.py::BoardSerializer",
-      "type": "model",
+      "type": "file",
       "community": 17,
       "external": false
     },
     {
       "id": "galileo/workspace/board/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 17,
       "external": false
     },
@@ -2186,7 +2120,7 @@
     },
     {
       "id": "galileo/workspace/board/views.py::BoardViewSet",
-      "type": "model",
+      "type": "file",
       "community": 16,
       "external": false
     },
@@ -2204,7 +2138,7 @@
     },
     {
       "id": "galileo/workspace/board/views.py::ColumnViewSet",
-      "type": "model",
+      "type": "file",
       "community": 16,
       "external": false
     },
@@ -2222,7 +2156,7 @@
     },
     {
       "id": "galileo/workspace/board/views.py::CardViewSet",
-      "type": "model",
+      "type": "file",
       "community": 16,
       "external": false
     },
@@ -2276,7 +2210,7 @@
     },
     {
       "id": "galileo/workspace/notes/apps.py::NotesConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 18,
       "external": false
     },
@@ -2306,13 +2240,13 @@
     },
     {
       "id": "galileo/workspace/notes/serializers.py::UserSerializer",
-      "type": "model",
+      "type": "file",
       "community": 18,
       "external": false
     },
     {
       "id": "galileo/workspace/notes/serializers.py::NoteSerializer",
-      "type": "model",
+      "type": "file",
       "community": 18,
       "external": false
     },
@@ -2324,7 +2258,7 @@
     },
     {
       "id": "galileo/workspace/notes/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 18,
       "external": false
     },
@@ -2348,7 +2282,7 @@
     },
     {
       "id": "galileo/workspace/notes/views.py::NoteViewSet",
-      "type": "model",
+      "type": "file",
       "community": 18,
       "external": false
     },
@@ -2414,7 +2348,7 @@
     },
     {
       "id": "galileo/workspace/todo/apps.py::TodoConfig",
-      "type": "model",
+      "type": "django_app",
       "community": 19,
       "external": false
     },
@@ -2450,13 +2384,13 @@
     },
     {
       "id": "galileo/workspace/todo/serializers.py::UserSerializer",
-      "type": "model",
+      "type": "file",
       "community": 19,
       "external": false
     },
     {
       "id": "galileo/workspace/todo/serializers.py::TaskSerializer",
-      "type": "model",
+      "type": "file",
       "community": 19,
       "external": false
     },
@@ -2480,7 +2414,7 @@
     },
     {
       "id": "galileo/workspace/todo/serializers.py::Meta",
-      "type": "model",
+      "type": "file",
       "community": 19,
       "external": false
     },
@@ -2504,7 +2438,7 @@
     },
     {
       "id": "galileo/workspace/todo/views.py::TaskViewSet",
-      "type": "model",
+      "type": "file",
       "community": 19,
       "external": false
     },
@@ -2536,6 +2470,144 @@
       "id": "galileo/workspace/todo/__init__.py",
       "type": "file",
       "community": 19,
+      "external": false
+    },
+    {
+      "id": "Model",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "AsyncWebsocketConsumer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "AppConfig",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.RetrieveUpdateDestroyAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "PermissionsMixin",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.RetrieveAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "serializers.Serializer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseUserManager",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "permissions.BasePermission",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "models.Model",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.GenericAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.ListAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "serializers.ModelSerializer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.ListCreateAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.UpdateAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "APIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseCommand",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.CreateAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseMiddleware",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseAuthentication",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.DestroyAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "viewsets.ModelViewSet",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "AbstractBaseUser",
+      "type": "type",
+      "community": -1,
       "external": false
     }
   ],
@@ -2622,6 +2694,11 @@
     },
     {
       "source": "galileo/chat/apps.py::ChatConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/chat/apps.py::ChatConfig",
       "target": "galileo/chat/apps.py::ChatConfig::ready",
       "type": "defines"
     },
@@ -2634,6 +2711,11 @@
       "source": "galileo/chat/consumers.py",
       "target": "galileo/chat/consumers.py::ChatConsumer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/chat/consumers.py::ChatConsumer",
+      "target": "AsyncWebsocketConsumer",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/consumers.py::ChatConsumer",
@@ -2737,8 +2819,8 @@
     },
     {
       "source": "galileo/chat/middleware.py::JWTAuthMiddleware",
-      "target": "table:jwtauthmiddlewares",
-      "type": "maps_to"
+      "target": "BaseMiddleware",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/middleware.py::JWTAuthMiddleware",
@@ -2767,6 +2849,11 @@
     },
     {
       "source": "galileo/chat/models.py::ChatRoom",
+      "target": "models.Model",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/chat/models.py::ChatRoom",
       "target": "galileo/chat/models.py::ChatRoom::__str__",
       "type": "defines"
     },
@@ -2776,9 +2863,19 @@
       "type": "defines"
     },
     {
+      "source": "galileo/chat/models.py::ChatRoomMembership",
+      "target": "models.Model",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/chat/models.py",
       "target": "galileo/chat/models.py::MessageScylla",
       "type": "defines"
+    },
+    {
+      "source": "galileo/chat/models.py::MessageScylla",
+      "target": "Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/models.py::MessageScylla",
@@ -2802,8 +2899,8 @@
     },
     {
       "source": "galileo/chat/permissions.py::HasSpaceAccess",
-      "target": "table:hasspaceaccesss",
-      "type": "maps_to"
+      "target": "permissions.BasePermission",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/permissions.py::HasSpaceAccess",
@@ -2817,8 +2914,8 @@
     },
     {
       "source": "galileo/chat/permissions.py::IsChatRoomMember",
-      "target": "table:ischatroommembers",
-      "type": "maps_to"
+      "target": "permissions.BasePermission",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/permissions.py::IsChatRoomMember",
@@ -2841,14 +2938,29 @@
       "type": "defines"
     },
     {
+      "source": "galileo/chat/serializers.py::ChatRoomSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/chat/serializers.py",
       "target": "galileo/chat/serializers.py::ChatRoomMembershipSerializer",
       "type": "defines"
     },
     {
+      "source": "galileo/chat/serializers.py::ChatRoomMembershipSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/chat/serializers.py",
       "target": "galileo/chat/serializers.py::MessageSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/chat/serializers.py::MessageSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/serializers.py",
@@ -2892,6 +3004,11 @@
     },
     {
       "source": "galileo/chat/views.py::ChatRoomListView",
+      "target": "generics.ListCreateAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/chat/views.py::ChatRoomListView",
       "target": "galileo/chat/views.py::ChatRoomListView::get_queryset",
       "type": "defines"
     },
@@ -2909,6 +3026,11 @@
       "source": "galileo/chat/views.py",
       "target": "galileo/chat/views.py::ChatRoomDetailView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/chat/views.py::ChatRoomDetailView",
+      "target": "generics.RetrieveUpdateDestroyAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/views.py::ChatRoomDetailView",
@@ -2932,6 +3054,11 @@
     },
     {
       "source": "galileo/chat/views.py::ChatRoomMembershipView",
+      "target": "APIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/chat/views.py::ChatRoomMembershipView",
       "target": "galileo/chat/views.py::ChatRoomMembershipView::post",
       "type": "defines"
     },
@@ -2944,6 +3071,11 @@
       "source": "galileo/chat/views.py",
       "target": "galileo/chat/views.py::MessageView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/chat/views.py::MessageView",
+      "target": "APIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/views.py::MessageView",
@@ -2977,6 +3109,11 @@
     },
     {
       "source": "galileo/chat/views.py::ChatHealthView",
+      "target": "APIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/chat/views.py::ChatHealthView",
       "target": "galileo/chat/views.py::ChatHealthView::get",
       "type": "defines"
     },
@@ -2984,6 +3121,11 @@
       "source": "galileo/chat/views.py",
       "target": "galileo/chat/views.py::RoomStatsView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/chat/views.py::RoomStatsView",
+      "target": "APIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/views.py::RoomStatsView",
@@ -3017,8 +3159,8 @@
     },
     {
       "source": "galileo/chat/management/commands/setup_scylladb.py::Command",
-      "target": "table:commands",
-      "type": "maps_to"
+      "target": "BaseCommand",
+      "type": "inherits"
     },
     {
       "source": "galileo/chat/management/commands/setup_scylladb.py::Command",
@@ -3226,6 +3368,11 @@
       "type": "defines"
     },
     {
+      "source": "galileo/outh/apps.py::OuthConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/outh",
       "target": "galileo/outh/models.py",
       "type": "contains"
@@ -3237,8 +3384,8 @@
     },
     {
       "source": "galileo/outh/models.py::CustomUserManager",
-      "target": "table:customusermanagers",
-      "type": "maps_to"
+      "target": "BaseUserManager",
+      "type": "inherits"
     },
     {
       "source": "galileo/outh/models.py::CustomUserManager",
@@ -3257,8 +3404,13 @@
     },
     {
       "source": "galileo/outh/models.py::User",
-      "target": "table:users",
-      "type": "maps_to"
+      "target": "AbstractBaseUser",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/outh/models.py::User",
+      "target": "PermissionsMixin",
+      "type": "inherits"
     },
     {
       "source": "galileo/outh/models.py::User",
@@ -3277,6 +3429,11 @@
     },
     {
       "source": "galileo/outh/serializers.py::UserSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/outh/serializers.py::UserSerializer",
       "target": "galileo/outh/serializers.py::UserSerializer::get_profile_image",
       "type": "defines"
     },
@@ -3284,6 +3441,11 @@
       "source": "galileo/outh/serializers.py",
       "target": "galileo/outh/serializers.py::SignupSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/outh/serializers.py::SignupSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/outh/serializers.py::SignupSerializer",
@@ -3307,6 +3469,11 @@
     },
     {
       "source": "galileo/outh/serializers.py::LoginSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/outh/serializers.py::LoginSerializer",
       "target": "galileo/outh/serializers.py::LoginSerializer::get_tokens",
       "type": "defines"
     },
@@ -3319,6 +3486,11 @@
       "source": "galileo/outh/serializers.py",
       "target": "galileo/outh/serializers.py::LogoutSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/outh/serializers.py::LogoutSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/outh/serializers.py::LogoutSerializer",
@@ -3357,6 +3529,11 @@
     },
     {
       "source": "galileo/outh/views.py::CompleteProfileAPIView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/outh/views.py::CompleteProfileAPIView",
       "target": "galileo/outh/views.py::CompleteProfileAPIView::get",
       "type": "defines"
     },
@@ -3372,6 +3549,11 @@
     },
     {
       "source": "galileo/outh/views.py::SignupAPIView",
+      "target": "APIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/outh/views.py::SignupAPIView",
       "target": "galileo/outh/views.py::SignupAPIView::post",
       "type": "defines"
     },
@@ -3382,6 +3564,11 @@
     },
     {
       "source": "galileo/outh/views.py::LoginAPIView",
+      "target": "APIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/outh/views.py::LoginAPIView",
       "target": "galileo/outh/views.py::LoginAPIView::post",
       "type": "defines"
     },
@@ -3389,6 +3576,11 @@
       "source": "galileo/outh/views.py",
       "target": "galileo/outh/views.py::LogoutAPIView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/outh/views.py::LogoutAPIView",
+      "target": "APIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/outh/views.py::LogoutAPIView",
@@ -3426,6 +3618,11 @@
       "type": "defines"
     },
     {
+      "source": "galileo/post/apps.py::PostConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/post",
       "target": "galileo/post/models.py",
       "type": "contains"
@@ -3434,6 +3631,11 @@
       "source": "galileo/post/models.py",
       "target": "galileo/post/models.py::Post",
       "type": "defines"
+    },
+    {
+      "source": "galileo/post/models.py::Post",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/post/models.py::Post",
@@ -3452,8 +3654,8 @@
     },
     {
       "source": "galileo/post/permissions.py::PostPermissions",
-      "target": "table:postpermissionss",
-      "type": "maps_to"
+      "target": "permissions.BasePermission",
+      "type": "inherits"
     },
     {
       "source": "galileo/post/permissions.py::PostPermissions",
@@ -3476,9 +3678,19 @@
       "type": "defines"
     },
     {
+      "source": "galileo/post/serializers.py::PostSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/post/serializers.py",
       "target": "galileo/post/serializers.py::PostCreateSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/post/serializers.py::PostCreateSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/post/serializers.py::PostCreateSerializer",
@@ -3494,6 +3706,11 @@
       "source": "galileo/post/serializers.py",
       "target": "galileo/post/serializers.py::PostUpdateSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/post/serializers.py::PostUpdateSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/post/serializers.py",
@@ -3542,6 +3759,11 @@
     },
     {
       "source": "galileo/post/views.py::CreatePostView",
+      "target": "generics.CreateAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/post/views.py::CreatePostView",
       "target": "galileo/post/views.py::CreatePostView::post",
       "type": "defines"
     },
@@ -3549,6 +3771,11 @@
       "source": "galileo/post/views.py",
       "target": "galileo/post/views.py::UpdatePostView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/post/views.py::UpdatePostView",
+      "target": "generics.UpdateAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/post/views.py::UpdatePostView",
@@ -3561,9 +3788,19 @@
       "type": "defines"
     },
     {
+      "source": "galileo/post/views.py::DeletePostView",
+      "target": "generics.DestroyAPIView",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/post/views.py",
       "target": "galileo/post/views.py::ListPostView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/post/views.py::ListPostView",
+      "target": "generics.ListAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/post/views.py::ListPostView",
@@ -3579,6 +3816,11 @@
       "source": "galileo/post/views.py",
       "target": "galileo/post/views.py::RetrievePostView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/post/views.py::RetrievePostView",
+      "target": "generics.RetrieveAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/post/views.py::RetrievePostView",
@@ -3612,6 +3854,11 @@
     },
     {
       "source": "galileo/space/apps.py::SpaceConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/apps.py::SpaceConfig",
       "target": "galileo/space/apps.py::SpaceConfig::ready",
       "type": "defines"
     },
@@ -3627,8 +3874,8 @@
     },
     {
       "source": "galileo/space/authentication.py::SpaceJWTAuthentication",
-      "target": "table:spacejwtauthentications",
-      "type": "maps_to"
+      "target": "BaseAuthentication",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/authentication.py::SpaceJWTAuthentication",
@@ -3647,6 +3894,11 @@
     },
     {
       "source": "galileo/space/models.py::Space",
+      "target": "models.Model",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/models.py::Space",
       "target": "galileo/space/models.py::Space::__str__",
       "type": "defines"
     },
@@ -3657,6 +3909,11 @@
     },
     {
       "source": "galileo/space/models.py::SpaceMembership",
+      "target": "models.Model",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/models.py::SpaceMembership",
       "target": "galileo/space/models.py::SpaceMembership::__str__",
       "type": "defines"
     },
@@ -3664,6 +3921,11 @@
       "source": "galileo/space/models.py",
       "target": "galileo/space/models.py::Invitation",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/models.py::Invitation",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/models.py::Invitation",
@@ -3687,8 +3949,8 @@
     },
     {
       "source": "galileo/space/permissions.py::IsSpaceOwnerOrAdmin",
-      "target": "table:isspaceowneroradmins",
-      "type": "maps_to"
+      "target": "permissions.BasePermission",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/permissions.py::IsSpaceOwnerOrAdmin",
@@ -3702,8 +3964,8 @@
     },
     {
       "source": "galileo/space/permissions.py::IsSpaceMember",
-      "target": "table:isspacemembers",
-      "type": "maps_to"
+      "target": "permissions.BasePermission",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/permissions.py::IsSpaceMember",
@@ -3717,8 +3979,8 @@
     },
     {
       "source": "galileo/space/permissions.py::HasWorkspaceAccess",
-      "target": "table:hasworkspaceaccesss",
-      "type": "maps_to"
+      "target": "permissions.BasePermission",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/permissions.py::HasWorkspaceAccess",
@@ -3734,6 +3996,11 @@
       "source": "galileo/space/serializers.py",
       "target": "galileo/space/serializers.py::SpaceSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/serializers.py::SpaceSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/serializers.py::SpaceSerializer",
@@ -3756,14 +4023,29 @@
       "type": "defines"
     },
     {
+      "source": "galileo/space/serializers.py::MemberSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/space/serializers.py",
       "target": "galileo/space/serializers.py::SpaceJWTSerializer",
       "type": "defines"
     },
     {
+      "source": "galileo/space/serializers.py::SpaceJWTSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/space/serializers.py",
       "target": "galileo/space/serializers.py::InviteSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/serializers.py::InviteSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/serializers.py::InviteSerializer",
@@ -3777,6 +4059,11 @@
     },
     {
       "source": "galileo/space/serializers.py::JoinSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/serializers.py::JoinSerializer",
       "target": "galileo/space/serializers.py::JoinSerializer::validate_space_id",
       "type": "defines"
     },
@@ -3784,6 +4071,11 @@
       "source": "galileo/space/serializers.py",
       "target": "galileo/space/serializers.py::ChangeRoleSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/serializers.py::ChangeRoleSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/serializers.py::ChangeRoleSerializer",
@@ -3797,6 +4089,11 @@
     },
     {
       "source": "galileo/space/serializers.py::RemoveMemberSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/serializers.py::RemoveMemberSerializer",
       "target": "galileo/space/serializers.py::RemoveMemberSerializer::validate_username",
       "type": "defines"
     },
@@ -3804,6 +4101,11 @@
       "source": "galileo/space/serializers.py",
       "target": "galileo/space/serializers.py::SpaceTokenSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/serializers.py::SpaceTokenSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/serializers.py",
@@ -3897,6 +4199,11 @@
     },
     {
       "source": "galileo/space/views.py::CreateSpaceView",
+      "target": "generics.CreateAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/views.py::CreateSpaceView",
       "target": "galileo/space/views.py::CreateSpaceView::post",
       "type": "defines"
     },
@@ -3912,6 +4219,11 @@
     },
     {
       "source": "galileo/space/views.py::SpaceDetailView",
+      "target": "generics.RetrieveAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/views.py::SpaceDetailView",
       "target": "galileo/space/views.py::SpaceDetailView::get",
       "type": "defines"
     },
@@ -3919,6 +4231,11 @@
       "source": "galileo/space/views.py",
       "target": "galileo/space/views.py::SpaceJWTView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/views.py::SpaceJWTView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/views.py::SpaceJWTView",
@@ -3937,6 +4254,11 @@
     },
     {
       "source": "galileo/space/views.py::SpaceAccessTokenView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/views.py::SpaceAccessTokenView",
       "target": "galileo/space/views.py::SpaceAccessTokenView::get",
       "type": "defines"
     },
@@ -3949,6 +4271,11 @@
       "source": "galileo/space/views.py",
       "target": "galileo/space/views.py::InviteView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/views.py::InviteView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/views.py::InviteView",
@@ -3967,6 +4294,11 @@
     },
     {
       "source": "galileo/space/views.py::JoinView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/views.py::JoinView",
       "target": "galileo/space/views.py::JoinView::post",
       "type": "defines"
     },
@@ -3974,6 +4306,11 @@
       "source": "galileo/space/views.py",
       "target": "galileo/space/views.py::RemoveSpaceMemberView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/views.py::RemoveSpaceMemberView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/views.py::RemoveSpaceMemberView",
@@ -3992,6 +4329,11 @@
     },
     {
       "source": "galileo/space/views.py::ChangeSpaceMemberRoleView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/space/views.py::ChangeSpaceMemberRoleView",
       "target": "galileo/space/views.py::ChangeSpaceMemberRoleView::get",
       "type": "defines"
     },
@@ -4004,6 +4346,11 @@
       "source": "galileo/space/views.py",
       "target": "galileo/space/views.py::LeaveSpaceView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/space/views.py::LeaveSpaceView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/space/views.py::LeaveSpaceView",
@@ -4046,6 +4393,11 @@
       "type": "defines"
     },
     {
+      "source": "galileo/teams/apps.py::TeamsConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/teams",
       "target": "galileo/teams/models.py",
       "type": "contains"
@@ -4054,6 +4406,11 @@
       "source": "galileo/teams/models.py",
       "target": "galileo/teams/models.py::Team",
       "type": "defines"
+    },
+    {
+      "source": "galileo/teams/models.py::Team",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/teams/models.py::Team",
@@ -4069,6 +4426,11 @@
       "source": "galileo/teams/models.py",
       "target": "galileo/teams/models.py::Member",
       "type": "defines"
+    },
+    {
+      "source": "galileo/teams/models.py::Member",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/teams/models.py::Member",
@@ -4091,9 +4453,19 @@
       "type": "defines"
     },
     {
+      "source": "galileo/teams/serializers.py::TeamSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/teams/serializers.py",
       "target": "galileo/teams/serializers.py::TeamCreateSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/teams/serializers.py::TeamCreateSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/teams/serializers.py",
@@ -4101,14 +4473,29 @@
       "type": "defines"
     },
     {
+      "source": "galileo/teams/serializers.py::JoinTeamSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/teams/serializers.py",
       "target": "galileo/teams/serializers.py::MemberSerializer",
       "type": "defines"
     },
     {
+      "source": "galileo/teams/serializers.py::MemberSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/teams/serializers.py",
       "target": "galileo/teams/serializers.py::RemoveMemberSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/teams/serializers.py::RemoveMemberSerializer",
+      "target": "serializers.Serializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/teams/serializers.py",
@@ -4137,6 +4524,11 @@
     },
     {
       "source": "galileo/teams/views.py::ListTeamsView",
+      "target": "generics.ListAPIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/teams/views.py::ListTeamsView",
       "target": "galileo/teams/views.py::ListTeamsView::get_queryset",
       "type": "defines"
     },
@@ -4147,6 +4539,11 @@
     },
     {
       "source": "galileo/teams/views.py::RemoveMemberView",
+      "target": "APIView",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/teams/views.py::RemoveMemberView",
       "target": "galileo/teams/views.py::RemoveMemberView::delete",
       "type": "defines"
     },
@@ -4154,6 +4551,11 @@
       "source": "galileo/teams/views.py",
       "target": "galileo/teams/views.py::TeamMembersView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/teams/views.py::TeamMembersView",
+      "target": "APIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/teams/views.py::TeamMembersView",
@@ -4186,6 +4588,11 @@
       "type": "defines"
     },
     {
+      "source": "galileo/workspace/apps.py::WorkspaceConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/workspace",
       "target": "galileo/workspace/models.py",
       "type": "contains"
@@ -4194,6 +4601,11 @@
       "source": "galileo/workspace/models.py",
       "target": "galileo/workspace/models.py::Workspace",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/models.py::Workspace",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/models.py::Workspace",
@@ -4209,6 +4621,11 @@
       "source": "galileo/workspace/serializers.py",
       "target": "galileo/workspace/serializers.py::WorkspaceSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/serializers.py::WorkspaceSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/serializers.py::WorkspaceSerializer",
@@ -4239,6 +4656,11 @@
       "source": "galileo/workspace/views.py",
       "target": "galileo/workspace/views.py::WorkspaceView",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/views.py::WorkspaceView",
+      "target": "generics.GenericAPIView",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/views.py::WorkspaceView",
@@ -4276,6 +4698,11 @@
       "type": "defines"
     },
     {
+      "source": "galileo/workspace/board/apps.py::BoardConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/workspace/board",
       "target": "galileo/workspace/board/models.py",
       "type": "contains"
@@ -4284,6 +4711,11 @@
       "source": "galileo/workspace/board/models.py",
       "target": "galileo/workspace/board/models.py::Board",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/board/models.py::Board",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/board/models.py::Board",
@@ -4297,6 +4729,11 @@
     },
     {
       "source": "galileo/workspace/board/models.py::Column",
+      "target": "models.Model",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/workspace/board/models.py::Column",
       "target": "galileo/workspace/board/models.py::Column::__str__",
       "type": "defines"
     },
@@ -4304,6 +4741,11 @@
       "source": "galileo/workspace/board/models.py",
       "target": "galileo/workspace/board/models.py::Card",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/board/models.py::Card",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/board/models.py::Card",
@@ -4321,9 +4763,19 @@
       "type": "defines"
     },
     {
+      "source": "galileo/workspace/board/serializers.py::UserSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/workspace/board/serializers.py",
       "target": "galileo/workspace/board/serializers.py::CardSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/board/serializers.py::CardSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/board/serializers.py::CardSerializer",
@@ -4346,9 +4798,19 @@
       "type": "defines"
     },
     {
+      "source": "galileo/workspace/board/serializers.py::ColumnSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/workspace/board/serializers.py",
       "target": "galileo/workspace/board/serializers.py::BoardSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/board/serializers.py::BoardSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/board/serializers.py",
@@ -4377,6 +4839,11 @@
     },
     {
       "source": "galileo/workspace/board/views.py::BoardViewSet",
+      "target": "viewsets.ModelViewSet",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/workspace/board/views.py::BoardViewSet",
       "target": "galileo/workspace/board/views.py::BoardViewSet::get_queryset",
       "type": "defines"
     },
@@ -4392,6 +4859,11 @@
     },
     {
       "source": "galileo/workspace/board/views.py::ColumnViewSet",
+      "target": "viewsets.ModelViewSet",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/workspace/board/views.py::ColumnViewSet",
       "target": "galileo/workspace/board/views.py::ColumnViewSet::get_queryset",
       "type": "defines"
     },
@@ -4404,6 +4876,11 @@
       "source": "galileo/workspace/board/views.py",
       "target": "galileo/workspace/board/views.py::CardViewSet",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/board/views.py::CardViewSet",
+      "target": "viewsets.ModelViewSet",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/board/views.py::CardViewSet",
@@ -4451,6 +4928,11 @@
       "type": "defines"
     },
     {
+      "source": "galileo/workspace/notes/apps.py::NotesConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/workspace/notes",
       "target": "galileo/workspace/notes/models.py",
       "type": "contains"
@@ -4459,6 +4941,11 @@
       "source": "galileo/workspace/notes/models.py",
       "target": "galileo/workspace/notes/models.py::Note",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/notes/models.py::Note",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/notes/models.py::Note",
@@ -4476,9 +4963,19 @@
       "type": "defines"
     },
     {
+      "source": "galileo/workspace/notes/serializers.py::UserSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/workspace/notes/serializers.py",
       "target": "galileo/workspace/notes/serializers.py::NoteSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/notes/serializers.py::NoteSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/notes/serializers.py::NoteSerializer",
@@ -4509,6 +5006,11 @@
       "source": "galileo/workspace/notes/views.py",
       "target": "galileo/workspace/notes/views.py::NoteViewSet",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/notes/views.py::NoteViewSet",
+      "target": "viewsets.ModelViewSet",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/notes/views.py::NoteViewSet",
@@ -4566,6 +5068,11 @@
       "type": "defines"
     },
     {
+      "source": "galileo/workspace/todo/apps.py::TodoConfig",
+      "target": "AppConfig",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/workspace/todo",
       "target": "galileo/workspace/todo/models.py",
       "type": "contains"
@@ -4574,6 +5081,11 @@
       "source": "galileo/workspace/todo/models.py",
       "target": "galileo/workspace/todo/models.py::Task",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/todo/models.py::Task",
+      "target": "models.Model",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/todo/models.py::Task",
@@ -4596,9 +5108,19 @@
       "type": "defines"
     },
     {
+      "source": "galileo/workspace/todo/serializers.py::UserSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
+    },
+    {
       "source": "galileo/workspace/todo/serializers.py",
       "target": "galileo/workspace/todo/serializers.py::TaskSerializer",
       "type": "defines"
+    },
+    {
+      "source": "galileo/workspace/todo/serializers.py::TaskSerializer",
+      "target": "serializers.ModelSerializer",
+      "type": "inherits"
     },
     {
       "source": "galileo/workspace/todo/serializers.py::TaskSerializer",
@@ -4642,6 +5164,11 @@
     },
     {
       "source": "galileo/workspace/todo/views.py::TaskViewSet",
+      "target": "viewsets.ModelViewSet",
+      "type": "inherits"
+    },
+    {
+      "source": "galileo/workspace/todo/views.py::TaskViewSet",
       "target": "galileo/workspace/todo/views.py::TaskViewSet::get_serializer_context",
       "type": "defines"
     },
@@ -4668,20 +5195,32 @@
   ],
   "metadata": {
     "project": "g2",
-    "total_nodes": 423,
-    "total_edges": 425,
+    "total_nodes": 435,
+    "total_edges": 516,
     "generated_by": "Tempory Mapper v1.0",
-    "scan_date": "2026-06-09T08:09:22.550263",
+    "scan_date": "2026-06-11T03:20:31.422903",
     "communities_count": 20,
     "god_nodes": {
       "internal": [
         {
+          "node": "serializers.ModelSerializer",
+          "degree": 21
+        },
+        {
           "node": "galileo/chat/consumers.py::ChatConsumer",
-          "degree": 19
+          "degree": 20
         },
         {
           "node": "galileo/chat/services/redis_service.py::RedisChatService",
           "degree": 18
+        },
+        {
+          "node": "models.Model",
+          "degree": 14
+        },
+        {
+          "node": "serializers.Serializer",
+          "degree": 11
         },
         {
           "node": "galileo/space/signals.py",
@@ -4696,32 +5235,20 @@
           "degree": 10
         },
         {
-          "node": "galileo/chat/views.py",
-          "degree": 7
+          "node": "AppConfig",
+          "degree": 9
         },
         {
-          "node": "galileo/teams/serializers.py",
-          "degree": 7
+          "node": "APIView",
+          "degree": 9
+        },
+        {
+          "node": "generics.GenericAPIView",
+          "degree": 9
         },
         {
           "node": "galileo/workspace/notes/views.py::NoteViewSet",
-          "degree": 7
-        },
-        {
-          "node": "galileo/chat/views.py::MessageView",
-          "degree": 6
-        },
-        {
-          "node": "galileo/outh/serializers.py",
-          "degree": 6
-        },
-        {
-          "node": "galileo/outh/views.py",
-          "degree": 6
-        },
-        {
-          "node": "galileo/post/views.py",
-          "degree": 6
+          "degree": 8
         }
       ],
       "external": []
@@ -4733,6 +5260,6 @@
       }
     },
     "dangling_edges_resolved": true,
-    "call_graph_scope": "intra-file only"
+    "call_graph_scope": "cross-file"
   }
 }

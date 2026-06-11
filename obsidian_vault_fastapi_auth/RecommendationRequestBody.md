@@ -1,0 +1,3 @@
+# RecommendationRequestBody
+
+**Type:** type

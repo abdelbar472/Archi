@@ -1,0 +1,3 @@
+# UserPayload
+
+**Type:** type

@@ -1,0 +1,3 @@
+# TypedDict
+
+**Type:** type

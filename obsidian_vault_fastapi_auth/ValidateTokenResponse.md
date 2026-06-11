@@ -1,0 +1,3 @@
+# ValidateTokenResponse
+
+**Type:** type

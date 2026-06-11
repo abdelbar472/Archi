@@ -1,8 +1,10 @@
-# Book Service
+# book
 
-**Overview**: Main functionality for the book module.
+**Type:** folder
+**Community:** 5
 
-## Key Components
+## Outgoing Connections
 
-## Related Services
-- [[root]]
+### Contains
+- [[book_jsons]]
+- [[book_old]]

@@ -1,24 +1,11 @@
-# Root Service
+# root
 
-**Overview**: Main functionality for the root module.
+**Type:** folder
+**Community:** 0
 
-## Key Components
+## Outgoing Connections
 
-## Database
-- [[table_authorbios]] (table)
-- [[table_authorprofiles]] (table)
-- [[table_authorstatss]] (table)
-- [[table_authorstyleprofiles]] (table)
-- [[table_book_likes]] (table)
-- [[table_book_ratings]] (table)
-- [[table_book_reviews]] (table)
-- [[table_bookprofiles]] (table)
-- [[table_booksocialstatsresponses]] (table)
-- [[table_booksyncrequests]] (table)
-- [[table_contentanalysiss]] (table)
-- [[table_editions]] (table)
-
-## Related Services
+### Contains
 - [[add_book_data.py]]
 - [[api_gateway]]
 - [[auth]]
@@ -27,3 +14,14 @@
 - [[e2e_test.py]]
 - [[follow]]
 - [[frontend]]
+- [[migrate_db.py]]
+- [[proto]]
+- [[quick_test.py]]
+- [[rag]]
+- [[recommendation]]
+- [[social]]
+- [[test.py]]
+- [[test_adania.py]]
+- [[test_adania_trace.py]]
+- [[test_api.py]]
+- [[user]]

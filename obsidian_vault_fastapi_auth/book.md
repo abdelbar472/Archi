@@ -1,31 +1,23 @@
-# Book Service
+# book
 
-**Overview**: Main functionality for the book module.
+**Type:** folder
+**Community:** 4
 
-## Key Components
-- [[book_main.py]] **(main)**
-- [[book_test_new_service.py]] **(service)**
+## Outgoing Connections
 
-## Database
-- [[book_book_v4_pb2_grpc.py_BookService]] (model)
-- [[book_book_v4_pb2_grpc.py_BookServiceServicer]] (model)
-- [[book_book_v4_pb2_grpc.py_BookServiceStub]] (model)
-- [[book_config.py_Config]] (model)
-- [[book_config.py_Settings]] (sql_model)
-- [[book_database.py_Database]] (model)
-- [[book_grpc_client.py_RAGServiceGRPCClient]] (model)
-- [[book_grpc_server.py_BookService]] (model)
-- [[book_models_author.py_AuthorBio]] (sql_model)
-- [[book_models_author.py_AuthorProfile]] (sql_model)
-- [[book_models_author.py_AuthorStats]] (sql_model)
-- [[book_models_author.py_AuthorStyleProfile]] (sql_model)
-
-## Related Services
-- [[AuthorProfile]]
-- [[BookProfile]]
-- [[FastAPI]]
-- [[IndexBookPayload]]
-- [[SeriesProfile]]
-- [[root]]
-- [[table:authorbios]]
-- [[table:authorprofiles]]
+### Contains
+- [[book_init_.py]]
+- [[book_book_v4_pb2.py]]
+- [[book_book_v4_pb2_grpc.py]]
+- [[book_check_series_results.py]]
+- [[book_clients]]
+- [[book_config.py]]
+- [[book_database.py]]
+- [[book_grpc_client.py]]
+- [[book_grpc_server.py]]
+- [[book_main.py]]
+- [[book_models]]
+- [[book_routers]]
+- [[book_services]]
+- [[book_test_new_service.py]]
+- [[book_utils]]

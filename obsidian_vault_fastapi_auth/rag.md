@@ -1,32 +1,19 @@
-# Rag Service
+# rag
 
-**Overview**: Main functionality for the rag module.
+**Type:** folder
+**Community:** 25
 
-## Key Components
-- [[rag_main.py]] **(main)**
-- [[rag_routers.py]] **(router)**
-- [[rag_services.py]] **(service)**
+## Outgoing Connections
 
-## Database
-- [[rag_config.py_Config]] (model)
-- [[rag_config.py_Settings]] (sql_model)
-- [[rag_embedding.py_EmbeddingGenerator]] (model)
-- [[rag_engine.py_RAGEngine]] (model)
-- [[rag_grpc_client.py_BookServiceGRPCClient]] (model)
-- [[rag_grpc_server.py_GRPCServer]] (model)
-- [[rag_grpc_server.py_RagServicer]] (model)
-- [[rag_qdrant_client.py_DatabaseManager]] (model)
-- [[rag_routers.py_BookSyncRequest]] (sql_model)
-- [[rag_services.py_IndexingService]] (model)
-- [[rag_services.py_SearchService]] (model)
-- [[rag_vector_store.py_VectorStore]] (model)
-
-## Related Services
-- [[BookSyncRequest]]
-- [[FastAPI]]
-- [[GetBookEmbeddingRequest]]
-- [[GetSimilarBooksRequest]]
-- [[IndexBooksRequest]]
-- [[QdrantClient]]
-- [[RetrievalCandidate]]
-- [[SemanticSearchRequest]]
+### Contains
+- [[rag_init_.py]]
+- [[rag_config.py]]
+- [[rag_embedding.py]]
+- [[rag_engine.py]]
+- [[rag_grpc_client.py]]
+- [[rag_grpc_server.py]]
+- [[rag_main.py]]
+- [[rag_qdrant_client.py]]
+- [[rag_routers.py]]
+- [[rag_services.py]]
+- [[rag_vector_store.py]]

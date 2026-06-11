@@ -1,0 +1,3 @@
+# AuthServiceStub
+
+**Type:** type

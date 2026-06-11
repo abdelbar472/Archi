@@ -1,29 +1,17 @@
-# Recommendation Service
+# recommendation
 
-**Overview**: Main functionality for the recommendation module.
+**Type:** folder
+**Community:** 27
 
-## Key Components
-- [[recommendation_main.py]] **(main)**
-- [[recommendation_routers.py]] **(router)**
-- [[recommendation_service.py]] **(service)**
+## Outgoing Connections
 
-## Database
-- [[recommendation_config.py_Config]] (model)
-- [[recommendation_config.py_Settings]] (sql_model)
-- [[recommendation_grpc_server.py_GRPCServer]] (model)
-- [[recommendation_grpc_server.py_RecommendationServicer]] (model)
-- [[recommendation_profile.py_UserProfile]] (model)
-- [[recommendation_profile.py_UserProfileBuilder]] (model)
-- [[recommendation_routers.py_InteractionEventBody]] (sql_model)
-- [[recommendation_routers.py_RecommendationRequestBody]] (sql_model)
-- [[recommendation_service.py_RecommendationService]] (model)
-
-## Related Services
-- [[FastAPI]]
-- [[InteractionEventBody]]
-- [[RagServiceStub]]
-- [[RecommendationRequestBody]]
-- [[Settings]]
-- [[UserProfile]]
-- [[root]]
-- [[table:interactioneventbodys]]
+### Contains
+- [[recommendation_init_.py]]
+- [[recommendation_config.py]]
+- [[recommendation_grpc_client.py]]
+- [[recommendation_grpc_server.py]]
+- [[recommendation_main.py]]
+- [[recommendation_profile.py]]
+- [[recommendation_ranking.py]]
+- [[recommendation_routers.py]]
+- [[recommendation_service.py]]

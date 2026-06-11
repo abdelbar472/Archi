@@ -1,0 +1,3 @@
+# GetBookEmbeddingRequest
+
+**Type:** type

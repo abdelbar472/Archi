@@ -1,0 +1,3 @@
+# viewsets.ModelViewSet
+
+**Type:** type

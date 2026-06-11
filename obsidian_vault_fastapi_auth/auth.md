@@ -1,32 +1,17 @@
-# Auth Service
+# auth
 
-**Overview**: Main functionality for the auth module.
+**Type:** folder
+**Community:** 1
 
-## Key Components
-- [[auth_main.py]] **(main)**
-- [[auth_routers.py]] **(router)**
-- [[auth_services.py]] **(service)**
+## Outgoing Connections
 
-## Database
-- [[auth_config.py_Settings]] (sql_model)
-- [[auth_grpc_server.py_AuthServicer]] (model)
-- [[auth_models.py]] (model)
-- [[auth_models.py_RefreshToken]] (sql_model)
-- [[auth_models.py_User]] (sql_model)
-- [[auth_schemas.py]] (model)
-- [[auth_schemas.py_LoginRequest]] (sql_model)
-- [[auth_schemas.py_RefreshTokenRequest]] (sql_model)
-- [[auth_schemas.py_Token]] (sql_model)
-- [[auth_schemas.py_TokenData]] (sql_model)
-- [[auth_schemas.py_UserBase]] (sql_model)
-- [[auth_schemas.py_UserCreate]] (sql_model)
-
-## Related Services
-- [[AsyncSession]]
-- [[FastAPI]]
-- [[HTTPAuthorizationCredentials]]
-- [[LoginRequest]]
-- [[RefreshToken]]
-- [[RefreshTokenRequest]]
-- [[Request]]
-- [[User]]
+### Contains
+- [[auth_init_.py]]
+- [[auth_config.py]]
+- [[auth_database.py]]
+- [[auth_grpc_server.py]]
+- [[auth_main.py]]
+- [[auth_models.py]]
+- [[auth_routers.py]]
+- [[auth_schemas.py]]
+- [[auth_services.py]]

@@ -1,0 +1,3 @@
+# RatingUpsertRequest
+
+**Type:** type

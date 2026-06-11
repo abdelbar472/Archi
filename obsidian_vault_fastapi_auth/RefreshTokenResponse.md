@@ -1,0 +1,3 @@
+# RefreshTokenResponse
+
+**Type:** type

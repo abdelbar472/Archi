@@ -1,0 +1,3 @@
+# GetFollowListResponse
+
+**Type:** type

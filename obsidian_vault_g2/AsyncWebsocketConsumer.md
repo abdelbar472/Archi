@@ -1,0 +1,3 @@
+# AsyncWebsocketConsumer
+
+**Type:** type

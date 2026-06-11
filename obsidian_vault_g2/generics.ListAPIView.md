@@ -1,0 +1,3 @@
+# generics.ListAPIView
+
+**Type:** type

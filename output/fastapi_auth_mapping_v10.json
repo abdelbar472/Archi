@@ -183,7 +183,7 @@
     {
       "id": "auth",
       "type": "folder",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
@@ -194,260 +194,212 @@
     },
     {
       "id": "auth/config.py::Settings",
-      "type": "sql_model",
-      "community": 1,
-      "external": false
-    },
-    {
-      "id": "table:settingss",
-      "type": "table",
+      "type": "file",
       "community": 1,
       "external": false
     },
     {
       "id": "auth/database.py",
       "type": "file",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/database.py::create_db_and_tables",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/database.py::get_session",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/grpc_server.py",
       "type": "file",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/grpc_server.py::AuthServicer",
-      "type": "model",
-      "community": 2,
+      "type": "grpc",
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/grpc_server.py::AuthServicer::ValidateToken",
       "type": "method",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/grpc_server.py::AuthServicer::RefreshToken",
       "type": "method",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/grpc_server.py::AuthServicer::GetUser",
       "type": "method",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/grpc_server.py::AuthServicer::GetUserByUsername",
       "type": "method",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/grpc_server.py::serve_grpc",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/main.py",
       "type": "main",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/main.py::lifespan",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/main.py::log_requests",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/models.py",
       "type": "model",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/models.py::User",
-      "type": "sql_model",
-      "community": 2,
+      "type": "model",
+      "community": 1,
       "external": false
     },
     {
       "id": "table:users",
       "type": "table",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/models.py::RefreshToken",
-      "type": "sql_model",
-      "community": 2,
+      "type": "model",
+      "community": 1,
       "external": false
     },
     {
       "id": "table:refresh_tokens",
       "type": "table",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/routers.py",
       "type": "router",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/routers.py::get_current_user",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/routers.py::health",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/routers.py::register",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/routers.py::login",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/routers.py::refresh",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/routers.py::logout",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/routers.py::verify",
       "type": "function",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/schemas.py",
       "type": "model",
-      "community": 3,
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/schemas.py::UserBase",
-      "type": "sql_model",
-      "community": 3,
-      "external": false
-    },
-    {
-      "id": "table:userbases",
-      "type": "table",
-      "community": 3,
+      "type": "fastapi_schema",
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/schemas.py::UserCreate",
-      "type": "sql_model",
-      "community": 3,
-      "external": false
-    },
-    {
-      "id": "table:usercreates",
-      "type": "table",
-      "community": 3,
+      "type": "model",
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/schemas.py::UserResponse",
-      "type": "sql_model",
-      "community": 3,
-      "external": false
-    },
-    {
-      "id": "table:userresponses",
-      "type": "table",
-      "community": 3,
+      "type": "model",
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/schemas.py::Token",
-      "type": "sql_model",
-      "community": 3,
-      "external": false
-    },
-    {
-      "id": "table:tokens",
-      "type": "table",
-      "community": 3,
+      "type": "fastapi_schema",
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/schemas.py::TokenData",
-      "type": "sql_model",
-      "community": 3,
-      "external": false
-    },
-    {
-      "id": "table:tokendatas",
-      "type": "table",
-      "community": 3,
+      "type": "fastapi_schema",
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/schemas.py::LoginRequest",
-      "type": "sql_model",
-      "community": 3,
-      "external": false
-    },
-    {
-      "id": "table:loginrequests",
-      "type": "table",
-      "community": 3,
+      "type": "fastapi_schema",
+      "community": 1,
       "external": false
     },
     {
       "id": "auth/schemas.py::RefreshTokenRequest",
-      "type": "sql_model",
-      "community": 3,
-      "external": false
-    },
-    {
-      "id": "table:refreshtokenrequests",
-      "type": "table",
-      "community": 3,
+      "type": "fastapi_schema",
+      "community": 1,
       "external": false
     },
     {
@@ -537,7 +489,7 @@
     {
       "id": "auth/__init__.py",
       "type": "file",
-      "community": 2,
+      "community": 1,
       "external": false
     },
     {
@@ -555,61 +507,61 @@
     {
       "id": "book/book_v4_pb2_grpc.py",
       "type": "file",
-      "community": 5,
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::BookServiceStub",
-      "type": "model",
-      "community": 5,
+      "type": "grpc",
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::BookServiceStub::__init__",
       "type": "method",
-      "community": 5,
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::BookServiceServicer",
-      "type": "model",
-      "community": 5,
+      "type": "grpc",
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::BookServiceServicer::GetBook",
       "type": "method",
-      "community": 5,
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::BookServiceServicer::GetBookByWorkId",
       "type": "method",
-      "community": 5,
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::BookService",
-      "type": "model",
-      "community": 5,
+      "type": "grpc",
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::BookService::GetBook",
       "type": "method",
-      "community": 5,
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::BookService::GetBookByWorkId",
       "type": "method",
-      "community": 5,
+      "community": 3,
       "external": false
     },
     {
       "id": "book/book_v4_pb2_grpc.py::add_BookServiceServicer_to_server",
       "type": "function",
-      "community": 5,
+      "community": 3,
       "external": false
     },
     {
@@ -621,19 +573,19 @@
     {
       "id": "book/config.py",
       "type": "file",
-      "community": 1,
+      "community": 4,
       "external": false
     },
     {
       "id": "book/config.py::Settings",
-      "type": "sql_model",
-      "community": 1,
+      "type": "file",
+      "community": 4,
       "external": false
     },
     {
       "id": "book/config.py::Config",
-      "type": "model",
-      "community": 1,
+      "type": "file",
+      "community": 4,
       "external": false
     },
     {
@@ -644,7 +596,7 @@
     },
     {
       "id": "book/database.py::Database",
-      "type": "model",
+      "type": "file",
       "community": 4,
       "external": false
     },
@@ -710,7 +662,7 @@
     },
     {
       "id": "book/grpc_client.py::RAGServiceGRPCClient",
-      "type": "model",
+      "type": "grpc",
       "community": 4,
       "external": false
     },
@@ -758,7 +710,7 @@
     },
     {
       "id": "book/grpc_server.py::BookService",
-      "type": "model",
+      "type": "grpc",
       "community": 4,
       "external": false
     },
@@ -873,379 +825,319 @@
     {
       "id": "book/models",
       "type": "folder",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/author.py",
       "type": "file",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/author.py::AuthorBio",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:authorbios",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/author.py::AuthorStyleProfile",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:authorstyleprofiles",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/author.py::AuthorStats",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:authorstatss",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/author.py::AuthorProfile",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:authorprofiles",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/book.py",
       "type": "file",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/book.py::ContentAnalysis",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:contentanalysiss",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/book.py::QualityMetrics",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:qualitymetricss",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/book.py::Edition",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:editions",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/book.py::BookProfile",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:bookprofiles",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/book.py::Config",
       "type": "model",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/common.py",
       "type": "file",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/common.py::ThemeCategory",
       "type": "model",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/common.py::ContentTone",
       "type": "model",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/series.py",
       "type": "file",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/series.py::SeriesBookEntry",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:seriesbookentrys",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/series.py::SeriesProfile",
-      "type": "sql_model",
-      "community": 6,
-      "external": false
-    },
-    {
-      "id": "table:seriesprofiles",
-      "type": "table",
-      "community": 6,
+      "type": "fastapi_schema",
+      "community": 5,
       "external": false
     },
     {
       "id": "book/models/__init__.py",
       "type": "file",
-      "community": 6,
+      "community": 5,
       "external": false
     },
     {
       "id": "book/routers",
       "type": "folder",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/routers/api.py",
       "type": "file",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/routers/api.py::health",
       "type": "function",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/routers/api.py::search_books",
       "type": "function",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/routers/api.py::search_authors",
       "type": "function",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/routers/api.py::get_author_books",
       "type": "function",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/routers/api.py::search_series",
       "type": "function",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/routers/api.py::unified_search",
       "type": "function",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/routers/__init__.py",
       "type": "file",
-      "community": 7,
+      "community": 6,
       "external": false
     },
     {
       "id": "book/services",
       "type": "folder",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py",
       "type": "file",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::SimpleExternalClient",
-      "type": "model",
-      "community": 8,
+      "type": "service",
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::SimpleExternalClient::fetch_by_isbn",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::SimpleExternalClient::search_books",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService",
-      "type": "model",
-      "community": 8,
+      "type": "service",
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::__init__",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::enrich_by_isbn",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::_group_editions_strong",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::_build_rich_book_profile",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::_build_book_rag_doc",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::enrich_author",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::_build_author_rag_doc",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::_fetch_books_by_author",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::enrich_series",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/enrichment.py::EnrichmentService::_build_series_rag_doc",
       "type": "method",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/wikipedia.py",
       "type": "file",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/wikipedia.py::resolve_author",
       "type": "function",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/wikipedia.py::resolve_book_wikipedia",
       "type": "function",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/wikipedia.py::resolve_series_wikipedia",
       "type": "function",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/wikipedia.py::_fetch_series_page",
       "type": "function",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/wikipedia.py::_parse_series_books_from_text",
       "type": "function",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/wikipedia.py::_fetch_wikipedia_page",
       "type": "function",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/wikipedia.py::_fallback",
       "type": "function",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
       "id": "book/services/__init__.py",
       "type": "file",
-      "community": 8,
+      "community": 7,
       "external": false
     },
     {
@@ -1293,325 +1185,301 @@
     {
       "id": "follow",
       "type": "folder",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/auth.py",
       "type": "file",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/auth.py::_get_auth_stub",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/auth.py::close_auth_channel",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/auth.py::get_current_user_id",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/config.py",
       "type": "file",
-      "community": 1,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/config.py::Settings",
-      "type": "sql_model",
-      "community": 1,
+      "type": "file",
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/database.py",
       "type": "file",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/database.py::create_db_and_tables",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/database.py::get_session",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_client.py",
       "type": "file",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_client.py::get_follow_stub",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_client.py::close_grpc_channel",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_client.py::is_following",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_client.py::get_follow_stats",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_client.py::get_followers",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_client.py::get_following",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_server.py",
       "type": "file",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_server.py::FollowServicer",
-      "type": "model",
-      "community": 9,
+      "type": "grpc",
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_server.py::FollowServicer::IsFollowing",
       "type": "method",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_server.py::FollowServicer::GetFollowStats",
       "type": "method",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_server.py::FollowServicer::GetFollowers",
       "type": "method",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_server.py::FollowServicer::GetFollowing",
       "type": "method",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/grpc_server.py::serve_grpc",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/main.py",
       "type": "main",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/main.py::lifespan",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/main.py::log_requests",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/models.py",
       "type": "model",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/models.py::Follow",
-      "type": "sql_model",
-      "community": 9,
+      "type": "model",
+      "community": 8,
       "external": false
     },
     {
       "id": "table:follows",
       "type": "table",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/routers.py",
       "type": "router",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/routers.py::follow",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/routers.py::unfollow",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/routers.py::check_follow",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/routers.py::list_followers",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/routers.py::list_following",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/routers.py::follow_stats",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/schemas.py",
       "type": "model",
-      "community": 10,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/schemas.py::FollowResponse",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:followresponses",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/schemas.py::FollowStats",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:followstatss",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/schemas.py::FollowerEntry",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:followerentrys",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/schemas.py::FollowListResponse",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:followlistresponses",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/services.py",
       "type": "service",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/services.py::follow_user",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/services.py::unfollow_user",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/services.py::is_following",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/services.py::get_followers",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/services.py::get_following",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/services.py::get_follow_stats",
       "type": "function",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
       "id": "follow/__init__.py",
       "type": "file",
-      "community": 9,
+      "community": 8,
       "external": false
     },
     {
@@ -1641,1039 +1509,1039 @@
     {
       "id": "proto",
       "type": "folder",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/auth.proto",
       "type": "file",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::AuthService",
       "type": "service",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::ValidateTokenRequest",
       "type": "message",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::ValidateTokenResponse",
       "type": "message",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::RefreshTokenRequest",
       "type": "message",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::RefreshTokenResponse",
       "type": "message",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::GetUserRequest",
       "type": "message",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::GetUserByUsernameRequest",
       "type": "message",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::UserPayload",
       "type": "message",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::ValidateToken",
       "type": "rpc",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::RefreshToken",
       "type": "rpc",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::GetUser",
       "type": "rpc",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth.proto::GetUserByUsername",
       "type": "rpc",
-      "community": 11,
+      "community": 9,
       "external": false
     },
     {
       "id": "proto/auth_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py",
       "type": "file",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthServiceStub",
-      "type": "model",
-      "community": 12,
+      "type": "grpc",
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthServiceStub::__init__",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthServiceServicer",
-      "type": "model",
-      "community": 12,
+      "type": "grpc",
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthServiceServicer::ValidateToken",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthServiceServicer::RefreshToken",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthServiceServicer::GetUser",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthServiceServicer::GetUserByUsername",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthService",
-      "type": "model",
-      "community": 12,
+      "type": "grpc",
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthService::ValidateToken",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthService::RefreshToken",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthService::GetUser",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::AuthService::GetUserByUsername",
       "type": "method",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/auth_pb2_grpc.py::add_AuthServiceServicer_to_server",
       "type": "function",
-      "community": 12,
+      "community": 11,
       "external": false
     },
     {
       "id": "proto/book.proto",
       "type": "file",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::BookService",
       "type": "service",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::GetBookRequest",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::GetBooksByAuthorRequest",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::SearchBooksRequest",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::GetAuthorRequest",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::GetPublisherRequest",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::BookPayload",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::AuthorPayload",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::PublisherPayload",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::BookListResponse",
       "type": "message",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::GetBook",
       "type": "rpc",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::GetBooksByAuthor",
       "type": "rpc",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::SearchBooks",
       "type": "rpc",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::GetAuthor",
       "type": "rpc",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book.proto::GetPublisher",
       "type": "rpc",
-      "community": 13,
+      "community": 12,
       "external": false
     },
     {
       "id": "proto/book_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py",
       "type": "file",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookServiceStub",
-      "type": "model",
-      "community": 14,
+      "type": "grpc",
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookServiceStub::__init__",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookServiceServicer",
-      "type": "model",
-      "community": 14,
+      "type": "grpc",
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookServiceServicer::GetBook",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookServiceServicer::GetBooksByAuthor",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookServiceServicer::SearchBooks",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookServiceServicer::GetAuthor",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookServiceServicer::GetPublisher",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookService",
-      "type": "model",
-      "community": 14,
+      "type": "grpc",
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookService::GetBook",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookService::GetBooksByAuthor",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookService::SearchBooks",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookService::GetAuthor",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::BookService::GetPublisher",
       "type": "method",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_pb2_grpc.py::add_BookServiceServicer_to_server",
       "type": "function",
-      "community": 14,
+      "community": 13,
       "external": false
     },
     {
       "id": "proto/book_v3.proto",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::BookV3Service",
       "type": "service",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::GetBookByWorkIdRequest",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::ListBooksRequest",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::SearchBooksRequest",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::BookV3Payload",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::BookV3ListResponse",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::GetBookByWorkId",
       "type": "rpc",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::ListBooks",
       "type": "rpc",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3.proto::SearchBooks",
       "type": "rpc",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py",
       "type": "file",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3ServiceStub",
-      "type": "model",
-      "community": 15,
+      "type": "grpc",
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3ServiceStub::__init__",
       "type": "method",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3ServiceServicer",
-      "type": "model",
-      "community": 15,
+      "type": "grpc",
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3ServiceServicer::GetBookByWorkId",
       "type": "method",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3ServiceServicer::ListBooks",
       "type": "method",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3ServiceServicer::SearchBooks",
       "type": "method",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3Service",
-      "type": "model",
-      "community": 15,
+      "type": "grpc",
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3Service::GetBookByWorkId",
       "type": "method",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3Service::ListBooks",
       "type": "method",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::BookV3Service::SearchBooks",
       "type": "method",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v3_pb2_grpc.py::add_BookV3ServiceServicer_to_server",
       "type": "function",
-      "community": 15,
+      "community": 14,
       "external": false
     },
     {
       "id": "proto/book_v4.proto",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4.proto::BookService",
       "type": "service",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4.proto::GetBookRequest",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4.proto::GetBookByWorkIdRequest",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4.proto::GetBookResponse",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4.proto::BookPayload",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4.proto::GetBook",
       "type": "rpc",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4.proto::GetBookByWorkId",
       "type": "rpc",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py",
       "type": "file",
-      "community": 16,
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::BookServiceStub",
-      "type": "model",
-      "community": 16,
+      "type": "grpc",
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::BookServiceStub::__init__",
       "type": "method",
-      "community": 16,
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::BookServiceServicer",
-      "type": "model",
-      "community": 16,
+      "type": "grpc",
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::BookServiceServicer::GetBook",
       "type": "method",
-      "community": 16,
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::BookServiceServicer::GetBookByWorkId",
       "type": "method",
-      "community": 16,
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::BookService",
-      "type": "model",
-      "community": 16,
+      "type": "grpc",
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::BookService::GetBook",
       "type": "method",
-      "community": 16,
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::BookService::GetBookByWorkId",
       "type": "method",
-      "community": 16,
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/book_v4_pb2_grpc.py::add_BookServiceServicer_to_server",
       "type": "function",
-      "community": 16,
+      "community": 15,
       "external": false
     },
     {
       "id": "proto/follow.proto",
       "type": "file",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::FollowService",
       "type": "service",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::IsFollowingRequest",
       "type": "message",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::IsFollowingResponse",
       "type": "message",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::GetFollowStatsRequest",
       "type": "message",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::GetFollowStatsResponse",
       "type": "message",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::GetFollowListRequest",
       "type": "message",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::GetFollowListResponse",
       "type": "message",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::IsFollowing",
       "type": "rpc",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::GetFollowStats",
       "type": "rpc",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::GetFollowers",
       "type": "rpc",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow.proto::GetFollowing",
       "type": "rpc",
-      "community": 17,
+      "community": 16,
       "external": false
     },
     {
       "id": "proto/follow_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py",
       "type": "file",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowServiceStub",
-      "type": "model",
-      "community": 18,
+      "type": "grpc",
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowServiceStub::__init__",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowServiceServicer",
-      "type": "model",
-      "community": 18,
+      "type": "grpc",
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowServiceServicer::IsFollowing",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowServiceServicer::GetFollowStats",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowServiceServicer::GetFollowers",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowServiceServicer::GetFollowing",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowService",
-      "type": "model",
-      "community": 18,
+      "type": "grpc",
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowService::IsFollowing",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowService::GetFollowStats",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowService::GetFollowers",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::FollowService::GetFollowing",
       "type": "method",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/follow_pb2_grpc.py::add_FollowServiceServicer_to_server",
       "type": "function",
-      "community": 18,
+      "community": 17,
       "external": false
     },
     {
       "id": "proto/rag.proto",
       "type": "file",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::RagService",
       "type": "service",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::IndexBookPayload",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::IndexBooksRequest",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::IndexBooksResponse",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::RetrievalCandidate",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::GetSimilarBooksRequest",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::GetSimilarBooksResponse",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::SemanticSearchRequest",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::SemanticSearchResponse",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::GetBookEmbeddingRequest",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::GetBookEmbeddingResponse",
       "type": "message",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::IndexBooks",
       "type": "rpc",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::GetSimilarBooks",
       "type": "rpc",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::SemanticSearch",
       "type": "rpc",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag.proto::GetBookEmbedding",
       "type": "rpc",
-      "community": 19,
+      "community": 18,
       "external": false
     },
     {
       "id": "proto/rag_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py",
       "type": "file",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagServiceStub",
-      "type": "model",
-      "community": 20,
+      "type": "grpc",
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagServiceStub::__init__",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagServiceServicer",
-      "type": "model",
-      "community": 20,
+      "type": "grpc",
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagServiceServicer::IndexBooks",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagServiceServicer::GetSimilarBooks",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagServiceServicer::SemanticSearch",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagServiceServicer::GetBookEmbedding",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagService",
-      "type": "model",
-      "community": 20,
+      "type": "grpc",
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagService::IndexBooks",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagService::GetSimilarBooks",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagService::SemanticSearch",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::RagService::GetBookEmbedding",
       "type": "method",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/rag_pb2_grpc.py::add_RagServiceServicer_to_server",
       "type": "function",
-      "community": 20,
+      "community": 19,
       "external": false
     },
     {
       "id": "proto/recommendation.proto",
       "type": "file",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::RecommendationService",
       "type": "service",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::RecommendationRequest",
       "type": "message",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::BookRecommendation",
       "type": "message",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::RecommendationResponse",
       "type": "message",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::InteractionEvent",
       "type": "message",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::UpdateUserProfileRequest",
       "type": "message",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::UpdateUserProfileResponse",
       "type": "message",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::GetRecommendations",
       "type": "rpc",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation.proto::UpdateUserProfile",
       "type": "rpc",
-      "community": 11,
+      "community": 20,
       "external": false
     },
     {
       "id": "proto/recommendation_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
@@ -2684,7 +2552,7 @@
     },
     {
       "id": "proto/recommendation_pb2_grpc.py::RecommendationServiceStub",
-      "type": "model",
+      "type": "grpc",
       "community": 21,
       "external": false
     },
@@ -2696,7 +2564,7 @@
     },
     {
       "id": "proto/recommendation_pb2_grpc.py::RecommendationServiceServicer",
-      "type": "model",
+      "type": "grpc",
       "community": 21,
       "external": false
     },
@@ -2714,7 +2582,7 @@
     },
     {
       "id": "proto/recommendation_pb2_grpc.py::RecommendationService",
-      "type": "model",
+      "type": "grpc",
       "community": 21,
       "external": false
     },
@@ -2739,55 +2607,55 @@
     {
       "id": "proto/social.proto",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/social.proto::SocialService",
       "type": "service",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/social.proto::GetBookStatsRequest",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/social.proto::BookSocialStatsPayload",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/social.proto::HealthRequest",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/social.proto::HealthResponse",
       "type": "message",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/social.proto::GetBookStats",
       "type": "rpc",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/social.proto::Health",
       "type": "rpc",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/social_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
@@ -2798,7 +2666,7 @@
     },
     {
       "id": "proto/social_pb2_grpc.py::SocialServiceStub",
-      "type": "model",
+      "type": "grpc",
       "community": 22,
       "external": false
     },
@@ -2810,7 +2678,7 @@
     },
     {
       "id": "proto/social_pb2_grpc.py::SocialServiceServicer",
-      "type": "model",
+      "type": "grpc",
       "community": 22,
       "external": false
     },
@@ -2828,7 +2696,7 @@
     },
     {
       "id": "proto/social_pb2_grpc.py::SocialService",
-      "type": "model",
+      "type": "grpc",
       "community": 22,
       "external": false
     },
@@ -2853,121 +2721,121 @@
     {
       "id": "proto/user.proto",
       "type": "file",
-      "community": 23,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user.proto::UserService",
       "type": "service",
-      "community": 23,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user.proto::GetProfileRequest",
       "type": "message",
-      "community": 23,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user.proto::UserProfilePayload",
       "type": "message",
-      "community": 23,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user.proto::HealthRequest",
       "type": "message",
-      "community": 23,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user.proto::HealthResponse",
       "type": "message",
-      "community": 23,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user.proto::GetProfile",
       "type": "rpc",
-      "community": 23,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user.proto::Health",
       "type": "rpc",
-      "community": 23,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user_pb2.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py",
       "type": "file",
-      "community": 24,
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::UserServiceStub",
-      "type": "model",
-      "community": 24,
+      "type": "grpc",
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::UserServiceStub::__init__",
       "type": "method",
-      "community": 24,
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::UserServiceServicer",
-      "type": "model",
-      "community": 24,
+      "type": "grpc",
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::UserServiceServicer::GetProfile",
       "type": "method",
-      "community": 24,
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::UserServiceServicer::Health",
       "type": "method",
-      "community": 24,
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::UserService",
-      "type": "model",
-      "community": 24,
+      "type": "grpc",
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::UserService::GetProfile",
       "type": "method",
-      "community": 24,
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::UserService::Health",
       "type": "method",
-      "community": 24,
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/user_pb2_grpc.py::add_UserServiceServicer_to_server",
       "type": "function",
-      "community": 24,
+      "community": 23,
       "external": false
     },
     {
       "id": "proto/__init__.py",
       "type": "file",
-      "community": 11,
+      "community": 10,
       "external": false
     },
     {
@@ -2984,13 +2852,13 @@
     },
     {
       "id": "rag/config.py::Settings",
-      "type": "sql_model",
+      "type": "file",
       "community": 25,
       "external": false
     },
     {
       "id": "rag/config.py::Config",
-      "type": "model",
+      "type": "file",
       "community": 25,
       "external": false
     },
@@ -3008,7 +2876,7 @@
     },
     {
       "id": "rag/embedding.py::EmbeddingGenerator",
-      "type": "model",
+      "type": "file",
       "community": 25,
       "external": false
     },
@@ -3044,7 +2912,7 @@
     },
     {
       "id": "rag/engine.py::RAGEngine",
-      "type": "model",
+      "type": "file",
       "community": 25,
       "external": false
     },
@@ -3092,7 +2960,7 @@
     },
     {
       "id": "rag/grpc_client.py::BookServiceGRPCClient",
-      "type": "model",
+      "type": "grpc",
       "community": 25,
       "external": false
     },
@@ -3140,7 +3008,7 @@
     },
     {
       "id": "rag/grpc_server.py::RagServicer",
-      "type": "model",
+      "type": "grpc",
       "community": 25,
       "external": false
     },
@@ -3170,7 +3038,7 @@
     },
     {
       "id": "rag/grpc_server.py::GRPCServer",
-      "type": "model",
+      "type": "grpc",
       "community": 25,
       "external": false
     },
@@ -3230,7 +3098,7 @@
     },
     {
       "id": "rag/qdrant_client.py::DatabaseManager",
-      "type": "model",
+      "type": "file",
       "community": 25,
       "external": false
     },
@@ -3267,61 +3135,55 @@
     {
       "id": "rag/routers.py",
       "type": "router",
-      "community": 26,
+      "community": 24,
       "external": false
     },
     {
       "id": "rag/routers.py::BookSyncRequest",
-      "type": "sql_model",
-      "community": 26,
-      "external": false
-    },
-    {
-      "id": "table:booksyncrequests",
-      "type": "table",
-      "community": 26,
+      "type": "fastapi_schema",
+      "community": 24,
       "external": false
     },
     {
       "id": "rag/routers.py::semantic_search",
       "type": "function",
-      "community": 26,
+      "community": 24,
       "external": false
     },
     {
       "id": "rag/routers.py::find_similar",
       "type": "function",
-      "community": 26,
+      "community": 24,
       "external": false
     },
     {
       "id": "rag/routers.py::thematic_search",
       "type": "function",
-      "community": 26,
+      "community": 24,
       "external": false
     },
     {
       "id": "rag/routers.py::get_stats",
       "type": "function",
-      "community": 26,
+      "community": 24,
       "external": false
     },
     {
       "id": "rag/routers.py::sync_books",
       "type": "function",
-      "community": 26,
+      "community": 24,
       "external": false
     },
     {
       "id": "rag/routers.py::sync_book_by_work_id",
       "type": "function",
-      "community": 26,
+      "community": 24,
       "external": false
     },
     {
       "id": "rag/routers.py::health_check",
       "type": "function",
-      "community": 26,
+      "community": 24,
       "external": false
     },
     {
@@ -3332,7 +3194,7 @@
     },
     {
       "id": "rag/services.py::SearchService",
-      "type": "model",
+      "type": "service",
       "community": 25,
       "external": false
     },
@@ -3356,7 +3218,7 @@
     },
     {
       "id": "rag/services.py::IndexingService",
-      "type": "model",
+      "type": "service",
       "community": 25,
       "external": false
     },
@@ -3410,56 +3272,56 @@
     },
     {
       "id": "rag/vector_store.py::VectorStore",
-      "type": "model",
-      "community": 27,
+      "type": "file",
+      "community": 26,
       "external": false
     },
     {
       "id": "rag/vector_store.py::VectorStore::__init__",
       "type": "method",
-      "community": 27,
+      "community": 26,
       "external": false
     },
     {
       "id": "rag/vector_store.py::VectorStore::_get_client",
       "type": "method",
-      "community": 27,
+      "community": 26,
       "external": false
     },
     {
       "id": "rag/vector_store.py::VectorStore::upsert_documents",
       "type": "method",
-      "community": 27,
+      "community": 26,
       "external": false
     },
     {
       "id": "rag/vector_store.py::VectorStore::search",
       "type": "method",
-      "community": 27,
+      "community": 26,
       "external": false
     },
     {
       "id": "rag/vector_store.py::VectorStore::hybrid_search",
       "type": "method",
-      "community": 27,
+      "community": 26,
       "external": false
     },
     {
       "id": "rag/vector_store.py::VectorStore::get_by_id",
       "type": "method",
-      "community": 27,
+      "community": 26,
       "external": false
     },
     {
       "id": "rag/vector_store.py::VectorStore::count",
       "type": "method",
-      "community": 27,
+      "community": 26,
       "external": false
     },
     {
       "id": "rag/vector_store.py::VectorStore::_build_filter",
       "type": "method",
-      "community": 27,
+      "community": 26,
       "external": false
     },
     {
@@ -3471,1613 +3333,1229 @@
     {
       "id": "recommendation",
       "type": "folder",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/config.py",
       "type": "file",
-      "community": 1,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/config.py::Settings",
-      "type": "sql_model",
-      "community": 1,
+      "type": "file",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/config.py::Config",
-      "type": "model",
-      "community": 1,
+      "type": "file",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/config.py::get_settings",
       "type": "function",
-      "community": 1,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_client.py",
       "type": "file",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_client.py::_get_stub",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_client.py::close_rag_channel",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_client.py::get_similar_books",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_server.py",
       "type": "file",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_server.py::RecommendationServicer",
-      "type": "model",
-      "community": 28,
+      "type": "grpc",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_server.py::RecommendationServicer::GetRecommendations",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_server.py::RecommendationServicer::UpdateUserProfile",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_server.py::GRPCServer",
-      "type": "model",
-      "community": 28,
+      "type": "grpc",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_server.py::GRPCServer::__init__",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_server.py::GRPCServer::start",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/grpc_server.py::GRPCServer::stop",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/main.py",
       "type": "main",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/main.py::lifespan",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/main.py::root",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/profile.py",
       "type": "file",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/profile.py::UserProfile",
-      "type": "model",
-      "community": 28,
+      "type": "file",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/profile.py::UserProfileBuilder",
-      "type": "model",
-      "community": 28,
+      "type": "file",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/profile.py::UserProfileBuilder::from_history",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/profile.py::apply_interaction",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/profile.py::get_profile_history",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/ranking.py",
       "type": "file",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/ranking.py::rank_unique_recommendations",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/ranking.py::diversify_by_genre",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/routers.py",
       "type": "router",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/routers.py::RecommendationRequestBody",
-      "type": "sql_model",
-      "community": 28,
-      "external": false
-    },
-    {
-      "id": "table:recommendationrequestbodys",
-      "type": "table",
-      "community": 28,
+      "type": "fastapi_schema",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/routers.py::InteractionEventBody",
-      "type": "sql_model",
-      "community": 28,
-      "external": false
-    },
-    {
-      "id": "table:interactioneventbodys",
-      "type": "table",
-      "community": 28,
+      "type": "fastapi_schema",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/routers.py::recommend",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/routers.py::update_profile_event",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/routers.py::health",
       "type": "function",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/service.py",
       "type": "service",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/service.py::RecommendationService",
-      "type": "model",
-      "community": 28,
+      "type": "service",
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/service.py::RecommendationService::_fetch_similar",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/service.py::RecommendationService::get_recommendations",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/service.py::RecommendationService::update_user_profile",
       "type": "method",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "recommendation/__init__.py",
       "type": "file",
-      "community": 28,
+      "community": 27,
       "external": false
     },
     {
       "id": "social",
       "type": "folder",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/auth.py",
       "type": "file",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/auth.py::_get_auth_stub",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/auth.py::close_auth_channel",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/auth.py::get_current_user_id",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/book_grpc_client.py",
       "type": "file",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/book_grpc_client.py::init_book_channel",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/book_grpc_client.py::close_book_channel",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/book_grpc_client.py::assert_book_exists",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/book_grpc_client.py::get_book_details",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/config.py",
       "type": "file",
-      "community": 1,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/config.py::Settings",
-      "type": "sql_model",
-      "community": 1,
+      "type": "file",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/database.py",
       "type": "file",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/database.py::create_db_and_tables",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/database.py::get_session",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/grpc_server.py",
       "type": "file",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/grpc_server.py::SocialServicer",
-      "type": "model",
-      "community": 29,
+      "type": "grpc",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/grpc_server.py::SocialServicer::GetBookStats",
       "type": "method",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/grpc_server.py::SocialServicer::Health",
       "type": "method",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/grpc_server.py::serve_grpc",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/main.py",
       "type": "main",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/main.py::lifespan",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/main.py::log_requests",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/models.py",
       "type": "model",
-      "community": 30,
+      "community": 29,
       "external": false
     },
     {
       "id": "social/models.py::BookLike",
-      "type": "sql_model",
-      "community": 30,
+      "type": "model",
+      "community": 29,
       "external": false
     },
     {
       "id": "table:book_likes",
       "type": "table",
-      "community": 30,
+      "community": 29,
       "external": false
     },
     {
       "id": "social/models.py::BookRating",
-      "type": "sql_model",
-      "community": 30,
+      "type": "model",
+      "community": 29,
       "external": false
     },
     {
       "id": "table:book_ratings",
       "type": "table",
-      "community": 30,
+      "community": 29,
       "external": false
     },
     {
       "id": "social/models.py::BookReview",
-      "type": "sql_model",
-      "community": 30,
+      "type": "model",
+      "community": 29,
       "external": false
     },
     {
       "id": "table:book_reviews",
       "type": "table",
-      "community": 30,
+      "community": 29,
       "external": false
     },
     {
       "id": "social/models.py::ReviewLike",
-      "type": "sql_model",
-      "community": 30,
+      "type": "model",
+      "community": 29,
       "external": false
     },
     {
       "id": "table:review_likes",
       "type": "table",
-      "community": 30,
+      "community": 29,
       "external": false
     },
     {
       "id": "social/models.py::Shelf",
-      "type": "sql_model",
-      "community": 30,
+      "type": "model",
+      "community": 29,
       "external": false
     },
     {
       "id": "table:shelves",
       "type": "table",
-      "community": 30,
+      "community": 29,
       "external": false
     },
     {
       "id": "social/models.py::ShelfItem",
-      "type": "sql_model",
-      "community": 30,
+      "type": "model",
+      "community": 29,
       "external": false
     },
     {
       "id": "table:shelf_items",
       "type": "table",
-      "community": 30,
+      "community": 29,
       "external": false
     },
     {
       "id": "social/models.py::utc_now",
       "type": "function",
-      "community": 30,
+      "community": 29,
       "external": false
     },
     {
       "id": "social/recommendation_grpc_client.py",
       "type": "file",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/recommendation_grpc_client.py::_get_recommendation_stub",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/recommendation_grpc_client.py::close_recommendation_channel",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/recommendation_grpc_client.py::track_interaction",
       "type": "function",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/routers.py",
       "type": "router",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::_review_payload",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::health",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::like_book_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::unlike_book_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::upsert_rating_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::get_my_rating_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::get_book_stats_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::create_review_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::create_review_reply_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::update_review_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::delete_review_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::like_review_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::unlike_review_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::list_reviews_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::list_review_replies_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::create_shelf_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::list_my_shelves_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::update_shelf_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::delete_shelf_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::add_shelf_item_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::list_shelf_items_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::list_shelf_books_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/routers.py::remove_shelf_item_route",
       "type": "function",
-      "community": 31,
+      "community": 30,
       "external": false
     },
     {
       "id": "social/schemas.py",
       "type": "model",
-      "community": 32,
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::LikeResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:likeresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::RatingUpsertRequest",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:ratingupsertrequests",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::RatingResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:ratingresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ReviewCreateRequest",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:reviewcreaterequests",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ReviewReplyCreateRequest",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:reviewreplycreaterequests",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ReviewUpdateRequest",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:reviewupdaterequests",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ReviewResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:reviewresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ReviewListResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:reviewlistresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ReviewLikeResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:reviewlikeresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ShelfCreateRequest",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:shelfcreaterequests",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ShelfUpdateRequest",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:shelfupdaterequests",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ShelfResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:shelfresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ShelfItemCreateRequest",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:shelfitemcreaterequests",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ShelfItemResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:shelfitemresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ShelfItemListResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:shelfitemlistresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ShelfBookItemResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:shelfbookitemresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::ShelfBookListResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:shelfbooklistresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/schemas.py::BookSocialStatsResponse",
-      "type": "sql_model",
-      "community": 32,
-      "external": false
-    },
-    {
-      "id": "table:booksocialstatsresponses",
-      "type": "table",
-      "community": 32,
+      "type": "fastapi_schema",
+      "community": 28,
       "external": false
     },
     {
       "id": "social/services.py",
       "type": "service",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::utc_now",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::like_book",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::unlike_book",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::upsert_rating",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::get_my_rating",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::create_review",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::create_review_reply",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::update_review",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::delete_review",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::list_book_reviews",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::list_review_replies",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::like_review",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::unlike_review",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::get_review_metrics",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::create_shelf",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::list_my_shelves",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::update_shelf",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::delete_shelf",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::add_shelf_item",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::list_shelf_items",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::remove_shelf_item",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/services.py::get_book_social_stats",
       "type": "function",
-      "community": 33,
+      "community": 31,
       "external": false
     },
     {
       "id": "social/__init__.py",
       "type": "file",
-      "community": 29,
+      "community": 28,
       "external": false
     },
     {
       "id": "user",
       "type": "folder",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/config.py",
       "type": "file",
-      "community": 1,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/config.py::Settings",
-      "type": "sql_model",
-      "community": 1,
+      "type": "file",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/database.py",
       "type": "file",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/database.py::_migrate_user_profiles_table",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/database.py::create_db_and_tables",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/database.py::get_session",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/follow_grpc_client.py",
       "type": "file",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/follow_grpc_client.py::_get_follow_stub",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/follow_grpc_client.py::close_follow_channel",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/follow_grpc_client.py::is_following",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/follow_grpc_client.py::get_follow_stats",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/follow_grpc_client.py::get_followers",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/follow_grpc_client.py::get_following",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_client.py",
       "type": "file",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_client.py::get_auth_stub",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_client.py::close_grpc_channel",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_client.py::validate_token",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_client.py::refresh_token",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_client.py::get_user",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_client.py::get_user_by_username",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_server.py",
       "type": "file",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_server.py::UserServicer",
-      "type": "model",
-      "community": 34,
+      "type": "grpc",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_server.py::UserServicer::GetProfile",
       "type": "method",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_server.py::UserServicer::Health",
       "type": "method",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/grpc_server.py::serve_grpc",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/main.py",
       "type": "main",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/main.py::lifespan",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/main.py::log_requests",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/models.py",
       "type": "model",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/models.py::UserProfile",
-      "type": "sql_model",
-      "community": 34,
+      "type": "model",
+      "community": 32,
       "external": false
     },
     {
       "id": "table:user_profiles",
       "type": "table",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py",
       "type": "router",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::get_current_user",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::health",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::get_me",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::update_me",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::refresh",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::get_user_by_username_route",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::follow_stats",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::list_followers",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::list_following",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/routers.py::check_is_following",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/schemas.py",
       "type": "model",
-      "community": 10,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/schemas.py::UserPayload",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:userpayloads",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/schemas.py::ProfileResponse",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:profileresponses",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/schemas.py::ProfileUpdate",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:profileupdates",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/schemas.py::TokenRefreshRequest",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:tokenrefreshrequests",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/schemas.py::TokenResponse",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:tokenresponses",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/schemas.py::FollowStatsResponse",
-      "type": "sql_model",
-      "community": 10,
-      "external": false
-    },
-    {
-      "id": "table:followstatsresponses",
-      "type": "table",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/schemas.py::FollowListResponse",
-      "type": "sql_model",
-      "community": 10,
+      "type": "fastapi_schema",
+      "community": 32,
       "external": false
     },
     {
       "id": "user/services.py",
       "type": "service",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/services.py::get_or_create_profile",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/services.py::update_profile",
       "type": "function",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
       "id": "user/__init__.py",
       "type": "file",
-      "community": 34,
+      "community": 32,
       "external": false
     },
     {
-      "id": "HTTPAuthorizationCredentials",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "UserPayload",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "AsyncSession",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ReviewReplyCreateRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ShelfUpdateRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "BookRating",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ReviewLike",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "Request",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "AuthorProfile",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "Follow",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "RetrievalCandidate",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "GetBookEmbeddingRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ValidateTokenResponse",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "IndexBooksRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "User",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "TokenRefreshRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "RefreshTokenResponse",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ProfileUpdate",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ShelfItem",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "IndexBookPayload",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "RecommendationServiceStub",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "QdrantClient",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "AuthServiceStub",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "InteractionEventBody",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "BookReview",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "GetFollowStatsResponse",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "BookSyncRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "BookProfile",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "GetSimilarBooksRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ReviewCreateRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ShelfCreateRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "RefreshToken",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "SeriesProfile",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "FollowServiceStub",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "UserProfile",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "datetime",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "BookLike",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "UserCreate",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "LoginRequest",
+      "id": "str",
       "type": "type",
       "community": -1,
       "external": true
@@ -5086,64 +4564,202 @@
       "id": "Settings",
       "type": "type",
       "community": -1,
-      "external": true
-    },
-    {
-      "id": "SemanticSearchRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ShelfItemCreateRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "ReviewUpdateRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "FastAPI",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "RecommendationRequestBody",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "RefreshTokenRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "RatingUpsertRequest",
-      "type": "type",
-      "community": -1,
-      "external": true
-    },
-    {
-      "id": "Shelf",
-      "type": "type",
-      "community": -1,
-      "external": true
+      "external": false
     },
     {
       "id": "RagServiceStub",
       "type": "type",
       "community": -1,
-      "external": true
+      "external": false
+    },
+    {
+      "id": "RefreshTokenRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "GetFollowStatsResponse",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "RefreshTokenResponse",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ShelfItem",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ProfileUpdate",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ShelfUpdateRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "follow_pb2_grpc.FollowServiceServicer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "TokenRefreshRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "GetSimilarBooksRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ShelfCreateRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "UserPayload",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "InteractionEventBody",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ReviewUpdateRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
     },
     {
       "id": "GetFollowListResponse",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "GetBookEmbeddingRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BookSyncRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BookReview",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "SemanticSearchRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "book_v4_pb2_grpc.BookServiceServicer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "QdrantClient",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "recommendation_pb2_grpc.RecommendationServiceServicer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "AuthorProfile",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "UserProfile",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "FollowServiceStub",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "RatingUpsertRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "AuthServiceStub",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "User",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ShelfItemCreateRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ReviewReplyCreateRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "IndexBooksRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "RetrievalCandidate",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "Request",
       "type": "type",
       "community": -1,
       "external": true
@@ -5153,6 +4769,180 @@
       "type": "type",
       "community": -1,
       "external": true
+    },
+    {
+      "id": "Enum",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "Shelf",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseSettings",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "RefreshToken",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "TypedDict",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BookProfile",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "LoginRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "Follow",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "AsyncSession",
+      "type": "type",
+      "community": -1,
+      "external": true
+    },
+    {
+      "id": "HTTPAuthorizationCredentials",
+      "type": "type",
+      "community": -1,
+      "external": true
+    },
+    {
+      "id": "RecommendationRequestBody",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ReviewLike",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseModel",
+      "type": "type",
+      "community": -1,
+      "external": true
+    },
+    {
+      "id": "RecommendationServiceStub",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "IndexBookPayload",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BookRating",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "user_pb2_grpc.UserServiceServicer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BookLike",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "UserCreate",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "auth_pb2_grpc.AuthServiceServicer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ReviewCreateRequest",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "datetime",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "ValidateTokenResponse",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "FastAPI",
+      "type": "type",
+      "community": -1,
+      "external": true
+    },
+    {
+      "id": "SeriesProfile",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "UserBase",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "SQLModel",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "social_pb2_grpc.SocialServiceServicer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "rag_pb2_grpc.RagServiceServicer",
+      "type": "type",
+      "community": -1,
+      "external": false
     }
   ],
   "edges": [
@@ -5338,8 +5128,8 @@
     },
     {
       "source": "auth/config.py::Settings",
-      "target": "table:settingss",
-      "type": "maps_to"
+      "target": "BaseSettings",
+      "type": "inherits"
     },
     {
       "source": "auth",
@@ -5365,6 +5155,11 @@
       "source": "auth/grpc_server.py",
       "target": "auth/grpc_server.py::AuthServicer",
       "type": "defines"
+    },
+    {
+      "source": "auth/grpc_server.py::AuthServicer",
+      "target": "auth_pb2_grpc.AuthServiceServicer",
+      "type": "inherits"
     },
     {
       "source": "auth/grpc_server.py::AuthServicer",
@@ -5437,9 +5232,9 @@
       "type": "maps_to"
     },
     {
-      "source": "auth/models.py",
-      "target": "table:users",
-      "type": "defines"
+      "source": "auth/models.py::User",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "auth/models.py",
@@ -5452,9 +5247,9 @@
       "type": "maps_to"
     },
     {
-      "source": "auth/models.py",
-      "target": "table:refresh_tokens",
-      "type": "defines"
+      "source": "auth/models.py::RefreshToken",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "auth",
@@ -5558,8 +5353,8 @@
     },
     {
       "source": "auth/schemas.py::UserBase",
-      "target": "table:userbases",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "auth/schemas.py",
@@ -5568,8 +5363,8 @@
     },
     {
       "source": "auth/schemas.py::UserCreate",
-      "target": "table:usercreates",
-      "type": "maps_to"
+      "target": "UserBase",
+      "type": "inherits"
     },
     {
       "source": "auth/schemas.py",
@@ -5578,8 +5373,8 @@
     },
     {
       "source": "auth/schemas.py::UserResponse",
-      "target": "table:userresponses",
-      "type": "maps_to"
+      "target": "UserBase",
+      "type": "inherits"
     },
     {
       "source": "auth/schemas.py",
@@ -5588,8 +5383,8 @@
     },
     {
       "source": "auth/schemas.py::Token",
-      "target": "table:tokens",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "auth/schemas.py",
@@ -5598,8 +5393,8 @@
     },
     {
       "source": "auth/schemas.py::TokenData",
-      "target": "table:tokendatas",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "auth/schemas.py",
@@ -5608,8 +5403,8 @@
     },
     {
       "source": "auth/schemas.py::LoginRequest",
-      "target": "table:loginrequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "auth/schemas.py",
@@ -5618,8 +5413,8 @@
     },
     {
       "source": "auth/schemas.py::RefreshTokenRequest",
-      "target": "table:refreshtokenrequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "auth",
@@ -5843,8 +5638,8 @@
     },
     {
       "source": "book/config.py::Settings",
-      "target": "table:settingss",
-      "type": "maps_to"
+      "target": "BaseSettings",
+      "type": "inherits"
     },
     {
       "source": "book/config.py",
@@ -5975,6 +5770,11 @@
       "source": "book/grpc_server.py",
       "target": "book/grpc_server.py::BookService",
       "type": "defines"
+    },
+    {
+      "source": "book/grpc_server.py::BookService",
+      "target": "book_v4_pb2_grpc.BookServiceServicer",
+      "type": "inherits"
     },
     {
       "source": "book/grpc_server.py::BookService",
@@ -6113,8 +5913,8 @@
     },
     {
       "source": "book/models/author.py::AuthorBio",
-      "target": "table:authorbios",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models/author.py",
@@ -6123,8 +5923,8 @@
     },
     {
       "source": "book/models/author.py::AuthorStyleProfile",
-      "target": "table:authorstyleprofiles",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models/author.py",
@@ -6133,8 +5933,8 @@
     },
     {
       "source": "book/models/author.py::AuthorStats",
-      "target": "table:authorstatss",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models/author.py",
@@ -6143,8 +5943,8 @@
     },
     {
       "source": "book/models/author.py::AuthorProfile",
-      "target": "table:authorprofiles",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models",
@@ -6158,8 +5958,8 @@
     },
     {
       "source": "book/models/book.py::ContentAnalysis",
-      "target": "table:contentanalysiss",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models/book.py",
@@ -6168,8 +5968,8 @@
     },
     {
       "source": "book/models/book.py::QualityMetrics",
-      "target": "table:qualitymetricss",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models/book.py",
@@ -6178,8 +5978,8 @@
     },
     {
       "source": "book/models/book.py::Edition",
-      "target": "table:editions",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models/book.py",
@@ -6188,8 +5988,8 @@
     },
     {
       "source": "book/models/book.py::BookProfile",
-      "target": "table:bookprofiles",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models/book.py",
@@ -6207,9 +6007,29 @@
       "type": "defines"
     },
     {
+      "source": "book/models/common.py::ThemeCategory",
+      "target": "str",
+      "type": "inherits"
+    },
+    {
+      "source": "book/models/common.py::ThemeCategory",
+      "target": "Enum",
+      "type": "inherits"
+    },
+    {
       "source": "book/models/common.py",
       "target": "book/models/common.py::ContentTone",
       "type": "defines"
+    },
+    {
+      "source": "book/models/common.py::ContentTone",
+      "target": "str",
+      "type": "inherits"
+    },
+    {
+      "source": "book/models/common.py::ContentTone",
+      "target": "Enum",
+      "type": "inherits"
     },
     {
       "source": "book/models",
@@ -6223,8 +6043,8 @@
     },
     {
       "source": "book/models/series.py::SeriesBookEntry",
-      "target": "table:seriesbookentrys",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models/series.py",
@@ -6233,8 +6053,8 @@
     },
     {
       "source": "book/models/series.py::SeriesProfile",
-      "target": "table:seriesprofiles",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "book/models",
@@ -6533,8 +6353,8 @@
     },
     {
       "source": "follow/config.py::Settings",
-      "target": "table:settingss",
-      "type": "maps_to"
+      "target": "BaseSettings",
+      "type": "inherits"
     },
     {
       "source": "follow",
@@ -6638,6 +6458,11 @@
     },
     {
       "source": "follow/grpc_server.py::FollowServicer",
+      "target": "follow_pb2_grpc.FollowServiceServicer",
+      "type": "inherits"
+    },
+    {
+      "source": "follow/grpc_server.py::FollowServicer",
       "target": "follow/grpc_server.py::FollowServicer::IsFollowing",
       "type": "defines"
     },
@@ -6707,9 +6532,9 @@
       "type": "maps_to"
     },
     {
-      "source": "follow/models.py",
-      "target": "table:follows",
-      "type": "defines"
+      "source": "follow/models.py::Follow",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "follow",
@@ -6788,8 +6613,8 @@
     },
     {
       "source": "follow/schemas.py::FollowResponse",
-      "target": "table:followresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "follow/schemas.py",
@@ -6798,8 +6623,8 @@
     },
     {
       "source": "follow/schemas.py::FollowStats",
-      "target": "table:followstatss",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "follow/schemas.py",
@@ -6808,8 +6633,8 @@
     },
     {
       "source": "follow/schemas.py::FollowerEntry",
-      "target": "table:followerentrys",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "follow/schemas.py",
@@ -6818,8 +6643,8 @@
     },
     {
       "source": "follow/schemas.py::FollowListResponse",
-      "target": "table:followlistresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "follow",
@@ -8043,8 +7868,8 @@
     },
     {
       "source": "rag/config.py::Settings",
-      "target": "table:settingss",
-      "type": "maps_to"
+      "target": "BaseSettings",
+      "type": "inherits"
     },
     {
       "source": "rag/config.py",
@@ -8190,6 +8015,11 @@
       "source": "rag/grpc_server.py",
       "target": "rag/grpc_server.py::RagServicer",
       "type": "defines"
+    },
+    {
+      "source": "rag/grpc_server.py::RagServicer",
+      "target": "rag_pb2_grpc.RagServiceServicer",
+      "type": "inherits"
     },
     {
       "source": "rag/grpc_server.py::RagServicer",
@@ -8363,8 +8193,8 @@
     },
     {
       "source": "rag/routers.py::BookSyncRequest",
-      "target": "table:booksyncrequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "rag/routers.py",
@@ -8553,8 +8383,8 @@
     },
     {
       "source": "recommendation/config.py::Settings",
-      "target": "table:settingss",
-      "type": "maps_to"
+      "target": "BaseSettings",
+      "type": "inherits"
     },
     {
       "source": "recommendation/config.py",
@@ -8615,6 +8445,11 @@
       "source": "recommendation/grpc_server.py",
       "target": "recommendation/grpc_server.py::RecommendationServicer",
       "type": "defines"
+    },
+    {
+      "source": "recommendation/grpc_server.py::RecommendationServicer",
+      "target": "recommendation_pb2_grpc.RecommendationServiceServicer",
+      "type": "inherits"
     },
     {
       "source": "recommendation/grpc_server.py::RecommendationServicer",
@@ -8682,6 +8517,11 @@
       "type": "defines"
     },
     {
+      "source": "recommendation/profile.py::UserProfile",
+      "target": "TypedDict",
+      "type": "inherits"
+    },
+    {
       "source": "recommendation/profile.py",
       "target": "recommendation/profile.py::UserProfileBuilder",
       "type": "defines"
@@ -8733,8 +8573,8 @@
     },
     {
       "source": "recommendation/routers.py::RecommendationRequestBody",
-      "target": "table:recommendationrequestbodys",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "recommendation/routers.py",
@@ -8743,8 +8583,8 @@
     },
     {
       "source": "recommendation/routers.py::InteractionEventBody",
-      "target": "table:interactioneventbodys",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "recommendation/routers.py",
@@ -8888,8 +8728,8 @@
     },
     {
       "source": "social/config.py::Settings",
-      "target": "table:settingss",
-      "type": "maps_to"
+      "target": "BaseSettings",
+      "type": "inherits"
     },
     {
       "source": "social",
@@ -8915,6 +8755,11 @@
       "source": "social/grpc_server.py",
       "target": "social/grpc_server.py::SocialServicer",
       "type": "defines"
+    },
+    {
+      "source": "social/grpc_server.py::SocialServicer",
+      "target": "social_pb2_grpc.SocialServiceServicer",
+      "type": "inherits"
     },
     {
       "source": "social/grpc_server.py::SocialServicer",
@@ -8977,9 +8822,9 @@
       "type": "maps_to"
     },
     {
-      "source": "social/models.py",
-      "target": "table:book_likes",
-      "type": "defines"
+      "source": "social/models.py::BookLike",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "social/models.py",
@@ -8992,9 +8837,9 @@
       "type": "maps_to"
     },
     {
-      "source": "social/models.py",
-      "target": "table:book_ratings",
-      "type": "defines"
+      "source": "social/models.py::BookRating",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "social/models.py",
@@ -9007,9 +8852,9 @@
       "type": "maps_to"
     },
     {
-      "source": "social/models.py",
-      "target": "table:book_reviews",
-      "type": "defines"
+      "source": "social/models.py::BookReview",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "social/models.py",
@@ -9022,9 +8867,9 @@
       "type": "maps_to"
     },
     {
-      "source": "social/models.py",
-      "target": "table:review_likes",
-      "type": "defines"
+      "source": "social/models.py::ReviewLike",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "social/models.py",
@@ -9037,9 +8882,9 @@
       "type": "maps_to"
     },
     {
-      "source": "social/models.py",
-      "target": "table:shelves",
-      "type": "defines"
+      "source": "social/models.py::Shelf",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "social/models.py",
@@ -9052,9 +8897,9 @@
       "type": "maps_to"
     },
     {
-      "source": "social/models.py",
-      "target": "table:shelf_items",
-      "type": "defines"
+      "source": "social/models.py::ShelfItem",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "social/models.py",
@@ -9383,8 +9228,8 @@
     },
     {
       "source": "social/schemas.py::LikeResponse",
-      "target": "table:likeresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9393,8 +9238,8 @@
     },
     {
       "source": "social/schemas.py::RatingUpsertRequest",
-      "target": "table:ratingupsertrequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9403,8 +9248,8 @@
     },
     {
       "source": "social/schemas.py::RatingResponse",
-      "target": "table:ratingresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9413,8 +9258,8 @@
     },
     {
       "source": "social/schemas.py::ReviewCreateRequest",
-      "target": "table:reviewcreaterequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9423,8 +9268,8 @@
     },
     {
       "source": "social/schemas.py::ReviewReplyCreateRequest",
-      "target": "table:reviewreplycreaterequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9433,8 +9278,8 @@
     },
     {
       "source": "social/schemas.py::ReviewUpdateRequest",
-      "target": "table:reviewupdaterequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9443,8 +9288,8 @@
     },
     {
       "source": "social/schemas.py::ReviewResponse",
-      "target": "table:reviewresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9453,8 +9298,8 @@
     },
     {
       "source": "social/schemas.py::ReviewListResponse",
-      "target": "table:reviewlistresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9463,8 +9308,8 @@
     },
     {
       "source": "social/schemas.py::ReviewLikeResponse",
-      "target": "table:reviewlikeresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9473,8 +9318,8 @@
     },
     {
       "source": "social/schemas.py::ShelfCreateRequest",
-      "target": "table:shelfcreaterequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9483,8 +9328,8 @@
     },
     {
       "source": "social/schemas.py::ShelfUpdateRequest",
-      "target": "table:shelfupdaterequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9493,8 +9338,8 @@
     },
     {
       "source": "social/schemas.py::ShelfResponse",
-      "target": "table:shelfresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9503,8 +9348,8 @@
     },
     {
       "source": "social/schemas.py::ShelfItemCreateRequest",
-      "target": "table:shelfitemcreaterequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9513,8 +9358,8 @@
     },
     {
       "source": "social/schemas.py::ShelfItemResponse",
-      "target": "table:shelfitemresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9523,8 +9368,8 @@
     },
     {
       "source": "social/schemas.py::ShelfItemListResponse",
-      "target": "table:shelfitemlistresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9533,8 +9378,8 @@
     },
     {
       "source": "social/schemas.py::ShelfBookItemResponse",
-      "target": "table:shelfbookitemresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9543,8 +9388,8 @@
     },
     {
       "source": "social/schemas.py::ShelfBookListResponse",
-      "target": "table:shelfbooklistresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social/schemas.py",
@@ -9553,8 +9398,8 @@
     },
     {
       "source": "social/schemas.py::BookSocialStatsResponse",
-      "target": "table:booksocialstatsresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "social",
@@ -9863,8 +9708,8 @@
     },
     {
       "source": "user/config.py::Settings",
-      "target": "table:settingss",
-      "type": "maps_to"
+      "target": "BaseSettings",
+      "type": "inherits"
     },
     {
       "source": "user",
@@ -10058,6 +9903,11 @@
     },
     {
       "source": "user/grpc_server.py::UserServicer",
+      "target": "user_pb2_grpc.UserServiceServicer",
+      "type": "inherits"
+    },
+    {
+      "source": "user/grpc_server.py::UserServicer",
       "target": "user/grpc_server.py::UserServicer::GetProfile",
       "type": "defines"
     },
@@ -10117,9 +9967,9 @@
       "type": "maps_to"
     },
     {
-      "source": "user/models.py",
-      "target": "table:user_profiles",
-      "type": "defines"
+      "source": "user/models.py::UserProfile",
+      "target": "SQLModel",
+      "type": "inherits"
     },
     {
       "source": "user",
@@ -10258,8 +10108,8 @@
     },
     {
       "source": "user/schemas.py::UserPayload",
-      "target": "table:userpayloads",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "user/schemas.py",
@@ -10268,8 +10118,8 @@
     },
     {
       "source": "user/schemas.py::ProfileResponse",
-      "target": "table:profileresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "user/schemas.py",
@@ -10278,8 +10128,8 @@
     },
     {
       "source": "user/schemas.py::ProfileUpdate",
-      "target": "table:profileupdates",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "user/schemas.py",
@@ -10288,8 +10138,8 @@
     },
     {
       "source": "user/schemas.py::TokenRefreshRequest",
-      "target": "table:tokenrefreshrequests",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "user/schemas.py",
@@ -10298,8 +10148,8 @@
     },
     {
       "source": "user/schemas.py::TokenResponse",
-      "target": "table:tokenresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "user/schemas.py",
@@ -10308,8 +10158,8 @@
     },
     {
       "source": "user/schemas.py::FollowStatsResponse",
-      "target": "table:followstatsresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "user/schemas.py",
@@ -10318,8 +10168,8 @@
     },
     {
       "source": "user/schemas.py::FollowListResponse",
-      "target": "table:followlistresponses",
-      "type": "maps_to"
+      "target": "BaseModel",
+      "type": "inherits"
     },
     {
       "source": "user",
@@ -10369,11 +10219,11 @@
   ],
   "metadata": {
     "project": "fastapi_auth",
-    "total_nodes": 859,
-    "total_edges": 1042,
+    "total_nodes": 824,
+    "total_edges": 1054,
     "generated_by": "Tempory Mapper v1.0",
-    "scan_date": "2026-06-08T13:13:46.475054",
-    "communities_count": 35,
+    "scan_date": "2026-06-11T03:22:31.066654",
+    "communities_count": 33,
     "god_nodes": {
       "internal": [
         {
@@ -10401,10 +10251,6 @@
           "degree": 14
         },
         {
-          "node": "social/models.py",
-          "degree": 14
-        },
-        {
           "node": "proto/auth.proto",
           "degree": 13
         },
@@ -10421,6 +10267,10 @@
           "degree": 11
         },
         {
+          "node": "SQLModel",
+          "degree": 10
+        },
+        {
           "node": "book/database.py::Database",
           "degree": 10
         }
@@ -10431,8 +10281,8 @@
           "degree": 72
         },
         {
-          "node": "UserPayload",
-          "degree": 10
+          "node": "BaseModel",
+          "degree": 47
         },
         {
           "node": "FastAPI",
@@ -10447,32 +10297,8 @@
           "degree": 4
         },
         {
-          "node": "GetFollowListResponse",
-          "degree": 4
-        },
-        {
-          "node": "AuthServiceStub",
-          "degree": 3
-        },
-        {
-          "node": "UserProfile",
-          "degree": 3
-        },
-        {
-          "node": "BookReview",
-          "degree": 3
-        },
-        {
-          "node": "UserCreate",
-          "degree": 2
-        },
-        {
-          "node": "RefreshTokenRequest",
-          "degree": 2
-        },
-        {
-          "node": "BookProfile",
-          "degree": 2
+          "node": "Session",
+          "degree": 1
         }
       ]
     },
@@ -10487,6 +10313,6 @@
       }
     },
     "dangling_edges_resolved": true,
-    "call_graph_scope": "intra-file only"
+    "call_graph_scope": "cross-file"
   }
 }
