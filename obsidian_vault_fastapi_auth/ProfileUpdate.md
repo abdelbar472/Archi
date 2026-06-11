@@ -1,3 +1,0 @@
-# ProfileUpdate
-
-**Type:** type

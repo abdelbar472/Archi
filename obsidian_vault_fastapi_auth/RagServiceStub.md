@@ -1,3 +1,0 @@
-# RagServiceStub
-
-**Type:** type

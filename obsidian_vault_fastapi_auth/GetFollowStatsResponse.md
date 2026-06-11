@@ -1,3 +1,0 @@
-# GetFollowStatsResponse
-
-**Type:** type

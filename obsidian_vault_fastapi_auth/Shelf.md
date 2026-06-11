@@ -1,3 +1,0 @@
-# Shelf
-
-**Type:** type

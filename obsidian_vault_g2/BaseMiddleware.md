@@ -1,3 +1,0 @@
-# BaseMiddleware
-
-**Type:** type

@@ -1,9 +1,0 @@
-# social/schemas.py::ShelfBookListResponse
-
-**Type:** fastapi_schema
-**Community:** 24
-
-## Outgoing Connections
-
-### Inherits
-- [[BaseModel]]

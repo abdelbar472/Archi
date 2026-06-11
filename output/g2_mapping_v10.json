@@ -2473,109 +2473,7 @@
       "external": false
     },
     {
-      "id": "BaseCommand",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "AsyncWebsocketConsumer",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "Model",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "BaseUserManager",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "AppConfig",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.CreateAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "models.Model",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.GenericAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.UpdateAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "AbstractBaseUser",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "PermissionsMixin",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.DestroyAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "generics.ListAPIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "APIView",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "BaseMiddleware",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "serializers.Serializer",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
       "id": "BaseAuthentication",
-      "type": "type",
-      "community": -1,
-      "external": false
-    },
-    {
-      "id": "permissions.BasePermission",
       "type": "type",
       "community": -1,
       "external": false
@@ -2587,7 +2485,43 @@
       "external": false
     },
     {
-      "id": "generics.ListCreateAPIView",
+      "id": "permissions.BasePermission",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseUserManager",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "models.Model",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "APIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.DestroyAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "AppConfig",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "Model",
       "type": "type",
       "community": -1,
       "external": false
@@ -2599,13 +2533,79 @@
       "external": false
     },
     {
-      "id": "generics.RetrieveAPIView",
+      "id": "AsyncWebsocketConsumer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "AbstractBaseUser",
       "type": "type",
       "community": -1,
       "external": false
     },
     {
       "id": "serializers.ModelSerializer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.CreateAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.ListCreateAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseCommand",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "BaseMiddleware",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.RetrieveAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.GenericAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.ListAPIView",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "PermissionsMixin",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "serializers.Serializer",
+      "type": "type",
+      "community": -1,
+      "external": false
+    },
+    {
+      "id": "generics.UpdateAPIView",
       "type": "type",
       "community": -1,
       "external": false
@@ -5198,7 +5198,7 @@
     "total_nodes": 435,
     "total_edges": 516,
     "generated_by": "Tempory Mapper v1.0",
-    "scan_date": "2026-06-11T08:22:49.050916",
+    "scan_date": "2026-06-11T11:51:36.975734",
     "communities_count": 20,
     "god_nodes": {
       "internal": [

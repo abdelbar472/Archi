@@ -1,3 +1,0 @@
-# BookLike
-
-**Type:** type

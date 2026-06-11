@@ -1,3 +1,0 @@
-# permissions.BasePermission
-
-**Type:** type

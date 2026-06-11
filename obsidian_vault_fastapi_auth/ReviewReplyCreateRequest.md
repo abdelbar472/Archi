@@ -1,3 +1,0 @@
-# ReviewReplyCreateRequest
-
-**Type:** type

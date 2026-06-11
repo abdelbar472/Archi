@@ -1,3 +1,0 @@
-# TokenRefreshRequest
-
-**Type:** type

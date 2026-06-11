@@ -1,3 +1,0 @@
-# AppConfig
-
-**Type:** type

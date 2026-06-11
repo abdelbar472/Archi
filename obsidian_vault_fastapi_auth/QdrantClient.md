@@ -1,3 +1,0 @@
-# QdrantClient
-
-**Type:** type

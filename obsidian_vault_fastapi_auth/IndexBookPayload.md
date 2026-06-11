@@ -1,3 +1,0 @@
-# IndexBookPayload
-
-**Type:** type

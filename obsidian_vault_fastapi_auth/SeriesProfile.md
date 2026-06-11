@@ -1,3 +1,0 @@
-# SeriesProfile
-
-**Type:** type

@@ -1,3 +1,0 @@
-# generics.UpdateAPIView
-
-**Type:** type

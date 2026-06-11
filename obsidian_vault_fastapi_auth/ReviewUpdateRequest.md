@@ -1,3 +1,0 @@
-# ReviewUpdateRequest
-
-**Type:** type

@@ -1,3 +1,0 @@
-# BookRating
-
-**Type:** type

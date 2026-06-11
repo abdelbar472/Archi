@@ -1,3 +1,0 @@
-# BookReview
-
-**Type:** type

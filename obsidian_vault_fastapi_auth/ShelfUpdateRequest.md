@@ -1,3 +1,0 @@
-# ShelfUpdateRequest
-
-**Type:** type

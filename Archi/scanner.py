@@ -7,7 +7,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent))
 
 from parsers.registry import PARSER_REGISTRY, PARSER_QUALITY
-from parsers import get_parser   # We'll add this in registry
+from parsers import get_parser
 from graph import Graph
 
 
@@ -65,12 +65,12 @@ class TemporyScanner:
 
             for filename in filenames:
                 ext = Path(filename).suffix.lower()
-                
+
                 # Use registry safely
-                parser_cls = PARSER_REGISTRY.get(ext)
+                parser_cls = get_parser(ext)
                 if parser_cls:
                     file_id = f"{folder_id}/{filename}" if folder_id != "root" else filename
-                    
+
                     file_node_type = self._detect_file_type(filename)
                     self.graph.add_node(file_id, file_node_type)
                     self.graph.add_edge(folder_id, file_id, "contains")

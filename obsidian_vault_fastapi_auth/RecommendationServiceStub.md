@@ -1,3 +1,0 @@
-# RecommendationServiceStub
-
-**Type:** type

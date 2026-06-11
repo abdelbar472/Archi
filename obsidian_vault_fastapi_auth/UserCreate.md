@@ -1,3 +1,0 @@
-# UserCreate
-
-**Type:** type

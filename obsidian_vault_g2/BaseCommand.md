@@ -1,3 +1,0 @@
-# BaseCommand
-
-**Type:** type

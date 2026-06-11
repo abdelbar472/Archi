@@ -1,3 +1,0 @@
-# BaseSettings
-
-**Type:** type

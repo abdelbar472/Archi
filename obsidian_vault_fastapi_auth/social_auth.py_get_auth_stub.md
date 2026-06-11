@@ -1,9 +1,0 @@
-# social/auth.py::_get_auth_stub
-
-**Type:** function
-**Community:** 21
-
-## Outgoing Connections
-
-### Return_type
-- [[AuthServiceStub]]

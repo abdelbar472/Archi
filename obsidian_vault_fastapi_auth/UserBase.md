@@ -1,3 +1,0 @@
-# UserBase
-
-**Type:** type

@@ -1,3 +1,0 @@
-# RetrievalCandidate
-
-**Type:** type

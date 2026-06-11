@@ -1,3 +1,0 @@
-# SemanticSearchRequest
-
-**Type:** type

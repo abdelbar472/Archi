@@ -1,3 +1,0 @@
-# Enum
-
-**Type:** type

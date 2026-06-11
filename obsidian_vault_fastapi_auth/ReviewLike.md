@@ -1,3 +1,0 @@
-# ReviewLike
-
-**Type:** type

@@ -1,3 +1,0 @@
-# ShelfCreateRequest
-
-**Type:** type

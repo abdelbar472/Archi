@@ -1,3 +1,0 @@
-# SQLModel
-
-**Type:** type

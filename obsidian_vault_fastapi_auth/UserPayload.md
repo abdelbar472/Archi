@@ -1,3 +1,0 @@
-# UserPayload
-
-**Type:** type

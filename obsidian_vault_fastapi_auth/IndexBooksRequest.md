@@ -1,3 +1,0 @@
-# IndexBooksRequest
-
-**Type:** type

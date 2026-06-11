@@ -1,3 +1,0 @@
-# serializers.Serializer
-
-**Type:** type

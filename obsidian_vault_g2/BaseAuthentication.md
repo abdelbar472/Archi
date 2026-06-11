@@ -1,3 +1,0 @@
-# BaseAuthentication
-
-**Type:** type

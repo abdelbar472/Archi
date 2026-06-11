@@ -1,6 +1,7 @@
-"""Python parser — Deep AST-based with rich FastAPI + Django detection."""
+"""Python parser — AST-based with deep FastAPI + Django detection and cross-file resolution."""
 import ast
 from pathlib import Path
+from collections import defaultdict
 
 from .base import BaseParser
 
@@ -15,6 +16,11 @@ class PythonParser(BaseParser):
                         'UpdateAPIView', 'DestroyAPIView', 'ListCreateAPIView'}
     DJANGO_MODEL_BASES = {'Model', 'AbstractUser', 'AbstractBaseUser'}
     DJANGO_SERIALIZER_BASES = {'ModelSerializer', 'Serializer', 'HyperlinkedModelSerializer'}
+    CALL_NOISE = {'int', 'str', 'bool', 'list', 'dict', 'len', 'print', 'range', 'super'}
+
+    def __init__(self, graph):
+        super().__init__(graph)
+        self._file_imports = defaultdict(dict)  # file_id -> {alias: target}
 
     def parse(self, file_path: Path, file_id: str):
         try:
@@ -30,7 +36,7 @@ class PythonParser(BaseParser):
 
         func_nodes = []
 
-        # Class definitions with framework detection
+        # Pass 1: Classes
         for node in ast.walk(tree):
             if isinstance(node, ast.ClassDef):
                 class_id = self._register_class(node, file_id)
@@ -43,7 +49,7 @@ class PythonParser(BaseParser):
                         self._extract_annotations(item, method_id)
                         func_nodes.append((method_id, item))
 
-        # Top-level functions + decorator detection
+        # Pass 2: Top-level functions
         for node in tree.body:
             if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 func_type = self._detect_function_type(node)
@@ -51,16 +57,11 @@ class PythonParser(BaseParser):
                 self._extract_annotations(node, func_id)
                 func_nodes.append((func_id, node))
 
-        # Intra-file calls
-        for func_id, func_node in func_nodes:
-            for child in ast.walk(func_node):
-                if isinstance(child, ast.Call) and isinstance(child.func, ast.Name):
-                    target_id = f"{file_id}::{child.func.id}"
-                    if self.graph.is_known(target_id) and target_id != func_id:
-                        self.graph.add_edge(func_id, target_id, "calls")
-
-        # Imports
+        # Pass 3: Imports (build map for cross-file resolution)
         self._parse_imports(tree, file_id)
+
+        # Pass 4: Intra-file + Cross-file calls
+        self._resolve_calls(func_nodes, file_id)
 
     def _register_class(self, node: ast.ClassDef, file_id: str) -> str:
         base_names = {self._expr_to_str(b) for b in node.bases}
@@ -83,7 +84,6 @@ class PythonParser(BaseParser):
         return self._add_def(file_id, node.name, node_type)
 
     def _detect_function_type(self, node):
-        """Detect FastAPI endpoints and Django signals"""
         for dec in node.decorator_list:
             if isinstance(dec, ast.Call):
                 name = self._expr_to_str(dec.func)
@@ -155,17 +155,57 @@ class PythonParser(BaseParser):
             return node.attr
         return None
 
-    def _parse_imports(self, tree, file_id):
+    def _parse_imports(self, tree, file_id: str):
+        """Build import map for cross-file resolution"""
         for node in ast.walk(tree):
             if isinstance(node, ast.ImportFrom) and node.module:
                 target = f"{node.module.replace('.', '/')}.py"
-                if self.graph.is_known(target):
-                    self.graph.add_edge(file_id, target, "imports")
+                for alias in node.names:
+                    self._file_imports[file_id][alias.asname or alias.name] = target
             elif isinstance(node, ast.Import):
                 for alias in node.names:
                     target = f"{alias.name.split('.')[0]}.py"
-                    if self.graph.is_known(target):
-                        self.graph.add_edge(file_id, target, "imports")
+                    self._file_imports[file_id][alias.asname or alias.name] = target
+
+    def _resolve_calls(self, func_nodes, file_id: str):
+        """Intra-file + Cross-file call resolution"""
+        imports = self._file_imports.get(file_id, {})
+
+        for func_id, func_node in func_nodes:
+            for child in ast.walk(func_node):
+                if not isinstance(child, ast.Call):
+                    continue
+                if not isinstance(child.func, (ast.Name, ast.Attribute)):
+                    continue
+
+                callee = self._call_to_str(child.func)
+                if not callee or callee in self.CALL_NOISE:
+                    continue
+
+                # Intra-file call
+                if '.' not in callee:
+                    target_id = f"{file_id}::{callee}"
+                    if self.graph.is_known(target_id):
+                        self.graph.add_edge(func_id, target_id, "calls")
+                    continue
+
+                # Cross-file call resolution
+                root = callee.split('.')[0]
+                if root in imports:
+                    base_target = imports[root]
+                    resolved = f"{base_target.rsplit('.py', 1)[0]}::{callee.split('.', 1)[1]}"
+                    if self.graph.is_known(resolved):
+                        self.graph.add_edge(func_id, resolved, "calls")
+
+    def _call_to_str(self, func):
+        if isinstance(func, ast.Name):
+            return func.id
+        if isinstance(func, ast.Attribute):
+            try:
+                return f"{self._call_to_str(func.value)}.{func.attr}"
+            except:
+                return None
+        return None
 
     def _detect_type(self, filename: str) -> str:
         lower = filename.lower()

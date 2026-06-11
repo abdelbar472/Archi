@@ -1,3 +1,0 @@
-# GetSimilarBooksRequest
-
-**Type:** type

@@ -1,3 +1,0 @@
-# BookProfile
-
-**Type:** type

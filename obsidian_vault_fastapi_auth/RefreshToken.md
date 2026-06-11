@@ -1,3 +1,0 @@
-# RefreshToken
-
-**Type:** type

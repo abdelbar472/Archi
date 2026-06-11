@@ -1,3 +1,0 @@
-# generics.DestroyAPIView
-
-**Type:** type

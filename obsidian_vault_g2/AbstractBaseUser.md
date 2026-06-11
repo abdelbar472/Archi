@@ -1,3 +1,0 @@
-# AbstractBaseUser
-
-**Type:** type

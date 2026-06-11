@@ -1,3 +1,0 @@
-# ShelfItem
-
-**Type:** type

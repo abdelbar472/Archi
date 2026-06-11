@@ -1,3 +1,0 @@
-# BookSyncRequest
-
-**Type:** type

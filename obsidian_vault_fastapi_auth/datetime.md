@@ -1,3 +1,0 @@
-# datetime
-
-**Type:** type

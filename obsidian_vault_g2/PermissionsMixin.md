@@ -1,3 +1,0 @@
-# PermissionsMixin
-
-**Type:** type

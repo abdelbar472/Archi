@@ -1,3 +1,0 @@
-# FollowServiceStub
-
-**Type:** type
