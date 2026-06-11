@@ -1,26 +1,30 @@
 # Archi — Code Architecture Mapper
 
-**Local, fast, offline codebase architecture tool.**
+**Local, fast, offline codebase visualization & architecture intelligence tool.**
 
-No LLM. No cloud. Runs instantly on your machine.
+No LLM dependency. No cloud. Runs instantly on your machine.
+
+![Archi Screenshot](https://github.com/abdelbar472/Archi/raw/main/docs/screenshot.png)
 
 ## Features
 
-- Scans Python, TypeScript, gRPC, and more
-- Builds rich graph (files, classes, methods, calls, database tables)
-- Detects services, routers, God Nodes, and communities
-- Generates clean **Obsidian** knowledge base automatically
-- Semantic search support
+- **Multi-language support**: Python (AST), JavaScript/TypeScript, Go, Proto, and more
+- **Rich architecture graph**: files, classes, methods, calls, imports, inheritance, database tables
+- **Framework awareness**: Deep detection for FastAPI, Django, React, gRPC, etc.
+- **God Nodes & Communities**: Automatically highlights critical parts of your codebase
+- **Beautiful Obsidian export**: Generates a full knowledge base with rich connections
+- **Semantic search**: Find components by natural language
 
 ## Quick Start
 
 ```bash
-# Install
-cd /d/codes/Archi
+# 1. Clone & install
+git clone https://github.com/abdelbar472/Archi.git
+cd Archi
 pip install -e .
 
-# Scan a project + generate Obsidian vault
+# 2. Scan any project
 archi /path/to/your/project
 
-# With search
+# 3. With semantic search
 archi /path/to/your/project --search "user authentication"
