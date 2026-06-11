@@ -4,7 +4,6 @@
 
 No LLM dependency. No cloud. Runs instantly on your machine.
 
-![Archi Screenshot](https://github.com/abdelbar472/Archi/raw/main/docs/screenshot.png)
 
 ## Features
 
