@@ -33,3 +33,7 @@ class BaseParser:
         if hasattr(self.graph, 'BUILTIN_TYPES') and type_name in self.graph.BUILTIN_TYPES:
             return
         self.graph.add_edge(func_id, type_name, edge_type)
+
+    def _add_import(self, file_id: str, target: str) -> None:
+        """Add an imports edge from file_id to target."""
+        self.graph.add_edge(file_id, target, "imports")

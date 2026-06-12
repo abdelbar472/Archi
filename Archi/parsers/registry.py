@@ -1,16 +1,15 @@
 """Parser Registry — Central hub for all language parsers."""
 from .python import PythonParser
-# Import other parsers only when they are ready (to avoid import errors)
-# from .javascript import JavaScriptParser
+from .javascript import JavaScriptParser
 # from .go import GoParser
 # ... etc.
 
 PARSER_REGISTRY = {
     '.py':    PythonParser,
-    # '.js':    JavaScriptParser,
-    # '.ts':    JavaScriptParser,
-    # '.jsx':   JavaScriptParser,
-    # '.tsx':   JavaScriptParser,
+    '.js':    JavaScriptParser,
+    '.ts':    JavaScriptParser,
+    '.jsx':   JavaScriptParser,
+    '.tsx':   JavaScriptParser,
     # '.go':    GoParser,
     # '.dart':  DartParser,
     # '.rs':    RustParser,
@@ -26,7 +25,10 @@ PARSER_REGISTRY = {
 # Quality levels for reporting
 PARSER_QUALITY = {
     '.py':    'ast-high',
-    # '.js':    'regex-medium',
+    '.js':    'regex-medium',
+    '.ts':    'regex-medium',
+    '.jsx':   'regex-medium',
+    '.tsx':   'regex-medium',
     # '.go':    'regex-medium',
     # Add others as implemented
 }
