@@ -1,8 +1,13 @@
 """Parser Registry — Central hub for all language parsers."""
 from .python import PythonParser
-from .javascript import JavaScriptParser
-# from .go import GoParser
-# ... etc.
+
+# Smart JS/TS Parser with fallback
+try:
+    from .javascript_treesitter import JavaScriptParser
+    JS_METHOD = "tree-sitter"
+except ImportError:
+    from .javascript_regex import JavaScriptParser
+    JS_METHOD = "regex"
 
 PARSER_REGISTRY = {
     '.py':    PythonParser,
@@ -10,36 +15,17 @@ PARSER_REGISTRY = {
     '.ts':    JavaScriptParser,
     '.jsx':   JavaScriptParser,
     '.tsx':   JavaScriptParser,
-    # '.go':    GoParser,
-    # '.dart':  DartParser,
-    # '.rs':    RustParser,
-    # '.java':  JavaParser,
-    # '.kt':    JavaParser,
-    # '.swift': SwiftParser,
-    # '.rb':    RubyParser,
-    # '.cpp':   CppParser,
-    # '.cs':    CSharpParser,
-    # '.proto': ProtoParser,
+    # Add more languages here
 }
 
-# Quality levels for reporting
 PARSER_QUALITY = {
     '.py':    'ast-high',
-    '.js':    'regex-medium',
-    '.ts':    'regex-medium',
-    '.jsx':   'regex-medium',
-    '.tsx':   'regex-medium',
-    # '.go':    'regex-medium',
-    # Add others as implemented
+    '.js':    JS_METHOD,
+    '.ts':    JS_METHOD,
+    '.jsx':   JS_METHOD,
+    '.tsx':   JS_METHOD,
 }
-
-
-def register_parser(ext: str, parser_class, quality: str = "medium"):
-    """Allow dynamic registration of new parsers."""
-    PARSER_REGISTRY[ext] = parser_class
-    PARSER_QUALITY[ext] = quality
 
 
 def get_parser(ext: str):
-    """Safe getter."""
     return PARSER_REGISTRY.get(ext.lower())

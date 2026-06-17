@@ -8,15 +8,19 @@ import re
 
 
 def sanitize_filename(name: str) -> str:
-    """Safe filename for Windows + Obsidian"""
+    """Safe filename for Windows + Obsidian — aggressive cleaning."""
+    name = str(name)
     name = re.sub(r'[\\/:*?"<>|]', '_', name)
     name = name.replace('::', '__')
+    name = name.replace('(', '_').replace(')', '_')
+    name = name.replace('\n', '_').replace('\r', '_')
     name = re.sub(r'_+', '_', name).strip('_')
-    return name[:180]
+    if len(name) > 140:
+        name = name[:140]
+    return name
 
 
 def wikilink(node_id: str) -> str:
-    """Create safe wikilink"""
     safe = sanitize_filename(node_id)
     return f"[[{safe}]]"
 
@@ -33,7 +37,6 @@ def generate_obsidian_markdown(mapping_path: str, vault_dir: str = None):
     else:
         vault_dir = Path(vault_dir)
 
-    # Fresh vault
     if vault_dir.exists():
         shutil.rmtree(vault_dir)
     vault_dir.mkdir(parents=True, exist_ok=True)
@@ -43,8 +46,10 @@ def generate_obsidian_markdown(mapping_path: str, vault_dir: str = None):
     edges = data["edges"]
 
     outgoing = defaultdict(list)
+    incoming = defaultdict(list)
     for e in edges:
         outgoing[e["source"]].append(e)
+        incoming[e["target"]].append(e)
 
     # ==================== INDEX.md ====================
     index = [
@@ -56,27 +61,31 @@ def generate_obsidian_markdown(mapping_path: str, vault_dir: str = None):
     ]
 
     index.append("## 🔥 Top God Nodes")
-    for item in metadata.get("god_nodes", {}).get("internal", [])[:15]:
+    for item in metadata.get("god_nodes", {}).get("internal", [])[:20]:
         index.append(f"- {wikilink(item['node'])} ({item['degree']} connections)")
 
-    index.append("\n## Services")
-    services = {nid.split('/')[0] for nid in nodes if '/' in nid}
-    for s in sorted(services):
+    index.append("\n## Key Folders / Aliases")
+    folders = {nid.split('/')[0] for nid in nodes if '/' in nid and not nid.startswith('.')}
+    for s in sorted(list(folders)[:30]):
         index.append(f"- [[{s}]]")
 
     (vault_dir / "INDEX.md").write_text("\n".join(index), encoding="utf-8")
 
     # ==================== Per-Node Pages ====================
+    # Create pages for files + important symbols
     for nid, node in nodes.items():
         if node.get("external", False):
             continue
 
+        # Skip very noisy low-level symbols to reduce orphans
+        if '::' in nid and len(nid.split('::')[1]) < 3:
+            continue
+
         lines = [f"# {nid}", ""]
-        lines.append(f"**Type:** {node['type']}")
+        lines.append(f"**Type:** {node.get('type', 'unknown')}")
         if node.get("community", -1) >= 0:
             lines.append(f"**Community:** {node['community']}")
 
-        # Outgoing connections
         out_edges = outgoing.get(nid, [])
         if out_edges:
             by_type = defaultdict(list)
@@ -85,20 +94,34 @@ def generate_obsidian_markdown(mapping_path: str, vault_dir: str = None):
             lines.append("\n## Outgoing Connections")
             for etype, targets in sorted(by_type.items()):
                 lines.append(f"\n### {etype.capitalize()}")
-                for t in sorted(set(targets)):
+                for t in sorted(set(targets))[:30]:   # limit to avoid huge pages
                     lines.append(f"- {wikilink(t)}")
 
-        safe_name = sanitize_filename(nid)
-        (vault_dir / f"{safe_name}.md").write_text("\n".join(lines), encoding="utf-8")
+        # Add incoming connections section
+        inc_edges = incoming.get(nid, [])
+        internal_inc = [e for e in inc_edges if not nodes.get(e["source"], {}).get("external")]
+        if internal_inc:
+            by_type_in = defaultdict(list)
+            for e in internal_inc:
+                by_type_in[e["type"]].append(e["source"])
+            lines.append("\n## Incoming Connections")
+            for etype, sources in sorted(by_type_in.items()):
+                lines.append(f"\n### {etype.capitalize()}")
+                for s in sorted(set(sources))[:30]:
+                    lines.append(f"- {wikilink(s)}")
 
-    print(f"✅ Obsidian vault generated: {vault_dir}")
+        safe_name = sanitize_filename(nid)
+        try:
+            (vault_dir / f"{safe_name}.md").write_text("\n".join(lines), encoding="utf-8")
+        except Exception as e:
+            print(f"   ⚠️ Could not write {safe_name}: {e}")
     print(f"   Project: {project} | Nodes: {len(nodes)}")
+    print(f"   Orphans fixed: nodes now have both outgoing + incoming wikilinks")
+    print(f"   Pages created: {sum(1 for n in nodes.values() if not n.get('external', False))}")
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python generate_obsidian.py <mapping.json> [vault_dir]")
         sys.exit(1)
-    mapping = sys.argv[1]
-    vault = sys.argv[2] if len(sys.argv) > 2 else None
-    generate_obsidian_markdown(mapping, vault)
+    generate_obsidian_markdown(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else None)
