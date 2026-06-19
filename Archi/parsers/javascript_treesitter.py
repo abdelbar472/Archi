@@ -1,7 +1,7 @@
-"""JavaScript/TypeScript Tree-sitter Parser — PRODUCTION-READY v4 (Large Monorepos + NestJS)"""
+"""Universal JavaScript/TypeScript Tree-sitter Parser for Archi"""
 import re
 from pathlib import Path
-from typing import Optional, List
+from typing import Optional, List, Dict
 
 try:
     from tree_sitter import Language, Parser
@@ -15,27 +15,18 @@ from .base import BaseParser
 
 
 NESTJS_CLASS_DECORATORS = {
-    'Controller': 'nestjs_controller',
-    'Injectable': 'nestjs_service',
-    'Service': 'nestjs_service',
-    'Module': 'nestjs_module',
-    'Guard': 'nestjs_guard',
-    'Interceptor': 'nestjs_interceptor',
-    'Pipe': 'nestjs_pipe',
-    'Resolver': 'nestjs_resolver',
-    'Middleware': 'nestjs_middleware',
-    'Catch': 'nestjs_filter',
-    'WebSocketGateway': 'nestjs_gateway',
+    'Controller', 'Injectable', 'Service', 'Module', 'Guard', 'Interceptor',
+    'Pipe', 'Resolver', 'Middleware', 'Catch', 'WebSocketGateway'
 }
 
 NESTJS_METHOD_DECORATORS = {'Get', 'Post', 'Put', 'Delete', 'Patch', 'Options', 'Head', 'All',
                            'MessagePattern', 'EventPattern', 'Query', 'Mutation', 'Subscription'}
 
-JS_NOISE = {'console', 'process', 'require', 'module', 'exports', 'window', 'document'}
+JS_NOISE = {'console', 'process', 'require', 'module', 'exports', 'window', 'document', 'global'}
 
 
 class JavaScriptParser(BaseParser):
-    METHOD = "tree-sitter"
+    METHOD = "tree-sitter-universal"
 
     def __init__(self, graph):
         super().__init__(graph)
@@ -50,11 +41,11 @@ class JavaScriptParser(BaseParser):
             self.js_language = Language(tree_sitter_javascript.language())
             self.ts_language = Language(tree_sitter_typescript.language_typescript())
             try:
-                self.parser = Parser(self.ts_language)
+                self.parser = Parser(self.ts_language)  # modern
             except TypeError:
                 self.parser = Parser()
                 self.parser.set_language(self.ts_language)
-            print("   🌳 Tree-sitter JS/TS initialized (Large Monorepo mode)")
+            print("   🌳 Tree-sitter JS/TS initialized — UNIVERSAL mode")
         except Exception as e:
             print(f"   ⚠️ Tree-sitter init failed: {e}")
             self.parser = None
@@ -74,11 +65,12 @@ class JavaScriptParser(BaseParser):
                 tree = self.parser.parse(bytes(content, "utf8"))
                 visitor = _ASTVisitor(self.graph, content, file_id)
                 visitor.visit(tree.root_node)
+                return
             except Exception as e:
-                print(f"   ⚠️ Tree-sitter error in {file_path.name}: {e}")
-                self._regex_fallback(file_path, file_id)
-        else:
-            self._regex_fallback(file_path, file_id)
+                print(f"   ⚠️ Tree-sitter parse error {file_path.name}: {e}")
+
+        # Fallback
+        self._regex_fallback(file_path, file_id)
 
     def _regex_fallback(self, file_path: Path, file_id: str):
         try:
@@ -101,6 +93,7 @@ class _ASTVisitor:
         handler(node)
 
     def _visit_export_statement(self, node):
+        """Critical for exported classes with decorators (NestJS + modern TS)"""
         decorators = []
         declaration = None
         for child in node.children:
@@ -109,7 +102,7 @@ class _ASTVisitor:
                 if dec:
                     decorators.append(dec)
             elif child.type in ("class_declaration", "function_declaration", "lexical_declaration",
-                                "variable_declaration", "interface_declaration"):
+                                "variable_declaration", "interface_declaration", "type_alias"):
                 declaration = child
 
         if declaration:
@@ -120,43 +113,48 @@ class _ASTVisitor:
             self._visit_default(node)
 
     def _visit_class_declaration(self, node):
-        name = self._child_text(node, "identifier")
+        name = self._child_text(node, ["identifier", "type_identifier"])
         if name:
             ntype = self._classify_class(name, self.current_decorators, node.start_byte)
             self._add_def(name, ntype)
 
             for child in node.children:
                 if child.type == "class_body":
-                    self._extract_class_methods(child, name)
+                    self._extract_class_members(child, name)
 
-    def _extract_class_methods(self, body_node, class_name: str):
+    def _extract_class_members(self, body_node, class_name: str):
         for child in body_node.children:
             if child.type == "method_definition":
-                mname = self._child_text(child, "property_identifier") or self._child_text(child, "identifier")
+                mname = self._child_text(child, ["property_identifier", "identifier"])
                 if mname and mname not in JS_NOISE:
                     mtype = self._classify_method(mname, child.start_byte)
                     self._add_def(mname, mtype, parent=class_name)
 
     def _visit_function_declaration(self, node):
-        name = self._child_text(node, "identifier")
+        name = self._child_text(node, ["identifier", "type_identifier"])
         if name and name not in JS_NOISE:
             ntype = self._classify_function(name, node.start_byte)
             self._add_def(name, ntype)
 
     def _visit_lexical_declaration(self, node):
-        for child in node.children:
-            if child.type == "variable_declarator":
-                name = self._child_text(child, "identifier")
+        for decl in node.children:
+            if decl.type == "variable_declarator":
+                name = self._child_text(decl, ["identifier", "type_identifier"])
                 if name and name not in JS_NOISE:
-                    for sub in child.children:
+                    for sub in decl.children:
                         if sub.type in ("arrow_function", "function"):
-                            ntype = self._classify_function(name, child.start_byte)
+                            ntype = self._classify_function(name, decl.start_byte)
                             self._add_def(name, ntype)
 
     def _visit_interface_declaration(self, node):
-        name = self._child_text(node, "identifier")
+        name = self._child_text(node, ["identifier", "type_identifier"])
         if name:
             self._add_def(name, "interface")
+
+    def _visit_type_alias(self, node):
+        name = self._child_text(node, ["identifier", "type_identifier"])
+        if name:
+            self._add_def(name, "type_alias")
 
     def _visit_import_statement(self, node):
         for child in node.children:
@@ -169,31 +167,34 @@ class _ASTVisitor:
             self.visit(child)
 
     def _classify_class(self, name: str, decorators: List[str], pos: int) -> str:
+        # Decorators first
         for dec in decorators:
             if dec in NESTJS_CLASS_DECORATORS:
-                return NESTJS_CLASS_DECORATORS[dec]
-        snippet = self.content[max(0, pos - 1800):pos + 1000]
-        for dec, ntype in NESTJS_CLASS_DECORATORS.items():
-            if f'@{dec}' in snippet or f'@{dec}(' in snippet:
-                return ntype
-        if name[0].isupper() and re.search(r'return\s*[<(]', snippet):
+                return f"nestjs_{dec.lower()}"
+        snippet = self.content[max(0, pos - 2000):pos + 1200]
+        for dec in NESTJS_CLASS_DECORATORS:
+            if f'@{dec}' in snippet:
+                return f"nestjs_{dec.lower()}"
+
+        # React component
+        if re.match(r'^[A-Z]', name) and re.search(r'return\s*[<(]', snippet):
             return "react_component"
         return "class"
 
     def _classify_method(self, name: str, pos: int) -> str:
-        snippet = self.content[max(0, pos - 600):pos + 400]
+        snippet = self.content[max(0, pos - 800):pos + 500]
         for dec in NESTJS_METHOD_DECORATORS:
-            if f'@{dec}' in snippet or f'@{dec}(' in snippet:
+            if f'@{dec}' in snippet:
                 return "nestjs_endpoint"
-        return "constructor" if name == "constructor" else "method"
+        return "method"
 
     def _classify_function(self, name: str, pos: int) -> str:
         if name.startswith('use') and len(name) > 3 and name[3].isupper():
             return "react_hook"
-        if name in {'getServerSideProps', 'getStaticProps', 'getStaticPaths', 'generateMetadata', 'generateStaticParams'}:
+        if name in {'getServerSideProps', 'getStaticProps', 'getStaticPaths', 'generateMetadata'}:
             return "nextjs_data_fn"
-        snippet = self.content[pos:pos + 900]
-        if name[0].isupper() and re.search(r'return\s*[<(]', snippet):
+        snippet = self.content[pos:pos + 1200]
+        if re.match(r'^[A-Z]', name) and re.search(r'return\s*[<(]', snippet):
             return "react_component"
         return "function"
 
@@ -203,44 +204,53 @@ class _ASTVisitor:
                 return self.content[child.start_byte:child.end_byte]
             if child.type == "call_expression":
                 for sub in child.children:
-                    if sub.type == "identifier":
-                        return self.content[sub.start_byte:sub.end_byte]
+                    if sub.type in ("identifier", "member_expression"):
+                        return self.content[sub.start_byte:sub.end_byte].split('.')[-1]
         return None
 
-    def _child_text(self, node, child_type: str) -> Optional[str]:
+    def _child_text(self, node, child_types):
+        if isinstance(child_types, str):
+            child_types = [child_types]
         for child in node.children:
-            if child.type == child_type:
+            if child.type in child_types:
                 return self.content[child.start_byte:child.end_byte]
         return None
 
     def _add_def(self, name: str, node_type: str, parent: Optional[str] = None):
-        if parent:
-            node_id = f"{self.file_id}::{name}"
-            parent_id = f"{self.file_id}::{parent}" if '::' not in str(parent) else parent
-        else:
-            node_id = f"{self.file_id}::{name}"
-            parent_id = self.file_id
+        node_id = f"{self.file_id}::{name}"
+        parent_id = f"{self.file_id}::{parent}" if parent and '::' not in str(parent) else (parent or self.file_id)
         self.graph.add_node(node_id, node_type, external=False)
         self.graph.add_edge(parent_id, node_id, "defines")
 
     def _handle_import(self, import_path: str):
-        if not import_path or import_path in JS_NOISE:
+        if not import_path or import_path in JS_NOISE or import_path.startswith('node:'):
             return
-        # Monorepo alias handling (@/, ~/, src/, packages/)
-        if import_path.startswith(('@/', '~/', 'src/', './', '../', 'packages/')):
-            alias_path = import_path.replace('src/', '', 1).lstrip('./')
-            for cand in (alias_path, f"{alias_path}.ts", f"{alias_path}.tsx", f"{alias_path}/index.ts", f"{alias_path}/index.tsx"):
+
+        # Strong monorepo alias support (Twenty, Hoppscotch, etc.)
+        if import_path.startswith(('@/', '~/', 'src/', './', '../', 'packages/', '@')):
+            cleaned = import_path.replace('@/', '').replace('~/', '').replace('src/', '')
+            candidates = [
+                cleaned,
+                f"{cleaned}.ts", f"{cleaned}.tsx",
+                f"{cleaned}/index.ts", f"{cleaned}/index.tsx",
+                cleaned.replace('.ts', ''), cleaned.replace('.tsx', '')
+            ]
+            for cand in candidates:
                 if self.graph.is_known(cand):
                     self.graph.add_edge(self.file_id, cand, "imports")
                     return
-            self.graph.add_node(alias_path, "alias", external=False)
-            self.graph.add_edge(self.file_id, alias_path, "imports")
+
+            # Register as internal alias
+            self.graph.add_node(cleaned, "alias", external=False)
+            self.graph.add_edge(self.file_id, cleaned, "imports")
             return
-        # External packages
+
+        # External package
         if import_path.startswith('@'):
             pkg = '/'.join(import_path.split('/')[:2])
         else:
-            pkg = import_path.split('/')[0]
+            pkg = import_path.split('/')[0].split('@')[0] if '@' in import_path else import_path.split('/')[0]
+
         if pkg:
             self.graph.add_node(pkg, "npm_package", external=True)
             self.graph.add_edge(self.file_id, pkg, "imports")

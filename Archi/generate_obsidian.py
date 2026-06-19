@@ -1,28 +1,45 @@
-"""Obsidian Markdown Generator — creates rich, well-connected knowledge base."""
+"""Obsidian Markdown Generator — Fixed for large projects like js_9"""
 import json
 import sys
 import shutil
+import time
 from pathlib import Path
 from collections import defaultdict
 import re
 
 
+import hashlib
+
 def sanitize_filename(name: str) -> str:
-    """Safe filename for Windows + Obsidian — aggressive cleaning."""
+    """Ultra-safe filename for Windows. Collision-proof for long monorepo paths."""
     name = str(name)
-    name = re.sub(r'[\\/:*?"<>|]', '_', name)
-    name = name.replace('::', '__')
-    name = name.replace('(', '_').replace(')', '_')
-    name = name.replace('\n', '_').replace('\r', '_')
-    name = re.sub(r'_+', '_', name).strip('_')
-    if len(name) > 140:
-        name = name[:140]
-    return name
+    cleaned = re.sub(r'[\\/:*?"<>|]', '_', name)
+    cleaned = cleaned.replace('::', '__')
+    cleaned = cleaned.replace('(', '_').replace(')', '_')
+    cleaned = re.sub(r'[\n\r\t]', '_', cleaned)
+    cleaned = re.sub(r'_+', '_', cleaned).strip('_')
+
+    if len(cleaned) > 140:
+        # Keep a short hash of the FULL original id so distinct long paths
+        # never collapse onto the same filename after truncation.
+        digest = hashlib.sha1(name.encode("utf-8")).hexdigest()[:10]
+        cleaned = f"{cleaned[:120]}__{digest}"
+
+    return cleaned or "unnamed_node"
 
 
 def wikilink(node_id: str) -> str:
-    safe = sanitize_filename(node_id)
-    return f"[[{safe}]]"
+    return f"[[{sanitize_filename(node_id)}]]"
+
+
+def safe_rmtree(path: Path):
+    """Robust cleanup for Windows."""
+    if path.exists():
+        try:
+            shutil.rmtree(path, ignore_errors=True)
+            time.sleep(0.8)
+        except Exception as e:
+            print(f"   ⚠️ Cleanup warning: {e}")
 
 
 def generate_obsidian_markdown(mapping_path: str, vault_dir: str = None):
@@ -30,94 +47,94 @@ def generate_obsidian_markdown(mapping_path: str, vault_dir: str = None):
     data = json.loads(mapping_path.read_text(encoding="utf-8"))
 
     metadata = data.get("metadata", {})
-    project = metadata.get("project", Path(mapping_path).stem.replace("_mapping_v10", ""))
+    project = metadata.get("project", mapping_path.stem.replace("_mapping_v10", ""))
 
     if vault_dir is None:
-        vault_dir = Path(f"obsidian_vault_{project}")
+        vault_dir = Path(f"output/{project}/obsidian_vault")
     else:
         vault_dir = Path(vault_dir)
 
-    if vault_dir.exists():
-        shutil.rmtree(vault_dir)
+    print(f"   Generating Obsidian vault for {project}...")
+
+    safe_rmtree(vault_dir)
     vault_dir.mkdir(parents=True, exist_ok=True)
     (vault_dir / ".obsidian").mkdir(exist_ok=True)
 
-    nodes = {n["id"]: n for n in data["nodes"]}
-    edges = data["edges"]
+    nodes = {n["id"]: n for n in data.get("nodes", [])}
+    edges = data.get("edges", [])
 
     outgoing = defaultdict(list)
     incoming = defaultdict(list)
     for e in edges:
-        outgoing[e["source"]].append(e)
-        incoming[e["target"]].append(e)
+        outgoing[e.get("source")].append(e)
+        incoming[e.get("target")].append(e)
 
-    # ==================== INDEX.md ====================
+    # INDEX.md
     index = [
         f"# {project} Architecture",
-        "",
-        f"Generated on {metadata.get('scan_date', 'N/A')}",
-        f"Nodes: {metadata.get('total_nodes', 0)} | Edges: {metadata.get('total_edges', 0)}",
+        f"Generated: {metadata.get('scan_date', 'N/A')}",
+        f"Nodes: {len(nodes):,} | Edges: {len(edges):,}",
         ""
     ]
 
-    index.append("## 🔥 Top God Nodes")
+    index.append("## 🔥 Top Internal God Nodes")
     for item in metadata.get("god_nodes", {}).get("internal", [])[:20]:
         index.append(f"- {wikilink(item['node'])} ({item['degree']} connections)")
 
-    index.append("\n## Key Folders / Aliases")
-    folders = {nid.split('/')[0] for nid in nodes if '/' in nid and not nid.startswith('.')}
-    for s in sorted(list(folders)[:30]):
-        index.append(f"- [[{s}]]")
-
     (vault_dir / "INDEX.md").write_text("\n".join(index), encoding="utf-8")
 
-    # ==================== Per-Node Pages ====================
-    # Create pages for files + important symbols
+    # Create pages — less aggressive filtering for js_9
+    created = 0
     for nid, node in nodes.items():
         if node.get("external", False):
             continue
 
-        # Skip very noisy low-level symbols to reduce orphans
-        if '::' in nid and len(nid.split('::')[1]) < 3:
-            continue
+        # Only skip extremely noisy tiny symbols
+        if '::' in nid:
+            symbol = nid.split('::', 1)[1]
+            if len(symbol) < 2 or symbol.startswith('_'):
+                continue
 
         lines = [f"# {nid}", ""]
         lines.append(f"**Type:** {node.get('type', 'unknown')}")
-        if node.get("community", -1) >= 0:
+
+        if node.get("community") is not None:
             lines.append(f"**Community:** {node['community']}")
 
+        # Outgoing connections
         out_edges = outgoing.get(nid, [])
         if out_edges:
             by_type = defaultdict(list)
             for e in out_edges:
-                by_type[e["type"]].append(e["target"])
-            lines.append("\n## Outgoing Connections")
+                by_type[e.get("type", "related")].append(e.get("target"))
+            lines.append("\n## → Outgoing")
             for etype, targets in sorted(by_type.items()):
                 lines.append(f"\n### {etype.capitalize()}")
-                for t in sorted(set(targets))[:30]:   # limit to avoid huge pages
+                for t in sorted(set(targets))[:35]:
                     lines.append(f"- {wikilink(t)}")
 
-        # Add incoming connections section
-        inc_edges = incoming.get(nid, [])
-        internal_inc = [e for e in inc_edges if not nodes.get(e["source"], {}).get("external")]
-        if internal_inc:
+        # Incoming (internal only)
+        inc_edges = [e for e in incoming.get(nid, []) if not nodes.get(e.get("source"), {}).get("external")]
+        if inc_edges:
             by_type_in = defaultdict(list)
-            for e in internal_inc:
-                by_type_in[e["type"]].append(e["source"])
-            lines.append("\n## Incoming Connections")
+            for e in inc_edges:
+                by_type_in[e.get("type", "related")].append(e.get("source"))
+            lines.append("\n## ← Incoming")
             for etype, sources in sorted(by_type_in.items()):
                 lines.append(f"\n### {etype.capitalize()}")
-                for s in sorted(set(sources))[:30]:
+                for s in sorted(set(sources))[:35]:
                     lines.append(f"- {wikilink(s)}")
 
         safe_name = sanitize_filename(nid)
         try:
             (vault_dir / f"{safe_name}.md").write_text("\n".join(lines), encoding="utf-8")
+            created += 1
         except Exception as e:
-            print(f"   ⚠️ Could not write {safe_name}: {e}")
-    print(f"   Project: {project} | Nodes: {len(nodes)}")
-    print(f"   Orphans fixed: nodes now have both outgoing + incoming wikilinks")
-    print(f"   Pages created: {sum(1 for n in nodes.values() if not n.get('external', False))}")
+            print(f"   ⚠️ Write failed for {safe_name}: {e}")
+
+    print(f"✅ Obsidian vault generated → {vault_dir}")
+    print(f"   Pages created: {created:,}")
+    print(f"   Open this folder in Obsidian to view the knowledge base.")
 
 
 if __name__ == "__main__":
