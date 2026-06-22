@@ -11,7 +11,7 @@ try:
 except ImportError:
     TREE_SITTER_AVAILABLE = False
 
-from .base import BaseParser
+from ..base import BaseParser
 
 
 NESTJS_CLASS_DECORATORS = {
@@ -30,46 +30,50 @@ class JavaScriptParser(BaseParser):
 
     def __init__(self, graph):
         super().__init__(graph)
-        self.parser = None
-        self.js_language = None
-        self.ts_language = None
+        self.js_parser = None
+        self.ts_parser = None
         if TREE_SITTER_AVAILABLE:
             self._init_tree_sitter()
 
     def _init_tree_sitter(self):
         try:
-            self.js_language = Language(tree_sitter_javascript.language())
-            self.ts_language = Language(tree_sitter_typescript.language_typescript())
+            js_language = Language(tree_sitter_javascript.language())
+            ts_language = Language(tree_sitter_typescript.language_typescript())
+            
             try:
-                self.parser = Parser(self.ts_language)  # modern
+                # Modern API (>=0.22)
+                self.js_parser = Parser(js_language)
+                self.ts_parser = Parser(ts_language)
             except TypeError:
-                self.parser = Parser()
-                self.parser.set_language(self.ts_language)
+                # Legacy API
+                self.js_parser = Parser()
+                self.js_parser.set_language(js_language)
+                self.ts_parser = Parser()
+                self.ts_parser.set_language(ts_language)
+                
             print("   🌳 Tree-sitter JS/TS initialized — UNIVERSAL mode")
         except Exception as e:
             print(f"   ⚠️ Tree-sitter init failed: {e}")
-            self.parser = None
+            self.js_parser = self.ts_parser = None
 
     def parse(self, file_path: Path, file_id: str):
         content = self._safe_read(file_path)
         if not content:
             return
 
-        if TREE_SITTER_AVAILABLE and self.parser:
+        if TREE_SITTER_AVAILABLE and self.ts_parser and self.js_parser:
             try:
-                is_ts = file_path.suffix.lower() in ('.ts', '.tsx', '.d.ts')
-                lang = self.ts_language if is_ts else self.js_language
-                if hasattr(self.parser, 'set_language'):
-                    self.parser.set_language(lang)
+                name = file_path.name.lower()
+                is_ts = name.endswith('.ts') or name.endswith('.tsx') or name.endswith('.d.ts')
+                parser = self.ts_parser if is_ts else self.js_parser
 
-                tree = self.parser.parse(bytes(content, "utf8"))
+                tree = parser.parse(bytes(content, "utf8"))
                 visitor = _ASTVisitor(self.graph, content, file_id)
                 visitor.visit(tree.root_node)
                 return
             except Exception as e:
                 print(f"   ⚠️ Tree-sitter parse error {file_path.name}: {e}")
 
-        # Fallback
         self._regex_fallback(file_path, file_id)
 
     def _regex_fallback(self, file_path: Path, file_id: str):
@@ -93,7 +97,6 @@ class _ASTVisitor:
         handler(node)
 
     def _visit_export_statement(self, node):
-        """Critical for exported classes with decorators (NestJS + modern TS)"""
         decorators = []
         declaration = None
         for child in node.children:
@@ -167,7 +170,6 @@ class _ASTVisitor:
             self.visit(child)
 
     def _classify_class(self, name: str, decorators: List[str], pos: int) -> str:
-        # Decorators first
         for dec in decorators:
             if dec in NESTJS_CLASS_DECORATORS:
                 return f"nestjs_{dec.lower()}"
@@ -176,8 +178,7 @@ class _ASTVisitor:
             if f'@{dec}' in snippet:
                 return f"nestjs_{dec.lower()}"
 
-        # React component
-        if re.match(r'^[A-Z]', name) and re.search(r'return\s*[<(]', snippet):
+        if re.match(r'^[A-Z]', name) and re.search(r'return\s*\(\s*<', snippet):
             return "react_component"
         return "class"
 
@@ -194,7 +195,7 @@ class _ASTVisitor:
         if name in {'getServerSideProps', 'getStaticProps', 'getStaticPaths', 'generateMetadata'}:
             return "nextjs_data_fn"
         snippet = self.content[pos:pos + 1200]
-        if re.match(r'^[A-Z]', name) and re.search(r'return\s*[<(]', snippet):
+        if re.match(r'^[A-Z]', name) and re.search(r'return\s*\(\s*<', snippet):
             return "react_component"
         return "function"
 
@@ -226,21 +227,17 @@ class _ASTVisitor:
         if not import_path or import_path in JS_NOISE or import_path.startswith('node:'):
             return
 
-        # Strong monorepo alias support (Twenty, Hoppscotch, etc.)
         if import_path.startswith(('@/', '~/', 'src/', './', '../', 'packages/', '@')):
             cleaned = import_path.replace('@/', '').replace('~/', '').replace('src/', '')
-            candidates = [
-                cleaned,
-                f"{cleaned}.ts", f"{cleaned}.tsx",
-                f"{cleaned}/index.ts", f"{cleaned}/index.tsx",
-                cleaned.replace('.ts', ''), cleaned.replace('.tsx', '')
-            ]
-            for cand in candidates:
-                if self.graph.is_known(cand):
-                    self.graph.add_edge(self.file_id, cand, "imports")
-                    return
+            if cleaned.startswith('./') or cleaned.startswith('../'):
+                # Relative paths are resolved via suffix index directly
+                pass
+            
+            resolved = self.graph.resolve_path_alias(cleaned)
+            if resolved:
+                self.graph.add_edge(self.file_id, resolved, "imports")
+                return
 
-            # Register as internal alias
             self.graph.add_node(cleaned, "alias", external=False)
             self.graph.add_edge(self.file_id, cleaned, "imports")
             return

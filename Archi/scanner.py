@@ -3,7 +3,6 @@ from pathlib import Path
 import os
 import sys
 
-# Add parent directory to path for absolute imports
 sys.path.insert(0, str(Path(__file__).parent))
 
 from parsers.registry import PARSER_REGISTRY, PARSER_QUALITY
@@ -56,20 +55,25 @@ class TemporyScanner:
                 continue
 
             rel = current.relative_to(self.root_dir)
-            folder_id = str(rel) if str(rel) != "." else "root"
+            folder_id = str(rel).replace('\\', '/') if str(rel) != "." else "root"
             self.graph.add_node(folder_id, "folder")
 
             if folder_id != "root":
-                parent_id = str(rel.parent) if str(rel.parent) != "." else "root"
+                parent_id = str(rel.parent).replace('\\', '/') if str(rel.parent) != "." else "root"
                 self.graph.add_edge(parent_id, folder_id, "contains")
 
             for filename in filenames:
                 ext = Path(filename).suffix.lower()
 
-                # Use registry safely
                 parser_cls = get_parser(ext)
                 if parser_cls:
                     file_id = f"{folder_id}/{filename}" if folder_id != "root" else filename
+                    
+                    # Register for cross-file resolution
+                    self.graph.register_file_id(file_id)
+                    if ext == '.py':
+                        dotted = file_id.replace('/', '.').rsplit('.py', 1)[0]
+                        self.graph.module_to_file[dotted] = file_id
 
                     file_node_type = self._detect_file_type(filename)
                     self.graph.add_node(file_id, file_node_type)
@@ -78,12 +82,10 @@ class TemporyScanner:
                     parser = parser_cls(self.graph)
                     parser.parse(current / filename, file_id)
 
-                    # Track stats
                     lang = ext.lstrip('.')
                     self.graph.parser_stats[lang]["files"] += 1
                     self.graph.parser_stats[lang]["method"] = getattr(parser, 'METHOD', 'unknown')
 
-        # Post-processing
         resolved = self.graph.resolve_dangling_edges()
         if resolved:
             print(f"   🔧 Auto-registered {resolved} dangling type targets")
